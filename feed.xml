@@ -3,7 +3,7 @@
     <title>Ad Hoc</title>
     <link href="https://gadgetboy.org/feed.xml" rel="self" />
     <link href="https://gadgetboy.org" />
-    <updated>2020-03-13T12:47:27-05:00</updated>
+    <updated>2020-03-13T12:51:56-05:00</updated>
     <author>
         <name>John A. Federico</name>
     </author>
@@ -91,7 +91,7 @@
             <category term="Home Assistant"/>
             <category term="Coding"/>
 
-        <updated>2020-03-11T09:09:07-05:00</updated>
+        <updated>2020-03-13T12:50:11-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/3/staycation_postcard.jpeg" alt="Staycation" />
@@ -106,7 +106,7 @@
 <p>But mostly, in addition to spending time with family and friends, I take this time to learn new things and to tinker – activities I rarely have time to do throughout the year.</p>
 <p>Here’s this year’s list.</p>
 <ol>
-<li><strong>I <a rel="noopener noreferrer" aria-label="installed (opens in a new tab)" href="https://gadgetboy.org/2020/01/05/alarming-news/" target="_blank">installed</a> a <a rel="noopener noreferrer" aria-label="Ring Alarm System (opens in a new tab)" href="https://amzn.to/2ZSQjYJ" target="_blank">Ring Alarm System</a> </strong>that included the <a rel="noopener noreferrer" aria-label="Ring Alarm Retrofit Kit (opens in a new tab)" href="https://amzn.to/35oIjjw" target="_blank">Ring Alarm Retrofit Kit</a> and the existing home security wiring. I learned a lot about home security wiring and, more importantly, how the home security market is being disrupted by the Internet of Things (IoT).</li>
+<li><strong>I <a href="https://gadgetboy.org/alarming-news/" title="Alarming News">installed</a> a <a rel="noopener noreferrer" aria-label="Ring Alarm System (opens in a new tab)" href="https://amzn.to/2ZSQjYJ" target="_blank">Ring Alarm System</a> </strong>that included the <a rel="noopener noreferrer" aria-label="Ring Alarm Retrofit Kit (opens in a new tab)" href="https://amzn.to/35oIjjw" target="_blank">Ring Alarm Retrofit Kit</a> and the existing home security wiring. I learned a lot about home security wiring and, more importantly, how the home security market is being disrupted by the Internet of Things (IoT).</li>
 <li>I kicked my <a rel="noopener noreferrer" aria-label="Vera Edge (opens in a new tab)" href="https://amzn.to/2Qo1c1F" target="_blank">Vera Edge</a> home controller to the curb and <strong>built a new home automation system from scratch</strong> using the open source <a rel="noopener noreferrer" aria-label="Home Assistant (opens in a new tab)" href="https://www.home-assistant.io" target="_blank">Home Assistant</a> software, a <a rel="noopener noreferrer" aria-label="Raspberry Pi 4 (opens in a new tab)" href="https://amzn.to/2QL4riJ" target="_blank">Raspberry Pi 4</a> and a <a rel="noopener noreferrer" aria-label="GoControl HUSBZB-1 (opens in a new tab)" href="https://amzn.to/2SUbeJv" target="_blank">GoControl HUSBZB-1</a>. (Full post to come.)</li>
 <li><strong>I started learning <a rel="noopener noreferrer" aria-label="YAML (opens in a new tab)" href="https://yaml.org/" target="_blank">YAML</a>.</strong> Even though you don’t have to break out a programmers text editor to use Home Assistant, if you want to create more complex automations or get very specific in how you configure the user interface, you have to use YAML. This also helped me in my next endeavor.</li>
 <li><strong>I learned how to manage <a rel="noopener noreferrer" aria-label="Ruby (opens in a new tab)" href="https://www.ruby-lang.org" target="_blank">Ruby</a> packages</strong> so that I could <strong>install and configure <a rel="noopener noreferrer" aria-label="Jekyll (opens in a new tab)" href="https://jekyllrb.com/" target="_blank">Jekyll</a> </strong>to publish this blog. (Full post to come) Jekyll helps you build static sites so they are <em>really</em> fast and, most importantly, <strong>unhackable</strong>. I’ve had way too many WordPress instances get hacked and fixing them was a major PITA. Jekyll is also configured using YAML. <br><br>Do I really need to do this? I mean, a basic blog on WordPress.com is cheap, fast and reliable. <br><br>Of course not. I just want to learn something new. <br><br>Once I figure out how to customize Jekyll themes and import posts from WordPress, I’ll probably host the files on <a rel="noopener noreferrer" aria-label="GitHub Pages (opens in a new tab)" href="https://pages.github.com/" target="_blank">GitHub Pages</a>. I’ve been considering running the static site from a <a rel="noopener noreferrer" aria-label="Raspberry Pi 2 B (opens in a new tab)" href="https://amzn.to/2ZSV9Fn" target="_blank">Raspberry Pi 2 B</a> on my home network, but this might be more trouble than it’s worth. I ran out of time during this holiday break, so getting this working will take a little longer.</li>
