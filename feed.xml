@@ -3,7 +3,7 @@
     <title>Ad Hoc</title>
     <link href="https://gadgetboy.org/feed.xml" rel="self" />
     <link href="https://gadgetboy.org" />
-    <updated>2020-04-17T15:58:34-05:00</updated>
+    <updated>2020-04-17T16:16:42-05:00</updated>
     <author>
         <name>John A. Federico</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://gadgetboy.org/review-system76-lemur-pro/"/>
         <id>https://gadgetboy.org/review-system76-lemur-pro/</id>
 
-        <updated>2020-04-17T15:58:15-05:00</updated>
+        <updated>2020-04-17T16:14:22-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/43/lemur.jpg" alt="Just a Lemur, chilling out." />
@@ -117,8 +117,7 @@
 <p>The design is the same as what you would expect from any top-tier PC OEM. It has clean lines and relatively modern design touches.</p>
 <p>The biggest and most obvious design decision was the webcam. Rather than increase the size of the bezel, System76 decided to add a small bump above the screen to house the camera and built-in microphone. It's not distracting at all when using the machine, but obviously protrudes by a few millimeters when the lid is closed. I'm hoping that the aluminum chassis will adequately protect it during transit.</p>
 <p>For some unknown reason, System76 made the decision to place the power button on the right<strong> side</strong> of the machine, not on the keyboard deck. Depending on your perspective, this could be a poor design choice, something to just get used to, or both.</p>
-<p>During my first full day of using the Lemur Pro, I plugged-in a USB Type-C cable with Power Delivery and DisplayPort (which is on the left side) so that I could use it with my <a href="https://amzn.to/2K9NA6f" target="_blank" rel="noopener noreferrer" title="Dell U3818DW">38" Dell display</a> to get some work done. Naturally, since the machine is so light, I braced it with my right hand and accidentally pushed the power button, putting it into Suspend mode.</p>
-<p>You definitely need to get used to that.</p>
+<p>During my first full day of using the Lemur Pro, I plugged-in a USB Type-C cable with Power Delivery and DisplayPort (which is on the left side) so that I could use it with my <a href="https://amzn.to/2K9NA6f" target="_blank" rel="noopener noreferrer" title="Dell U3818DW">38" Dell display</a> to get some work done. Naturally, since the machine is so light, I braced it with my right hand and accidentally pushed the power button, putting it into Suspend mode. I definitely need to remember that in the future.</p>
 <h3 id="mcetoc_1e61vbms51">Materials &amp; Build Quality</h3>
 <p>At the moment, System76 doesn't indicate what materials are used to build the Lemur Pro chassis on its web site. While looking at the photos during the buying process, I guessed that it was a nice, Thinkpad-like plastic or some kind of aluminum or magnesium alloy.</p>
 <p>After it arrived, I realized it was metal but didn't know what kind, so I asked the System76 support team and they responded almost immediately:</p>
@@ -129,11 +128,11 @@
 <p>The Magnesium-Aluminum alloy is smooth to the touch and in my short time using it, appears to reject fingerprints. (Though, System76 includes a microfiber cloth with the system, so perhaps this is a premature observation.) It has barely noticeable, reflective flecks of material that only appear in the right light and from the right perspective. This may be a conscious design choice or just a natural charateristic of the alloy. Perhaps those flecks are the "1% other material".</p>
 <p>Fit and finish are excellent with no visible gaps or imperfections. There is no flexing of the chassis or the keyboard deck - it's a solid typing experience. In fact, it's one of the best keyboards I've used in a long time, almost on par with my 2015 MacBook Pro.</p>
 <p>The bottom panel flexes a wee bit but it doesn't detract from the overall build quality of the machine. I've only noticed it when I close the lid and grip the PC with one hand.</p>
-<p>The 14.1" matte finish, 1080p screen is bright, crisp and seemingly color accurate. The screen is pleasingly larger than my 13.3" devices and the form factor is just about perfect.</p>
+<p>The 14.1" matte finish, 1080p screen is bright, crisp and seemingly color accurate. The Lemur Pro's screen is pleasingly larger than my 13" devices and the form factor is just about perfect.</p>
 <p class="msg msg--info">Even though it would be nice to have a larger screen on-the-go, I recently discovered that the tradeoffs of a 15.6" machine just aren't worth it - especially the keyboard layout.</p>
 <p class="msg msg--info">I don't understand why just about every PC OEM feels the need to fill the keyboard deck of larger devices with a number pad, shifting the trackpad and keyboard to the left. It's an awkward experience. Instead of the number pad, why not center the keyboard and add front-firing speakers on each side or a maybe just a fingerprint reader that actually works more than 20% of the time? Anyone who really needs a number pad can get one from <a href="https://amzn.to/2XENFXu" target="_blank" rel="noopener noreferrer" title="USB Numbers Pads on Amazon.com">Amazon for less than $20</a>.</p>
 <h4 id="mcetoc_1e62rs7enh">Trackpad</h4>
-<p>The trackpad on this machine is a solid performer. Is it as good as a MacBook Pro or a Dell XPS? Not quite, but it's pretty damn close. The fact that it doesn't have buttons is a real plus. I'm not a fan of physical buttons on a trackpad.</p>
+<p>The trackpad on this machine is excellent. Is it as good as a MacBook Pro or a Dell XPS? Not quite, but it's pretty damn close. The fact that it doesn't have buttons is a real plus. I'm not a fan of physical buttons on a trackpad.</p>
 <h4 id="mcetoc_1e62nfi3mf">Power Supply</h4>
 <p>From the perspective of portability, the power supply is great. It's relatively small and lightweight and gets the job done. And while System76 definitely considered the needs of road warriors and hallway walkers with the Lemur Pro's great battery life, they missed the mark with the power supply. The total length of the cables is so ridiculously short, it's almost comical. I'm going to have carry an extension cord or find a longer main lead with the right connector for the power supply.</p>
 <p>Everything else about the device is so well thought-out that this decision left me scratching my head. </p>
@@ -261,7 +260,7 @@
 <tr >
 <td ><strong>Price as configured</strong></td>
 <td >
-<p>$1,688 + $31.68 for UPS Ground shipping</p>
+<p>$1,688 + $32 for UPS Ground shipping</p>
 </td>
 </tr>
 </tbody>
@@ -305,7 +304,7 @@
 </figure>
 </div>
 <p id="mcetoc_1e643u0b0j"><strong>Thermals</strong></p>
-<p>On a few occasions, the fans spun up like jet engines, then quickly went silent. During those instances, I was installing 38 package updates from Pop!_Shop or running a video conference in Zoom.</p>
+<p>On a few occasions, the fans spun up like jet engines, then quickly went silent. During those instances, I was installing multiple package updates from Pop!_Shop or running a video conference in Zoom.</p>
 <p>Otherwise, the machine runs quite cool. I can barely feel any excess heat when it's on my lap during general use. I'm sure I might have a different experience if I was rendering a 4K video with compositing while sitting on the couch.</p>
 <h4 id="mcetoc_1e61vcb4s4">RAM</h4>
 <p>Do I really need 40 GB of RAM for a machine that I'm using for hobby projects?</p>
@@ -317,7 +316,7 @@
 <p>My preferred configuration is to have a small (&lt;250 GB) NVMe drive for the OS and a second, larger NVMe drive for my /home directory and files. However, after lots of shopping around, it doesn't appear that the smaller NVMe drives even come close to the performance of those that are 500 GB or larger, which is an important consideration for the OS drive.</p>
 <p>With that in mind, I selected the smallest, fastest NVMe drive available during system configuration for both the OS and my files - <a href="https://amzn.to/2VchDk4" target="_blank" rel="noopener noreferrer" title="Samsung EVO Pro">a 512 GB Samsung EVO Pro</a>. I could have gotten a 1 TB drive with the same read/write specs, but most of my larger media files are stored on NAS on my LAN, and in the cloud. I can upgrade to a larger drive or add a second drive at a later time, if I need it.</p>
 <h4 id="mcetoc_1e61vcm076">Networking</h4>
-<p>The Lemur Pro uses the onboard Intel networking controller with the 802.11ac spec and speeds up to 867 Mbps. My other machines also have 802.11ac but this feels much snappier, perhaps because web pages render so quickly. File transfers over SAMBA, FTP, NFS and HTTPS also seemed very fast.</p>
+<p>The Lemur Pro uses the onboard Intel networking controller with the 802.11ac spec and speeds up to 867 Mbps. I have other machines with 802.11ac but this feels much snappier, perhaps because web pages render so quickly. File transfers over SAMBA, FTP, NFS and HTTPS also seemed very fast.</p>
 <h4 id="mcetoc_1e61vlsac9">Battery Life</h4>
 <p>If you've read this far, you know that I am not a professional PC reviewer so I had to improvise on the evaluation of battery life.</p>
 <p>Here's what I did:</p>
