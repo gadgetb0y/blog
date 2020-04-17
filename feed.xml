@@ -3,7 +3,7 @@
     <title>Ad Hoc</title>
     <link href="https://gadgetboy.org/feed.xml" rel="self" />
     <link href="https://gadgetboy.org" />
-    <updated>2020-04-17T14:34:29-05:00</updated>
+    <updated>2020-04-17T14:48:19-05:00</updated>
     <author>
         <name>John A. Federico</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://gadgetboy.org/review-system76-lemur-pro/"/>
         <id>https://gadgetboy.org/review-system76-lemur-pro/</id>
 
-        <updated>2020-04-17T14:34:22-05:00</updated>
+        <updated>2020-04-17T14:48:13-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/43/lemur.jpg" alt="Just a Lemur, chilling out." />
@@ -124,10 +124,10 @@
 <blockquote>
 <p class="msg msg--highlight ">Hello John,<br><br>Glad you're enjoying the Lemur Pro! The chassis is made out of Magnesium-Aluminum alloy: 9% Aluminum, 90% Magnesium, 1% other material. (Before you ask, I do not know what the "other material" is; I assume our supplier simply includes that as a tolerance.) Please let us know if you have any other questions! --Jacob</p>
 </blockquote>
-<p>Thanks, Jacob.</p>
+<p><em>Thanks, Jacob.</em></p>
 <p>The Magnesium-Aluminum alloy is smooth to the touch and in my short time using it, appears to reject fingerprints. (Though, System76 includes a microfiber cloth with the system, so perhaps this is a premature observation.) It has barely noticeable, reflective flecks of material that only appear in the right light and from the right perspective. This may be a conscious design choice or just a natural charateristic of the alloy. Perhaps those flecks are the "1% other material".</p>
 <p>Fit and finish are excellent with no visible gaps or imperfections. There is no flexing of the chassis or the keyboard deck - it's a solid typing experience. In fact, it's one of the best keyboards I've used in a long time, almost on par with my 2015 MacBook Pro.</p>
-<p>The bottom panel flexes a wee bit but it doesn't detract from the overall build quality of the machine. I've only noticied it when I close the lid and grip the PC with one hand.</p>
+<p>The bottom panel flexes a wee bit but it doesn't detract from the overall build quality of the machine. I've only noticed it when I close the lid and grip the PC with one hand.</p>
 <p>The 14.1" matte finish, 1080p screen is bright, crisp and seemingly color accurate. The screen is pleasingly larger than my 13.3" devices and the form factor is just about perfect.</p>
 <p class="msg msg--info">Even though it would be nice to have a larger screen on-the-go, I recently discovered that the tradeoffs of a 15.6" machine just aren't worth it - especially the keyboard layout.</p>
 <p class="msg msg--info">I don't understand why just about every PC OEM feels the need to fill the keyboard deck of larger devices with a number pad, shifting the trackpad and keyboard to the left. It's an awkward experience. Instead of the number pad, why not center the keyboard and add front-firing speakers on each side or a maybe just a fingerprint reader that actually works more than 20% of the time? Anyone who really needs a number pad can get one from <a href="https://amzn.to/2XENFXu" target="_blank" rel="noopener noreferrer" title="USB Numbers Pads on Amazon.com">Amazon for less than $20</a>.</p>
@@ -268,7 +268,7 @@
 <h4 id="mcetoc_1e61ved6v8">First Boot</h4>
 <p>I chose to capture the unboxing in photos and not video as my other cameras and tripods are in storage at the moment. So, when it came to booting the machine for the first time, I wanted to snap a few photos of the process.</p>
 <p>The Lemur Pro boots so fast that I couldn't even unlock my phone quickly enough to take a picture! In seconds, the machine booted into system setup.</p>
-<p>If you've ever installed Pop!_OS on your machine, the experience of having it installed on a new PC is exactly the same as booting from a live session: select your country, keyboard layout, disk encryption preference, etc. When it's done, it will ask you to create after a restart.</p>
+<p>If you've ever installed Pop!_OS on your machine, the experience of having it installed on a new PC is exactly the same as booting from a live session: select your country, keyboard layout, disk encryption preference, etc. When it's done, it will ask you to create a user after a restart.</p>
 <div class="gallery"   >
 <figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/neofetch.png" ><img src="https://gadgetboy.org/media/posts/43/gallery/neofetch-thumbnail.png" alt="neofetch on my System76 Lemur Pro" width="768" height="435"></a>
 <figcaption class="gallery-description">neofetch on my System76 Lemur Pro</figcaption>
@@ -276,7 +276,7 @@
 </div>
 <h4 id="mcetoc_1e62eso1da">Processor &amp; GPU</h4>
 <p>The CPU is a 10th Generation Intel i7 processor (an upgrade from the 10th Gen i5 in the base Lemur Pro build) in the "U" spec, which indicates that it's designed for Ultrabooks that require longer battery life. Spec-for-spec, it certainly doesn't pack the horespower of the Dell Inspiron 7591 I gave up.</p>
-<p>The 7591 has a 9th Gen Intel i7 in the "H" spec (high performance) with 6 cores - 12 threads, 12 MB cache and burst mode up to 4.5 GHz. More importantly, it has a dedicated NVIDIA GPU which helps render video faster. (And improves gaming performance, but I'm not much of a gamer.)</p>
+<p class="msg msg--info">The Dell Inspiron 7591 has a 9th Gen Intel i7 in the "H" spec (high performance) with 6 cores - 12 threads, 12 MB cache and burst mode up to 4.5 GHz. More importantly, it has a dedicated NVIDIA GPU which helps render video faster. (And improves gaming performance, but I'm not much of a gamer.)</p>
 <p>With that said, the Lemur Pro defintely punches above its weight. It's surprisingly fast for its specs and the onboard Intel GPU works well, powering both the built-in display and my large (3840 x 1600) external display simultaneously. Video playback and video conferences are smooth and consistent.</p>
 <p>It quickly renders web pages in Firefox, which is typically a small step behind the speed of the Chromium and WebKit rendering engines.</p>
 <p><strong>GeekBench</strong></p>
@@ -304,8 +304,8 @@
 </figure>
 </div>
 <p id="mcetoc_1e643u0b0j"><strong>Thermals</strong></p>
-<p>On a few occasions, the fans spun up like jet engines, then quickly went silent. During these occasions I was installing 38 pacakge updates from Pop!_Shop or in a video conference using Zoom.</p>
-<p>Otherwise, the machine runs quite cool. I barely feel any excess heat when it's on my lap.</p>
+<p>On a few occasions, the fans spun up like jet engines, then quickly went silent. During these occasions I was installing 38 pacakge updates from Pop!_Shop or running a video conference in Zoom.</p>
+<p>Otherwise, the machine runs quite cool. I can barely feel any excess heat when it's on my lap.</p>
 <h4 id="mcetoc_1e61vcb4s4">RAM</h4>
 <p>Do I really need 40 GB of RAM for a machine that I'm using for hobby projects?</p>
 <p>Generally, no.</p>
@@ -323,7 +323,8 @@
 <p>I unplugged the machine at 7 AM and spent 4 hours writing this post, responding to email, watching YouTube tutorials on how to optimize OpenMediaVault and NextCloud, downloading software and connecting with friends and family on social media.</p>
 <p>I didn't do any video rendering or stream a ton of HD video, and I didn't compile any code. Basically, I just used it like an average consumer.</p>
 <p>At the end of the 4 hours, my battery was still at 91%. Pop!_OS indicated that I still had over 20 hours of use.</p>
-<figure class="post__image post__image" ><img src="https://gadgetboy.org/media/posts/43/power_after_4_hours.png" alt="Power Indicator after 4 hours" width="327" height="445">
+<p>It's not a thorough test, but should give you some idea about the battery life of the Lemur Pro. It's remarkable, I'd say.</p>
+<figure class="post__image post__image--center" ><img src="https://gadgetboy.org/media/posts/43/power_after_4_hours.png" alt="Power Indicator after 4 hours" width="327" height="445">
 <figcaption >Power indicator after 4 hours of use.</figcaption>
 </figure>
 <p>Eventually, I'll get a feel for how the battery life holds up under heavier loads.</p>
