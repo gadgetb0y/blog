@@ -3,7 +3,7 @@
     <title>Ad Hoc</title>
     <link href="https://gadgetboy.org/feed.xml" rel="self" />
     <link href="https://gadgetboy.org" />
-    <updated>2020-04-17T14:48:19-05:00</updated>
+    <updated>2020-04-17T14:58:10-05:00</updated>
     <author>
         <name>John A. Federico</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://gadgetboy.org/review-system76-lemur-pro/"/>
         <id>https://gadgetboy.org/review-system76-lemur-pro/</id>
 
-        <updated>2020-04-17T14:48:13-05:00</updated>
+        <updated>2020-04-17T14:57:59-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/43/lemur.jpg" alt="Just a Lemur, chilling out." />
@@ -38,7 +38,7 @@
 <p>I was generally in love with the 7591, but there was just one problem with it: I couldn't get it to properly run any flavor of Linux. Even though the machine is <a href="https://certification.ubuntu.com/hardware/201903-26880" target="_blank" rel="noopener noreferrer" title="Dell Inspiron 15 7591 Ubuntu Certification">Ubuntu Certified</a> (which is a key reason I chose it), I couldn't get the PCI sound card to work. USB audio input and output both worked fine, but troubleshooting the built-in sound card was an exercise in frustration.</p>
 <p>I think we all take for granted that our laptops can play sound until you find yourself trying to learn something from a YouTube video and have to switch to a different PC or your smartphone.</p>
 <p>Since the machine didn't ship with Ubuntu pre-installed, I was unable to get support from Dell. Look, I get it: successfully supporting millions of consumers (many of them not very tech savvy) is no small feat. If you buy a new car, then completely replace the engine with something else, you can't expect the manufacturer to support it. This appears ot be industry wide, not just at Dell. (Though, I will ask, why bother certifying a PC for Ubuntu if you're not going to support it with that OS? But, I digress...)</p>
-<p>The Pop!_OS and Ubuntu communities are great resources, but I finally gave up after three weeks and sold it on eBay. The shop where I bought the 32 GB RAM kit won't accept returns unless it's DOA and I didn't fee like negotiating the restocking fee on the PC, nor create a support incident for the Dell team to deal with - with so many people working from home now, they are likely overwhelmed. It was easier to just restore the Windows 10 OS factory image and sell it as "New, Open Box." I actually earned a profit on it. <span >😉</span></p>
+<p>The Pop!_OS and Ubuntu communities are great resources, but I finally gave up after three weeks and sold it on eBay. The shop where I bought the 32 GB RAM kit won't accept returns unless the memory is DOA and I didn't fee like negotiating the restocking fee on the PC, nor create a support incident for the Dell support team to deal with - with so many people working from home now, they are likely overwhelmed. It was easier to just restore the Windows 10 OS factory image and sell it as "New, Open Box."</p>
 <p>So, even as I returned to my 13" machine, I was trying to figure out my options. I didn't want to spend a ton of money on a PC that wasn't my daily driver, I wasn't willing to buy a similar machine and hope for a better trackpad and, most importantly, I didn't want to have to wrestle with a PC from any major OEM to get Linux running on it. Even users of Thinkpads, which are famously great for supporting Linux across the product line, were having issues getting Ubuntu to run properly on models that I would have considered.</p>
 <p>I wanted a Linux machine with hardware support out of the box, but any device with Linux pre-installed from a major PC OEM is typically sold as a "<a href="#mcetoc_1e5km0bsc0" title="Footnote">Developer Edition*</a>," which means it's <a href="https://www.dell.com/en-us/work/shop/overview/cp/linuxsystems" target="_blank" rel="noopener noreferrer" title="Dell Project Sputnik">built - and priced - for business use</a>.</p>
 <p>So, I started searching for other PC's with Linux pre-installed and, not surprisngly, System76 kept popping up with great reviews and a huge community of super fans. Of course, I knew of System76 as they're the creator and maintainer of Pop!_OS, but I was still thinking (hoping?) that I could get a better spec'd and more economical machine from Dell that would run Linux.</p>
