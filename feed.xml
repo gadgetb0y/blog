@@ -3,7 +3,7 @@
     <title>Ad Hoc</title>
     <link href="https://gadgetboy.org/feed.xml" rel="self" />
     <link href="https://gadgetboy.org" />
-    <updated>2020-04-17T14:58:10-05:00</updated>
+    <updated>2020-04-17T15:35:57-05:00</updated>
     <author>
         <name>John A. Federico</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://gadgetboy.org/review-system76-lemur-pro/"/>
         <id>https://gadgetboy.org/review-system76-lemur-pro/</id>
 
-        <updated>2020-04-17T14:57:59-05:00</updated>
+        <updated>2020-04-17T15:35:50-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/43/lemur.jpg" alt="Just a Lemur, chilling out." />
@@ -275,7 +275,7 @@
 </figure>
 </div>
 <h4 id="mcetoc_1e62eso1da">Processor &amp; GPU</h4>
-<p>The CPU is a 10th Generation Intel i7 processor (an upgrade from the 10th Gen i5 in the base Lemur Pro build) in the "U" spec, which indicates that it's designed for Ultrabooks that require longer battery life. Spec-for-spec, it certainly doesn't pack the horespower of the Dell Inspiron 7591 I gave up.</p>
+<p>The CPU is a 10th Generation Intel i7 processor (an upgrade from the 10th Gen i5 in the base model Lemur Pro) in the "U" spec, which indicates that it's designed for Ultrabooks that require longer battery life. Spec-for-spec, it certainly doesn't pack the horespower of the Dell Inspiron 7591 I gave up.</p>
 <p class="msg msg--info">The Dell Inspiron 7591 has a 9th Gen Intel i7 in the "H" spec (high performance) with 6 cores - 12 threads, 12 MB cache and burst mode up to 4.5 GHz. More importantly, it has a dedicated NVIDIA GPU which helps render video faster. (And improves gaming performance, but I'm not much of a gamer.)</p>
 <p>With that said, the Lemur Pro defintely punches above its weight. It's surprisingly fast for its specs and the onboard Intel GPU works well, powering both the built-in display and my large (3840 x 1600) external display simultaneously. Video playback and video conferences are smooth and consistent.</p>
 <p>It quickly renders web pages in Firefox, which is typically a small step behind the speed of the Chromium and WebKit rendering engines.</p>
@@ -309,7 +309,7 @@
 <h4 id="mcetoc_1e61vcb4s4">RAM</h4>
 <p>Do I really need 40 GB of RAM for a machine that I'm using for hobby projects?</p>
 <p>Generally, no.</p>
-<p>While I do some light video production, photo editing and vector art production, I use my machine mostly for office work, Raspberry Pi projects, managing my home lab and testing home automation scripts. </p>
+<p>While I do some light video production, photo editing and vector art production, I use my machine mostly for office work, Raspberry Pi and other SBC projects, managing my home lab and testing home automation scripts. </p>
 <p>But I want to <strong>fly</strong> through my workflows. When I'm in The Zone, I don't want to deal with a lagging OS. Having excess memory ensures that the OS almost never has to write anything to the swap partition on the disk. (Also referred to as "Virtual RAM." <a href="https://en.wikipedia.org/wiki/Virtual_memory" target="_blank" rel="noopener noreferrer" title="Virtual RAM on Wikipedia">Wikipedia</a>)</p>
 <p>Plus, maxing out the RAM ensures that the machine will have a long service life without much effort and it improves its resale value should I decide to upgrade to a new machine in the future.</p>
 <h4 id="mcetoc_1e61vcfpk5">Storage</h4>
@@ -318,12 +318,12 @@
 <h4 id="mcetoc_1e61vcm076">Networking</h4>
 <p>The Lemur Pro uses the onboard Intel networking controller with an 802.11ac spec and speeds up to 867 Mbps. My other machines also have 802.11ac but this feels much snappier, perhaps because web pages render so quickly. File transfers over SAMBA, FTP, NFS and HTTPS also seemed very fast.</p>
 <h4 id="mcetoc_1e61vlsac9">Battery Life</h4>
-<p>If you've read this far, you know that I am not a professional PC reviewer so I had to improvise on the battery life test.</p>
+<p>If you've read this far, you know that I am not a professional PC reviewer so I had to improvise the battery life evaluation.</p>
 <p>Here's what I did:</p>
-<p>I unplugged the machine at 7 AM and spent 4 hours writing this post, responding to email, watching YouTube tutorials on how to optimize OpenMediaVault and NextCloud, downloading software and connecting with friends and family on social media.</p>
+<p>I unplugged the machine from the power supply and spent 4 hours writing this post, responding to email, watching YouTube tutorials on how to optimize OpenMediaVault and NextCloud, downloading software and connecting with friends and family on social media.</p>
 <p>I didn't do any video rendering or stream a ton of HD video, and I didn't compile any code. Basically, I just used it like an average consumer.</p>
-<p>At the end of the 4 hours, my battery was still at 91%. Pop!_OS indicated that I still had over 20 hours of use.</p>
-<p>It's not a thorough test, but should give you some idea about the battery life of the Lemur Pro. It's remarkable, I'd say.</p>
+<p>At the end of the 4 hours, my battery was at 91%. Pop!_OS indicated that I still had over 20 hours of use.</p>
+<p>It's not a scientific benchmark, but it should give you some idea about the battery life of the Lemur Pro. I'd say, it's remarkable.</p>
 <figure class="post__image post__image--center" ><img src="https://gadgetboy.org/media/posts/43/power_after_4_hours.png" alt="Power Indicator after 4 hours" width="327" height="445">
 <figcaption >Power indicator after 4 hours of use.</figcaption>
 </figure>
@@ -332,6 +332,7 @@
 <p>I provided my opinion of this laptop based on my specific needs using my own decision making criteria. However, I'm hoping that based on my experience, you can get a sense of how well it might work for you.</p>
 <h3 id="mcetoc_1e62iung6e">Positives:</h3>
 <ul>
+<li>Premium specs</li>
 <li>Light, Magnesium-Alloy chassis</li>
 <li>Bright, color-accurate, matte-finish 1080p screen </li>
 <li>Solid keyboard with good key travel</li>
