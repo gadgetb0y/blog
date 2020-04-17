@@ -3,7 +3,7 @@
     <title>Ad Hoc</title>
     <link href="https://gadgetboy.org/feed.xml" rel="self" />
     <link href="https://gadgetboy.org" />
-    <updated>2020-04-17T15:35:57-05:00</updated>
+    <updated>2020-04-17T15:58:34-05:00</updated>
     <author>
         <name>John A. Federico</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://gadgetboy.org/review-system76-lemur-pro/"/>
         <id>https://gadgetboy.org/review-system76-lemur-pro/</id>
 
-        <updated>2020-04-17T15:35:50-05:00</updated>
+        <updated>2020-04-17T15:58:15-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/43/lemur.jpg" alt="Just a Lemur, chilling out." />
@@ -41,6 +41,7 @@
 <p>The Pop!_OS and Ubuntu communities are great resources, but I finally gave up after three weeks and sold it on eBay. The shop where I bought the 32 GB RAM kit won't accept returns unless the memory is DOA and I didn't fee like negotiating the restocking fee on the PC, nor create a support incident for the Dell support team to deal with - with so many people working from home now, they are likely overwhelmed. It was easier to just restore the Windows 10 OS factory image and sell it as "New, Open Box."</p>
 <p>So, even as I returned to my 13" machine, I was trying to figure out my options. I didn't want to spend a ton of money on a PC that wasn't my daily driver, I wasn't willing to buy a similar machine and hope for a better trackpad and, most importantly, I didn't want to have to wrestle with a PC from any major OEM to get Linux running on it. Even users of Thinkpads, which are famously great for supporting Linux across the product line, were having issues getting Ubuntu to run properly on models that I would have considered.</p>
 <p>I wanted a Linux machine with hardware support out of the box, but any device with Linux pre-installed from a major PC OEM is typically sold as a "<a href="#mcetoc_1e5km0bsc0" title="Footnote">Developer Edition*</a>," which means it's <a href="https://www.dell.com/en-us/work/shop/overview/cp/linuxsystems" target="_blank" rel="noopener noreferrer" title="Dell Project Sputnik">built - and priced - for business use</a>.</p>
+<p><img class="post__image post__image--center" src="https://gadgetboy.org/media/posts/43/System76-System76_Logo_Blue-by_Kate_Hazen_of_System76.jpg" alt="System76 Branded Desktop Image" width="640" height="360"></p>
 <p>So, I started searching for other PC's with Linux pre-installed and, not surprisngly, System76 kept popping up with great reviews and a huge community of super fans. Of course, I knew of System76 as they're the creator and maintainer of Pop!_OS, but I was still thinking (hoping?) that I could get a better spec'd and more economical machine from Dell that would run Linux.</p>
 <p>As I was overthinking the whole decision, I made my 3,000th visit to the Sytem76 web site so I could (again) configure a 15" <a href="https://system76.com/laptops/darter" target="_blank" rel="noopener noreferrer" title="Darter Pro on System76.com">Darter Pro</a> machine and noticed that System76 was about to release a new PC - the 2020 14" <a href="https://system76.com/laptops/lemur" target="_blank" rel="noopener noreferrer" title="Lemur Pro on System76.com">Lemur Pro</a>.</p>
 <figure class="post__image post__image--center" ><img src="https://gadgetboy.org/media/posts/43/lemur_pro.png" alt="Lemur Pro" width="952" height="582">
@@ -304,23 +305,23 @@
 </figure>
 </div>
 <p id="mcetoc_1e643u0b0j"><strong>Thermals</strong></p>
-<p>On a few occasions, the fans spun up like jet engines, then quickly went silent. During these occasions I was installing 38 pacakge updates from Pop!_Shop or running a video conference in Zoom.</p>
-<p>Otherwise, the machine runs quite cool. I can barely feel any excess heat when it's on my lap.</p>
+<p>On a few occasions, the fans spun up like jet engines, then quickly went silent. During those instances, I was installing 38 package updates from Pop!_Shop or running a video conference in Zoom.</p>
+<p>Otherwise, the machine runs quite cool. I can barely feel any excess heat when it's on my lap during general use. I'm sure I might have a different experience if I was rendering a 4K video with compositing while sitting on the couch.</p>
 <h4 id="mcetoc_1e61vcb4s4">RAM</h4>
 <p>Do I really need 40 GB of RAM for a machine that I'm using for hobby projects?</p>
 <p>Generally, no.</p>
 <p>While I do some light video production, photo editing and vector art production, I use my machine mostly for office work, Raspberry Pi and other SBC projects, managing my home lab and testing home automation scripts. </p>
 <p>But I want to <strong>fly</strong> through my workflows. When I'm in The Zone, I don't want to deal with a lagging OS. Having excess memory ensures that the OS almost never has to write anything to the swap partition on the disk. (Also referred to as "Virtual RAM." <a href="https://en.wikipedia.org/wiki/Virtual_memory" target="_blank" rel="noopener noreferrer" title="Virtual RAM on Wikipedia">Wikipedia</a>)</p>
-<p>Plus, maxing out the RAM ensures that the machine will have a long service life without much effort and it improves its resale value should I decide to upgrade to a new machine in the future.</p>
+<p>Plus, maxing out the RAM ensures that the machine will have a long service life without much effort and the additional memory improves its resale value should I decide to upgrade to a new machine in the future.</p>
 <h4 id="mcetoc_1e61vcfpk5">Storage</h4>
 <p>My preferred configuration is to have a small (&lt;250 GB) NVMe drive for the OS and a second, larger NVMe drive for my /home directory and files. However, after lots of shopping around, it doesn't appear that the smaller NVMe drives even come close to the performance of those that are 500 GB or larger, which is an important consideration for the OS drive.</p>
-<p>With that in mind, I selected the smallest, fastest drive available during system configuration for both the OS and my files - <a href="https://amzn.to/2VchDk4" target="_blank" rel="noopener noreferrer" title="Samsung EVO Pro">a 512 GB Samsung EVO Pro</a>. I could have gotten a 1 TB drive with the same read/write specs, but most of my larger media files are stored on NAS on my LAN and in the cloud. I can upgrade to a larger drive or add a second drive at a later time.</p>
+<p>With that in mind, I selected the smallest, fastest NVMe drive available during system configuration for both the OS and my files - <a href="https://amzn.to/2VchDk4" target="_blank" rel="noopener noreferrer" title="Samsung EVO Pro">a 512 GB Samsung EVO Pro</a>. I could have gotten a 1 TB drive with the same read/write specs, but most of my larger media files are stored on NAS on my LAN, and in the cloud. I can upgrade to a larger drive or add a second drive at a later time, if I need it.</p>
 <h4 id="mcetoc_1e61vcm076">Networking</h4>
-<p>The Lemur Pro uses the onboard Intel networking controller with an 802.11ac spec and speeds up to 867 Mbps. My other machines also have 802.11ac but this feels much snappier, perhaps because web pages render so quickly. File transfers over SAMBA, FTP, NFS and HTTPS also seemed very fast.</p>
+<p>The Lemur Pro uses the onboard Intel networking controller with the 802.11ac spec and speeds up to 867 Mbps. My other machines also have 802.11ac but this feels much snappier, perhaps because web pages render so quickly. File transfers over SAMBA, FTP, NFS and HTTPS also seemed very fast.</p>
 <h4 id="mcetoc_1e61vlsac9">Battery Life</h4>
-<p>If you've read this far, you know that I am not a professional PC reviewer so I had to improvise the battery life evaluation.</p>
+<p>If you've read this far, you know that I am not a professional PC reviewer so I had to improvise on the evaluation of battery life.</p>
 <p>Here's what I did:</p>
-<p>I unplugged the machine from the power supply and spent 4 hours writing this post, responding to email, watching YouTube tutorials on how to optimize OpenMediaVault and NextCloud, downloading software and connecting with friends and family on social media.</p>
+<p>I unplugged the machine from the power supply and spent 4 hours writing this post, responding to email, watching YouTube tutorials on how to optimize OpenMediaVault and NextCloud, downloading software, and connecting with friends and family on social media.</p>
 <p>I didn't do any video rendering or stream a ton of HD video, and I didn't compile any code. Basically, I just used it like an average consumer.</p>
 <p>At the end of the 4 hours, my battery was at 91%. Pop!_OS indicated that I still had over 20 hours of use.</p>
 <p>It's not a scientific benchmark, but it should give you some idea about the battery life of the Lemur Pro. I'd say, it's remarkable.</p>
@@ -332,16 +333,17 @@
 <p>I provided my opinion of this laptop based on my specific needs using my own decision making criteria. However, I'm hoping that based on my experience, you can get a sense of how well it might work for you.</p>
 <h3 id="mcetoc_1e62iung6e">Positives:</h3>
 <ul>
-<li>Premium specs</li>
+<li>Premium specs, look and feel</li>
 <li>Light, Magnesium-Alloy chassis</li>
 <li>Bright, color-accurate, matte-finish 1080p screen </li>
 <li>Solid keyboard with good key travel</li>
 <li>Ample ports</li>
+<li>USB Type-C Power Delivery with Display Port</li>
 <li>Powerful CPU that runs cool</li>
 <li>Quiet fans</li>
-<li>Great trackpad response</li>
+<li>Excellent trackpad performance</li>
 <li>Pop!_OS (of course)</li>
-<li>Full hardware support for Pop!_OS</li>
+<li><em>Complete hardware support</em> for Pop!_OS</li>
 <li>An envelope full of cool stickers <span >😉</span></li>
 </ul>
 <h3 id="mcetoc_1e62uo586i">Neutrals:</h3>
@@ -354,6 +356,7 @@
 <li>Poorly placed power button</li>
 <li>The power supply cables are waaayyy too short</li>
 </ul>
+<p class="msg msg--success">Overall, I'm extremely satisfied with my purchase of the Lemur Pro and am now wondering why I didn't buy a System76 machine sooner.</p>
 <p>Do you have a Lemur Pro? Do you want one? Do you have specific questions about things I didn't cover?</p>
 <p>Let me know in the comments or on <a href="https://twitter.com/gadgetboy" target="_blank" rel="noopener noreferrer" title="@gadgetboy on twitter">Twitter</a>.</p>
 <p>---</p>
