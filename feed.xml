@@ -3,7 +3,7 @@
     <title>Ad Hoc</title>
     <link href="https://gadgetboy.org/feed.xml" rel="self" />
     <link href="https://gadgetboy.org" />
-    <updated>2020-04-18T06:04:29-05:00</updated>
+    <updated>2020-04-18T06:49:30-05:00</updated>
     <author>
         <name>John A. Federico</name>
     </author>
@@ -17,16 +17,16 @@
         <link href="https://gadgetboy.org/review-system76-lemur-pro/"/>
         <id>https://gadgetboy.org/review-system76-lemur-pro/</id>
 
-        <updated>2020-04-18T06:03:17-05:00</updated>
+        <updated>2020-04-18T06:49:19-05:00</updated>
             <summary>
                 <![CDATA[
-                        <img src="https://gadgetboy.org/media/posts/43/lemur.jpg" alt="Just a Lemur, chilling out." />
+                        <img src="https://gadgetboy.org/media/posts/43/lemur.jpg" alt="Just a Lemur." />
                     I decided it was time to replace my aging 2015 MacBook Pro. Even&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <img src="https://gadgetboy.org/media/posts/43/lemur.jpg" alt="Just a Lemur, chilling out." />
+                    <img src="https://gadgetboy.org/media/posts/43/lemur.jpg" alt="Just a Lemur." />
                 <p>I decided it was time to replace my aging 2015 MacBook Pro. Even though it's still in mint physical condition with a beautiful HiDPI ("Retina") display and is generally great to type on, the battery was beginning to show its age and it will become ineligible for OS upgrades in the near future.</p>
 <p>I experimented with a Chromebook for a short while, then found myself <a href="https://gadgetboy.org/my-new-chromebook-isnt-a-chromebook-at-all/" target="_blank" rel="noopener noreferrer">running Pop!_OS on a 13" Dell 2-in-1</a>, which I've enjoyed a lot. Using that machine has generally been a great experience, especially since Ubuntu seems to support all the hardware. My only complaint has been the trackpad - it's just not as precise as I'm used to and can be really frustrating to use. (It's not a Linux problem - it's the same running Windows 10.)</p>
 <p>While immersing myself in some projects at home, I decided that I wanted a more powerful machine with a bigger, matte screen and a passable trackpad. After much deliberation, I bought a <a href="https://www.dell.com/en-us/shop/dell-laptops/new-inspiron-15-7000-laptop/spd/inspiron-15-7591-laptop" target="_blank" rel="noopener noreferrer" title="Dell Inspiron 15 7591">Dell Inspiron 15 7591</a>. It's an awesome machine that's a joy to type on and, with a 32 GB RAM kit and NVIDIA Graphics, it's screaming fast. The trackpad is pretty damn good, too, and the aluminium shell feels and looks great. It supports two NVMe drives and yet another 2.5" mass storage drive (SSD, Hybrid or Hard Drive). It's a beautiful beast that won't break the bank.</p>
