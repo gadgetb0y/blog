@@ -3,7 +3,7 @@
     <title>Ad Hoc</title>
     <link href="https://gadgetboy.org/feed.xml" rel="self" />
     <link href="https://gadgetboy.org" />
-    <updated>2020-04-17T16:17:56-05:00</updated>
+    <updated>2020-04-18T06:04:29-05:00</updated>
     <author>
         <name>John A. Federico</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://gadgetboy.org/review-system76-lemur-pro/"/>
         <id>https://gadgetboy.org/review-system76-lemur-pro/</id>
 
-        <updated>2020-04-17T16:17:46-05:00</updated>
+        <updated>2020-04-18T06:03:17-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/43/lemur.jpg" alt="Just a Lemur, chilling out." />
@@ -37,8 +37,8 @@
 <p>(Full Disclosure: <a href="https://www.linkedin.com/in/johnfederico/" target="_blank" rel="noopener noreferrer" title="John Federico on LinkedIn.com">I work for Dell</a> running software partnerships, making this post a little...uncomfortable to write. I'm not involved in the hardware side of the business in any way other than I can sometimes get my hands on some machines before they're released to the <a href="#mcetoc_1e5km0bsc0" title="Footnotes">public*</a>.) <span >😉</span></p>
 <p>I was generally in love with the 7591, but there was just one problem with it: I couldn't get it to properly run any flavor of Linux. Even though the machine is <a href="https://certification.ubuntu.com/hardware/201903-26880" target="_blank" rel="noopener noreferrer" title="Dell Inspiron 15 7591 Ubuntu Certification">Ubuntu Certified</a> (which is a key reason I chose it), I couldn't get the PCI sound card to work. USB audio input and output both worked fine, but troubleshooting the built-in sound card was an exercise in frustration.</p>
 <p>I think we all take for granted that our laptops can play sound until you find yourself trying to learn something from a YouTube video and have to switch to a different PC or your smartphone.</p>
-<p>Since the machine didn't ship with Ubuntu pre-installed, I was unable to get support from Dell. Look, I get it: successfully supporting millions of consumers (many of them not very tech savvy) is no small feat. If you buy a new car, then completely replace the engine with something else, you can't expect the manufacturer to support it. This appears ot be industry wide, not just at Dell. (Though, I will ask, why bother certifying a PC for Ubuntu if you're not going to support it with that OS? But, I digress...)</p>
-<p>The Pop!_OS and Ubuntu communities are great resources, but I finally gave up after three weeks and sold it on eBay. The shop where I bought the 32 GB RAM kit won't accept returns unless the memory is DOA and I didn't fee like negotiating the restocking fee on the PC, nor create a support incident for the Dell support team to deal with - with so many people working from home now, they are likely overwhelmed. It was easier to just restore the Windows 10 OS factory image and sell it as "New, Open Box."</p>
+<p>Since the machine didn't ship with Ubuntu pre-installed, I was unable to get support from Dell. Look, I get it: successfully supporting millions of consumers (many of them not very tech savvy) is no small feat. If you buy a new car, then completely replace the engine with something else, you can't expect the manufacturer to support it. This appears to be industry wide, not just at Dell. (Though, I will ask, why bother certifying a PC for Ubuntu if you're not going to support it with that OS? But, I digress...)</p>
+<p>The Pop!_OS and Ubuntu communities are great resources, but I finally gave up after three weeks and sold it on eBay. The shop where I bought the 32 GB RAM kit won't accept returns unless the memory is DOA and I didn't feel like negotiating the restocking fee on the PC, nor create a support incident for the Dell support team to deal with - with so many people working from home now, they are likely overwhelmed. It was easier to just restore the Windows 10 OS factory image and sell it as "New, Open Box."</p>
 <p>So, even as I returned to my 13" machine, I was trying to figure out my options. I didn't want to spend a ton of money on a PC that wasn't my daily driver, I wasn't willing to buy a similar machine and hope for a better trackpad and, most importantly, I didn't want to have to wrestle with a PC from any major OEM to get Linux running on it. Even users of Thinkpads, which are famously great for supporting Linux across the product line, were having issues getting Ubuntu to run properly on models that I would have considered.</p>
 <p>I wanted a Linux machine with hardware support out of the box, but any device with Linux pre-installed from a major PC OEM is typically sold as a "<a href="#mcetoc_1e5km0bsc0" title="Footnote">Developer Edition*</a>," which means it's <a href="https://www.dell.com/en-us/work/shop/overview/cp/linuxsystems" target="_blank" rel="noopener noreferrer" title="Dell Project Sputnik">built - and priced - for business use</a>.</p>
 <p><img class="post__image post__image--center" src="https://gadgetboy.org/media/posts/43/System76-System76_Logo_Blue-by_Kate_Hazen_of_System76.jpg" alt="System76 Branded Desktop Image" width="640" height="360"></p>
@@ -60,7 +60,7 @@
 <h3 id="mcetoc_1e62ogl9jg">First Impressions</h3>
 <p>I'm not going to lie: when I was exploring Linux distros, one of the reasons I was attracted to Pop!_OS was the brand messaging, desktop graphics and overall user experience of the OS. I found their packaging to be consistent with that and right on-brand. </p>
 <p>In what appears to be taking a queue from Apple, System76 ships the device secured in a reusable plastic-and-cardboard mechanism. It's worth keeping around in case you need to ship your machine for service or maybe want to sell it in the future.</p>
-<p>The envelope containing System76 and Pop!_OS stickers were a nice touch.</p>
+<p>The envelope containing System76 and Pop!_OS stickers was a nice touch.</p>
 <div class="gallery"   >
 <figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_closed_box.jpg" ><img src="https://gadgetboy.org/media/posts/43/gallery/system76_closed_box-thumbnail.jpg" alt="System76 sealed box" width="768" height="459"></a>
 <figcaption class="gallery-description">System76 sealed box</figcaption>
@@ -115,7 +115,7 @@
 <p>The Lemur Pro is as powerful as the current MacBook Pro but weighs <em>less.</em> <strong>I</strong>t's also ligher than the current MacBook Air and even ligher than the amazing XPS 13" 7391 that I use every day at work. (Though, to be fair, the 7391 is a 2-in-1 and has some added weight due to the touchscreen and sophisticated hinge mechanism.)</p>
 <p>The Lemur Pro is so light that I can load both my work machine <em>and</em> my personal machine into my backpack and not even realize that I'm carrying two PC's. Even better, both machines can be powered by USC Type-C Power Delivery, so I only have to carry one charger. This will be great for business trips, when I want to work on personal projects after hours or watch movies on the plane.</p>
 <p>The design is the same as what you would expect from any top-tier PC OEM. It has clean lines and relatively modern design touches.</p>
-<p>The biggest and most obvious design decision was the webcam. Rather than increase the size of the bezel, System76 decided to add a small bump above the screen to house the camera and built-in microphone. It's not distracting at all when using the machine, but obviously protrudes by a few millimeters when the lid is closed. I'm hoping that the aluminum chassis will adequately protect it during transit.</p>
+<p>The biggest and most obvious design decision was the webcam. Rather than increase the size of the bezel, System76 decided to add a small bump above the screen to house the camera and built-in microphone. It's not distracting at all when using the machine, but obviously protrudes by a few millimeters when the lid is closed. I'm hoping that the chassis will adequately protect it during transit.</p>
 <p>For some unknown reason, System76 made the decision to place the power button on the right<strong> side</strong> of the machine, not on the keyboard deck. Depending on your perspective, this could be a poor design choice, something to just get used to, or both.</p>
 <p>During my first full day of using the Lemur Pro, I plugged-in a USB Type-C cable with Power Delivery and DisplayPort (which is on the left side) so that I could use it with my <a href="https://amzn.to/2K9NA6f" target="_blank" rel="noopener noreferrer" title="Dell U3818DW">38" Dell display</a> to get some work done. Naturally, since the machine is so light, I braced it with my right hand and accidentally pushed the power button, putting it into Suspend mode. I definitely need to remember that in the future.</p>
 <h3 id="mcetoc_1e61vbms51">Materials &amp; Build Quality</h3>
@@ -132,7 +132,7 @@
 <p class="msg msg--info">Even though it would be nice to have a larger screen on-the-go, I recently discovered that the tradeoffs of a 15.6" machine just aren't worth it - especially the keyboard layout.</p>
 <p class="msg msg--info">I don't understand why just about every PC OEM feels the need to fill the keyboard deck of larger devices with a number pad, shifting the trackpad and keyboard to the left. It's an awkward experience. Instead of the number pad, why not center the keyboard and add front-firing speakers on each side or a maybe just a fingerprint reader that actually works more than 20% of the time? Anyone who really needs a number pad can get one from <a href="https://amzn.to/2XENFXu" target="_blank" rel="noopener noreferrer" title="USB Numbers Pads on Amazon.com">Amazon for less than $20</a>.</p>
 <h4 id="mcetoc_1e62rs7enh">Trackpad</h4>
-<p>The trackpad on this machine is excellent. Is it as good as a MacBook Pro or a Dell XPS? Not quite, but it's pretty damn close. The fact that it doesn't have buttons is a real plus. I'm not a fan of physical buttons on a trackpad.</p>
+<p>The trackpad on this machine is excellent. Is it as good as a MacBook Pro or a Dell XPS? Not quite, but it's pretty damn close. The fact that it doesn't have buttons is a real plus.</p>
 <h4 id="mcetoc_1e62nfi3mf">Power Supply</h4>
 <p>From the perspective of portability, the power supply is great. It's relatively small and lightweight and gets the job done. And while System76 definitely considered the needs of road warriors and hallway walkers with the Lemur Pro's great battery life, they missed the mark with the power supply. The total length of the cables is so ridiculously short, it's almost comical. I'm going to have carry an extension cord or find a longer main lead with the right connector for the power supply.</p>
 <p>Everything else about the device is so well thought-out that this decision left me scratching my head. </p>
@@ -311,19 +311,19 @@
 <p>Generally, no.</p>
 <p>While I do some light video production, photo editing and vector art production, I use my machine mostly for office work, Raspberry Pi and other SBC projects, managing my home lab and testing home automation scripts. </p>
 <p>But I want to <strong>fly</strong> through my workflows. When I'm in The Zone, I don't want to deal with a lagging OS. Having excess memory ensures that the OS almost never has to write anything to the swap partition on the disk. (Also referred to as "Virtual RAM." <a href="https://en.wikipedia.org/wiki/Virtual_memory" target="_blank" rel="noopener noreferrer" title="Virtual RAM on Wikipedia">Wikipedia</a>)</p>
-<p>Plus, maxing out the RAM ensures that the machine will have a long service life without much effort and the additional memory improves its resale value should I decide to upgrade to a new machine in the future.</p>
+<p>Plus, maxing out the RAM ensures that the machine will have a long service life without much effort, and the additional memory improves its resale value should I decide to upgrade to a new machine in the future.</p>
 <h4 id="mcetoc_1e61vcfpk5">Storage</h4>
 <p>My preferred configuration is to have a small (&lt;250 GB) NVMe drive for the OS and a second, larger NVMe drive for my /home directory and files. However, after lots of shopping around, it doesn't appear that the smaller NVMe drives even come close to the performance of those that are 500 GB or larger, which is an important consideration for the OS drive.</p>
 <p>With that in mind, I selected the smallest, fastest NVMe drive available during system configuration for both the OS and my files - <a href="https://amzn.to/2VchDk4" target="_blank" rel="noopener noreferrer" title="Samsung EVO Pro">a 512 GB Samsung EVO Pro</a>. I could have gotten a 1 TB drive with the same read/write specs, but most of my larger media files are stored on NAS on my LAN, and in the cloud. I can upgrade to a larger drive or add a second drive at a later time, if I need it.</p>
 <h4 id="mcetoc_1e61vcm076">Networking</h4>
 <p>The Lemur Pro uses the onboard Intel networking controller with the 802.11ac spec and speeds up to 867 Mbps. I have other machines with 802.11ac but this feels much snappier, perhaps because web pages render so quickly. File transfers over SAMBA, FTP, NFS and HTTPS also seemed very fast.</p>
 <h4 id="mcetoc_1e61vlsac9">Battery Life</h4>
-<p>If you've read this far, you know that I am not a professional PC reviewer so I had to improvise on the evaluation of battery life.</p>
+<p>If you've read this far, you know that I am not a professional PC reviewer so I had to improvise on the battery life evaluation.</p>
 <p>Here's what I did:</p>
 <p>I unplugged the machine from the power supply and spent 4 hours writing this post, responding to email, watching YouTube tutorials on how to optimize OpenMediaVault and NextCloud, downloading software, and connecting with friends and family on social media.</p>
 <p>I didn't do any video rendering or stream a ton of HD video, and I didn't compile any code. Basically, I just used it like an average consumer.</p>
 <p>At the end of the 4 hours, my battery was at 91%. Pop!_OS indicated that I still had over 20 hours of use.</p>
-<p>It's not a scientific benchmark, but it should give you some idea about the battery life of the Lemur Pro. I'd say, it's remarkable.</p>
+<p>It's not a scientific benchmark, but it should give you some idea about the battery life of the Lemur Pro: it's remarkable.</p>
 <figure class="post__image post__image--center" ><img src="https://gadgetboy.org/media/posts/43/power_after_4_hours.png" alt="Power Indicator after 4 hours" width="327" height="445">
 <figcaption >Power indicator after 4 hours of use.</figcaption>
 </figure>
@@ -338,7 +338,7 @@
 <li>Solid keyboard with good key travel</li>
 <li>Ample ports</li>
 <li>USB Type-C Power Delivery with Display Port</li>
-<li>Powerful CPU that runs cool</li>
+<li>Powerful CPU that runs cool during general use</li>
 <li>Quiet fans</li>
 <li>Excellent trackpad performance</li>
 <li>Pop!_OS (of course)</li>
