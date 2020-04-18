@@ -3,7 +3,7 @@
     <title>Ad Hoc</title>
     <link href="https://gadgetboy.org/feed.xml" rel="self" />
     <link href="https://gadgetboy.org" />
-    <updated>2020-04-18T06:49:30-05:00</updated>
+    <updated>2020-04-18T08:21:36-05:00</updated>
     <author>
         <name>John A. Federico</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://gadgetboy.org/review-system76-lemur-pro/"/>
         <id>https://gadgetboy.org/review-system76-lemur-pro/</id>
 
-        <updated>2020-04-18T06:49:19-05:00</updated>
+        <updated>2020-04-18T07:45:22-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/43/lemur.jpg" alt="Just a Lemur." />
@@ -112,30 +112,30 @@
 </figure>
 </div>
 <h3 id="mcetoc_1e61vbefv0">Weight &amp; Design</h3>
-<p>The Lemur Pro is as powerful as the current MacBook Pro but weighs <em>less.</em> <strong>I</strong>t's also ligher than the current MacBook Air and even ligher than the amazing XPS 13" 7391 that I use every day at work. (Though, to be fair, the 7391 is a 2-in-1 and has some added weight due to the touchscreen and sophisticated hinge mechanism.)</p>
+<p>The Lemur Pro is as powerful as the current MacBook Pro but weighs <em>less.</em> <strong>I</strong>t's also ligher than the current MacBook Air and even ligher than the amazing <a href="https://www.dell.com/en-us/shop/dell-laptops/new-xps-13-2-in-1-laptop/spd/xps-13-7390-2-in-1-laptop" target="_blank" rel="noopener noreferrer" title="XPS 7391 on Dell.com">XPS 13" 7391</a> that I use every day at work. (Though, to be fair, the 7391 is a 2-in-1 and has some added weight due to the touchscreen and sophisticated hinge mechanism.)</p>
 <p>The Lemur Pro is so light that I can load both my work machine <em>and</em> my personal machine into my backpack and not even realize that I'm carrying two PC's. Even better, both machines can be powered by USC Type-C Power Delivery, so I only have to carry one charger. This will be great for business trips, when I want to work on personal projects after hours or watch movies on the plane.</p>
-<p>The design is the same as what you would expect from any top-tier PC OEM. It has clean lines and relatively modern design touches.</p>
+<p>The design is the same as what you would expect from any top-tier PC OEM. It has clean lines and relatively modern design touches. The System76 logo on the lid appears to be laser etched.</p>
 <p>The biggest and most obvious design decision was the webcam. Rather than increase the size of the bezel, System76 decided to add a small bump above the screen to house the camera and built-in microphone. It's not distracting at all when using the machine, but obviously protrudes by a few millimeters when the lid is closed. I'm hoping that the chassis will adequately protect it during transit.</p>
 <p>For some unknown reason, System76 made the decision to place the power button on the right<strong> side</strong> of the machine, not on the keyboard deck. Depending on your perspective, this could be a poor design choice, something to just get used to, or both.</p>
 <p>During my first full day of using the Lemur Pro, I plugged-in a USB Type-C cable with Power Delivery and DisplayPort (which is on the left side) so that I could use it with my <a href="https://amzn.to/2K9NA6f" target="_blank" rel="noopener noreferrer" title="Dell U3818DW">38" Dell display</a> to get some work done. Naturally, since the machine is so light, I braced it with my right hand and accidentally pushed the power button, putting it into Suspend mode. I definitely need to remember that in the future.</p>
 <h3 id="mcetoc_1e61vbms51">Materials &amp; Build Quality</h3>
-<p>At the moment, System76 doesn't indicate what materials are used to build the Lemur Pro chassis on its web site. While looking at the photos during the buying process, I guessed that it was a nice, Thinkpad-like plastic or some kind of aluminum or magnesium alloy.</p>
+<p>At the time this post is written, System76 doesn't indicate what materials are used to build the Lemur Pro chassis on its web site. While looking at the photos during the buying process, I guessed that it was a nice, Thinkpad-like plastic or some kind of aluminum or magnesium alloy.</p>
 <p>After it arrived, I realized it was metal but didn't know what kind, so I asked the System76 support team and they responded almost immediately:</p>
 <blockquote>
 <p class="msg msg--highlight ">Hello John,<br><br>Glad you're enjoying the Lemur Pro! The chassis is made out of Magnesium-Aluminum alloy: 9% Aluminum, 90% Magnesium, 1% other material. (Before you ask, I do not know what the "other material" is; I assume our supplier simply includes that as a tolerance.) Please let us know if you have any other questions! --Jacob</p>
 </blockquote>
 <p><em>Thanks, Jacob.</em></p>
-<p>The Magnesium-Aluminum alloy is smooth to the touch and in my short time using it, appears to reject fingerprints. (Though, System76 includes a microfiber cloth with the system, so perhaps this is a premature observation.) It has barely noticeable, reflective flecks of material that only appear in the right light and from the right perspective. This may be a conscious design choice or just a natural charateristic of the alloy. Perhaps those flecks are the "1% other material".</p>
+<p>The Magnesium-Aluminum alloy is smooth to the touch and in my short time using it, appears to reject fingerprints. (Though, System76 includes a microfiber cloth with the system, so perhaps this is a premature observation.) It has tiny reflective flecks of material that only appear in the right light and from the right perspective. This may be a conscious design choice or just a natural charateristic of the alloy. Those flecks might also be the "1% other material" but I'm just guessing.</p>
 <p>Fit and finish are excellent with no visible gaps or imperfections. There is no flexing of the chassis or the keyboard deck - it's a solid typing experience. In fact, it's one of the best keyboards I've used in a long time, almost on par with my 2015 MacBook Pro.</p>
 <p>The bottom panel flexes a wee bit but it doesn't detract from the overall build quality of the machine. I've only noticed it when I close the lid and grip the PC with one hand.</p>
-<p>The 14.1" matte finish, 1080p screen is bright, crisp and seemingly color accurate. The Lemur Pro's screen is pleasingly larger than my 13" devices and the form factor is just about perfect.</p>
+<p>The 14.1" 1080p screen has a matte finish and is bright, crisp and seemingly color accurate. The Lemur Pro's screen is pleasingly larger than my 13" devices and the form factor is just about perfect.</p>
 <p class="msg msg--info">Even though it would be nice to have a larger screen on-the-go, I recently discovered that the tradeoffs of a 15.6" machine just aren't worth it - especially the keyboard layout.</p>
 <p class="msg msg--info">I don't understand why just about every PC OEM feels the need to fill the keyboard deck of larger devices with a number pad, shifting the trackpad and keyboard to the left. It's an awkward experience. Instead of the number pad, why not center the keyboard and add front-firing speakers on each side or a maybe just a fingerprint reader that actually works more than 20% of the time? Anyone who really needs a number pad can get one from <a href="https://amzn.to/2XENFXu" target="_blank" rel="noopener noreferrer" title="USB Numbers Pads on Amazon.com">Amazon for less than $20</a>.</p>
 <h4 id="mcetoc_1e62rs7enh">Trackpad</h4>
 <p>The trackpad on this machine is excellent. Is it as good as a MacBook Pro or a Dell XPS? Not quite, but it's pretty damn close. The fact that it doesn't have buttons is a real plus.</p>
 <h4 id="mcetoc_1e62nfi3mf">Power Supply</h4>
 <p>From the perspective of portability, the power supply is great. It's relatively small and lightweight and gets the job done. And while System76 definitely considered the needs of road warriors and hallway walkers with the Lemur Pro's great battery life, they missed the mark with the power supply. The total length of the cables is so ridiculously short, it's almost comical. I'm going to have carry an extension cord or find a longer main lead with the right connector for the power supply.</p>
-<p>Everything else about the device is so well thought-out that this decision left me scratching my head. </p>
+<p>Everything else about the device is so well thought out that this decision left me scratching my head. </p>
 <h3 id="mcetoc_1e61vbums2">Performance</h3>
 <p>First, let's look at the specs of my particular configuration, outlined in the table below.</p>
 <table >
@@ -268,7 +268,7 @@
 <h4 id="mcetoc_1e61ved6v8">First Boot</h4>
 <p>I chose to capture the unboxing in photos and not video as my other cameras and tripods are in storage at the moment. So, when it came to booting the machine for the first time, I wanted to snap a few photos of the process.</p>
 <p>The Lemur Pro boots so fast that I couldn't even unlock my phone quickly enough to take a picture! In seconds, the machine booted into system setup.</p>
-<p>If you've ever installed Pop!_OS on your machine, the experience of having it installed on a new PC is exactly the same as booting from a live session: select your country, keyboard layout, disk encryption preference, etc. When it's done, it will ask you to create a user after a restart.</p>
+<p>If you've ever installed Pop!_OS on your machine, the experience of having it installed on a new PC is exactly the same as booting from a live session: select your country, keyboard layout, disk encryption preference, etc. When it's done, it will ask you to create a user, after a restart.</p>
 <div class="gallery"   >
 <figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/neofetch.png" ><img src="https://gadgetboy.org/media/posts/43/gallery/neofetch-thumbnail.png" alt="neofetch on my System76 Lemur Pro" width="768" height="435"></a>
 <figcaption class="gallery-description">neofetch on my System76 Lemur Pro</figcaption>
@@ -277,7 +277,7 @@
 <h4 id="mcetoc_1e62eso1da">Processor &amp; GPU</h4>
 <p>The CPU is a 10th Generation Intel i7 processor (an upgrade from the 10th Gen i5 in the base model Lemur Pro) in the "U" spec, which indicates that it's designed for Ultrabooks that require longer battery life. Spec-for-spec, it certainly doesn't pack the horespower of the Dell Inspiron 7591 I gave up.</p>
 <p class="msg msg--info">The Dell Inspiron 7591 has a 9th Gen Intel i7 in the "H" spec (high performance) with 6 cores - 12 threads, 12 MB cache and burst mode up to 4.5 GHz. More importantly, it has a dedicated NVIDIA GPU which helps render video faster. (And improves gaming performance, but I'm not much of a gamer.)</p>
-<p>With that said, the Lemur Pro defintely punches above its weight. It's surprisingly fast for its specs and the onboard Intel GPU works well, powering both the built-in display and my large (3840 x 1600) external display simultaneously. Video playback and video conferences are smooth and consistent.</p>
+<p>With that said, the Lemur Pro defintely punches above its weight. It's surprisingly fast for its specs and the onboard Intel GPU works well, powering both the built-in display and my <a href="https://amzn.to/3cwwFXN" target="_blank" rel="noopener noreferrer" title="Dell U3818DW Curved Display">large (3840 x 1600) external display</a> simultaneously. Video playback and video conferences are smooth and consistent.</p>
 <p>It quickly renders web pages in Firefox, which is typically a small step behind the speed of the Chromium and WebKit rendering engines.</p>
 <p><strong>GeekBench</strong></p>
 <p>Running Geekbench5, the Lemur Pro scored better in Multi-core tests than the Intel 8th Gen U series processor in a Dell Inspiron 7386, but lower in Single-core tests. You can see the full results of the Lemur Pro test <a href="https://browser.geekbench.com/v5/cpu/1817319" target="_blank" rel="noopener noreferrer" title="GeekBench Scores for the System76 Lemur Pro">here</a> and the Dell test <a href="https://browser.geekbench.com/v5/cpu/1717304" target="_blank" rel="noopener noreferrer" title="GeekBench 5 test results for the Dell Inspiron 7386">here</a>.</p>
@@ -305,7 +305,7 @@
 </div>
 <p id="mcetoc_1e643u0b0j"><strong>Thermals</strong></p>
 <p>On a few occasions, the fans spun up like jet engines, then quickly went silent. During those instances, I was installing multiple package updates from Pop!_Shop or running a video conference in Zoom.</p>
-<p>Otherwise, the machine runs quite cool. I can barely feel any excess heat when it's on my lap during general use. I'm sure I might have a different experience if I was rendering a 4K video with compositing while sitting on the couch.</p>
+<p>Otherwise, the machine runs quite cool. I can barely feel any excess heat when it's on my lap during general use. (I'm sure I might have a different experience if I was rendering a 4K video with compositing while sitting on the couch.)</p>
 <h4 id="mcetoc_1e61vcb4s4">RAM</h4>
 <p>Do I really need 40 GB of RAM for a machine that I'm using for hobby projects?</p>
 <p>Generally, no.</p>
@@ -316,9 +316,9 @@
 <p>My preferred configuration is to have a small (&lt;250 GB) NVMe drive for the OS and a second, larger NVMe drive for my /home directory and files. However, after lots of shopping around, it doesn't appear that the smaller NVMe drives even come close to the performance of those that are 500 GB or larger, which is an important consideration for the OS drive.</p>
 <p>With that in mind, I selected the smallest, fastest NVMe drive available during system configuration for both the OS and my files - <a href="https://amzn.to/2VchDk4" target="_blank" rel="noopener noreferrer" title="Samsung EVO Pro">a 512 GB Samsung EVO Pro</a>. I could have gotten a 1 TB drive with the same read/write specs, but most of my larger media files are stored on NAS on my LAN, and in the cloud. I can upgrade to a larger drive or add a second drive at a later time, if I need it.</p>
 <h4 id="mcetoc_1e61vcm076">Networking</h4>
-<p>The Lemur Pro uses the onboard Intel networking controller with the 802.11ac spec and speeds up to 867 Mbps. I have other machines with 802.11ac but this feels much snappier, perhaps because web pages render so quickly. File transfers over SAMBA, FTP, NFS and HTTPS also seemed very fast.</p>
+<p>The Lemur Pro uses the onboard Intel networking controller with the 802.11ac spec and speeds up to 867 Mbps. I have other machines with 802.11ac but this feels much snappier, perhaps because web pages render so quickly. File transfers over SAMBA, SFTP, NFS and HTTPS also seemed very fast.</p>
 <h4 id="mcetoc_1e61vlsac9">Battery Life</h4>
-<p>If you've read this far, you know that I am not a professional PC reviewer so I had to improvise on the battery life evaluation.</p>
+<p>If you've read this far, you know that I am not a professional PC reviewer so I had to improvise the battery life evaluation.</p>
 <p>Here's what I did:</p>
 <p>I unplugged the machine from the power supply and spent 4 hours writing this post, responding to email, watching YouTube tutorials on how to optimize OpenMediaVault and NextCloud, downloading software, and connecting with friends and family on social media.</p>
 <p>I didn't do any video rendering or stream a ton of HD video, and I didn't compile any code. Basically, I just used it like an average consumer.</p>
@@ -412,7 +412,7 @@
             <category term="Internet of Things"/>
             <category term="Home Automation"/>
 
-        <updated>2020-03-13T13:10:17-05:00</updated>
+        <updated>2020-04-18T08:03:29-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/4/sirens.png" alt="Sirens" />
@@ -440,24 +440,24 @@
 <p>It was the <a href="https://amzn.to/35j2rUG" target="_blank" rel="noopener noreferrer" aria-label=" (opens in a new tab)">Ring Retrofit Alarm Kit</a>.</p>
 <p>This magical device lets you connect your existing wired home security system to a <a rel="noopener noreferrer" aria-label=" (opens in a new tab)" href="https://amzn.to/2PgrXED" target="_blank">Ring Alarm Base Station</a>*. From there, you can get professional monitoring  over the internet – with LTE cellular backup – and control the entire system via the <a rel="noopener noreferrer" aria-label="Ring mobile app (opens in a new tab)" href="https://apps.apple.com/us/app/ring-always-home/id926252661" target="_blank">Ring mobile app</a>, including arming, disarming, guest access and panic mode.</p>
 <figure class="post__image post__image" ><img src="https://gadgetboy.org/media/posts/4/ring_alarm_mobile_app.jpg" alt="" width="1024" height="697">
-<figcaption >Ring Alarm Mobile App</figcaption>
+<figcaption >Ring Alarm Mobile App (Image Credit: Ring)</figcaption>
 </figure>
 <p>You can also add wireless accessories like <a href="https://amzn.to/34lNr7x" target="_blank" rel="noopener noreferrer" aria-label="motion sensors (opens in a new tab)">motion sensors</a> and <a href="https://amzn.to/36EA0B7" target="_blank" rel="noopener noreferrer" aria-label="keypads (opens in a new tab)">keypads</a>.</p>
 <p>Every component is either battery powered or has battery backup. If, for whatever reason, a thief decides that our home is an attractive target and figures out how to cut the power, the entire system still functions. If said thief decides to cut the internet connection, the system will still send triggers over LTE. (Backup and redundancy are your friends.)</p>
 <p>I installed the <a rel="noopener noreferrer" href="https://amzn.to/2PgrXED" target="_blank">Ring Alarm Base Station</a> before the Retrofit Alarm Kit arrived, which was simple.</p>
 <figure class="post__image post__image" ><img src="https://gadgetboy.org/media/posts/4/ring_base_station.jpg" alt="Ring Alarm Base Station" width="1024" height="683">
-<figcaption >Ring Alarm Base Station</figcaption>
+<figcaption >Ring Alarm Base Station (Image Credit: Ring)</figcaption>
 </figure>
 <p>I hid the base station (which also acts as the primary siren) behind some picture frames on the entertainment center in the living room and added a second <a rel="noopener noreferrer" aria-label="wireless keypad (opens in a new tab)" href="https://amzn.to/36EA0B7" target="_blank">wireless keypad</a> by the backdoor so that I don’t have to run to the front of the house to disarm the system when my 14-year-old Cocker Spaniel needs to go outside in the middle of the night. (She’s a senior dog. I have to move quickly to get her out or things can get messy.)</p>
 <figure class="post__image post__image" ><img src="https://gadgetboy.org/media/posts/4/ring_keypad.jpg" alt="Ring Alarm Keypad" width="1024" height="683">
-<figcaption >Ring Alarm Keypad</figcaption>
+<figcaption >Ring Alarm Keypad (Image Credit: Ring)</figcaption>
 </figure>
 <p>Next, I added a <a rel="noopener noreferrer" aria-label=" (opens in a new tab)" href="https://shop.ring.com/collections/accessories/products/dome-siren" target="_blank">Dome Siren</a> to ensure that anyone on the second floor can also hear the alarm and a second <a rel="noopener noreferrer" aria-label=" (opens in a new tab)" href="https://amzn.to/2E9wBhk" target="_blank">motion sensor</a> to cover the front and garage doors.</p>
 <figure class="post__image post__image" ><img src="https://gadgetboy.org/media/posts/4/dome_siren.jpg" alt="" width="1024" height="795">
-<figcaption >Dome Siren for Ring</figcaption>
+<figcaption >Dome Siren for Ring (Image Credit: Ring)</figcaption>
 </figure>
 <figure class="post__image post__image" ><img src="https://gadgetboy.org/media/posts/4/ring_motion_sensor.jpg" alt="Ring Motion Sensor" width="1024" height="683">
-<figcaption >Ring Motion Sensor</figcaption>
+<figcaption >Ring Motion Sensor (Image Credit: Ring)</figcaption>
 </figure>
 <h2 id="mcetoc_1e34v4h1n0">Truly Alarming</h2>
 <p>While I’m pretty comfortable with most tech, I had a momentary loss of confidence when reading the product page for the Retrofit Kit on Ring.com and opted for professional installation via <a rel="noopener noreferrer" aria-label=" (opens in a new tab)" href="https://www.ontechsmartservices.com/" target="_blank">OnTech</a>.</p>
@@ -479,6 +479,7 @@
 <p>The professional monitoring from Ring is half the cost of monitoring from my existing service provider – and I didn’t have to pay extra for the cellular hardware. The purchase of the Ring products will almost pay for themselves in the <s>first</s> second year and the system includes all the convenience we’ve been waiting for.</p>
 <p>I’ll unload the old system on eBay or Facebook Marketplace.</p>
 <hr class="wp-block-separator">
+<h4 id="mcetoc_1e66m4aml0">Footnotes</h4>
 <p>*Only 8 zones are supported.</p>
 <p>**If you don’t have an Echo device, you can purchase <a rel="noopener noreferrer" aria-label="a sensor that will listen for your smoke or CO alarms (opens in a new tab)" href="https://amzn.to/35l5LyL" target="_blank">a sensor that will listen for your smoke or CO alarms</a> and send the appropriate trigger to the monitoring station.</p>
             ]]>
@@ -596,7 +597,7 @@
             <category term="Home Automation"/>
             <category term="Gadgets"/>
 
-        <updated>2020-03-13T13:09:30-05:00</updated>
+        <updated>2020-04-18T08:19:55-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/7/rosie-the-jetsons-free-vector-800x566.jpg" alt="Rosie!" />
@@ -629,10 +630,10 @@
 <h2 id="mcetoc_1e368b3950">Navigation</h2>
 <p>There are basically two types of navigation: the random, bumping-around-the-house-until-it’s-clean type, and the more intelligent, S-patterned type.</p>
 <p>Inexpensive robot vacuums will basically just bounce off of objects around your home until its onboard software determines that it has covered the area it’s supposed to clean. There’s nothing wrong with this approach, but in larger homes, it can take a long time, especially since it will vacuum over spots it has already cleaned until it has completely covered the floor. This approach also makes it more likely that the robot needs to return to the dock to recharge during a session, extending the completion time even further.</p>
-<p>Also, as part of any navigation, you’ll want to be able to block the vacuum from going to certain places like, say, your kids playroom or keeping the vacuum from falling down stairs. Inexpensive vacuums can do this but they usually require the placement of some sort of signalling tape that you place around your home. It’s not the most attractive option.</p>
+<p>Also, as part of any navigation system, you’ll want to be able to block the vacuum from going to certain places like, say, your kids playroom or keeping the vacuum from falling down stairs. Inexpensive vacuums can do this but they usually require the placement of some sort of signalling tape that you place around your home. It’s not the most attractive option.</p>
 <p>If you want to clean larger spaces more quickly, you need more advanced navigation. That’s where the S-patterned approach comes in.</p>
 <p>The first time this type of vacuum goes about its business, it will behave more-or-less like the navigation described above. After that, it has captured a map of your home in its onboard software and that’s where things get interesting – and faster.</p>
-<p>Once the robot knows the basic layout of your home, it will begin to vacuum floors in a regular back-and-forth motion (sometimes referred to as an S-pattern) until it has reached the end of the room, then it will switch to another room and repeat the process until all of your designated floors are clean.</p>
+<p>Once the robot knows the basic layout of your home, it will begin to vacuum floors in a regular back-and-forth motion until it has reached the end of the room, then it will switch to another room and repeat the process until all of your designated floors are clean.</p>
 <p>After researching robot vacuums (and watching <em>way</em> too many Vacuum Wars videos) I decided that this type of navigation was the best option for us.</p>
 <p>When the <a href="https://amzn.to/2rhVDYI">Roborock S5 </a>went on sale (and I had a bunch of Amazon affiliate earnings banked) I made the purchase.</p>
 <h2 id="mcetoc_1e368b3951">Meet Rosie</h2>
@@ -652,20 +653,20 @@
 <p>What does Xiaomi (the manufacturer) do with this data? Is it shared with anyone? Do employees have access to it? Does it know my location?</p>
 <p>I decided to find out.</p>
 <h2 id="mcetoc_1e368b3952"><a href="https://cnbj1.fds.api.xiaomi.com/html/en/mihome_use_agreement.html">Terms of Service</a></h2>
-<p>It’s pretty much what you’d expect, except for a few concerning items.</p>
+<p>The Terms of Service are pretty much what you’d expect, except for a few concerning items.</p>
 <p><code>5.5. Xiaomi specifically brings to the User's attention that, 
 in order to protect the company's business development and right to make
  adjustments, Xiaomi has the right to modify or suspend the services at 
 any time without notice to the User and without any liability to the 
 User or any third party.</code></p>
-<p>This means that if Xiaomi ever decides to end the service, I’m SOL. Rosie becomes a door stop.</p>
+<p class="msg msg--highlight ">This means that if Xiaomi ever decides to end the service, I’m SOL. Rosie becomes a door stop.</p>
 <p><code>VII. Amendment</code></p>
 <p><code>7.1. Xiaomi has the right to amend the terms of this Agreement 
 when necessary, and any such amended terms will be published on relevant
  web pages. If the User does not agree with the amended terms, the User 
 shall cancel the service. The User's continuing to use the service 
 constitutes acceptance of the amended terms of the Agreement.</code></p>
-<p>Xiaomi reserves the right to amend the user agreement at any time. It’s up to me to monitor this agreement for amendments.</p>
+<p class="msg msg--highlight ">Xiaomi reserves the right to amend the user agreement at any time. It’s up to me to monitor this agreement for amendments.</p>
 <p><code>7.2. Xiaomi and the Partner have the right to modify or change 
 the paid services provided, the charging criteria, charging method, 
 service charges and service terms according to their needs. When 
@@ -674,13 +675,13 @@ either now or in the future. If the User refuses to pay such fees, the
 User will be unable to continue using relevant services after the new 
 charge begins. Xiaomi and its Partner will do their utmost to notify the
  User of any amendments or changes by email or other means.</code></p>
-<p>Things that were once free may become premium (paid) services. If I prefer not to pay these fees, Rosie becomes a door stop.</p>
+<p class="msg msg--highlight ">Things that were once free may become premium (paid) services. If I prefer not to pay these fees, Rosie becomes a door stop.</p>
 <p><code>VIII. Applicable Law and Dispute Resolution</code></p>
 <p><code>8.1. The validity and interpretation of this Agreement shall be
  governed by the laws of the Mainland of the People's Republic of China.
  In the absence of relevant legal provisions, international business 
 practices and/or business practices may be used as references.</code></p>
-<p>Do I feel like Xiaomi has breached this agreement or is at fault for something? I’ll have to visit Mainland China and file a suit in their court system.</p>
+<p class="msg msg--highlight ">Do I feel like Xiaomi has breached this agreement or is at fault for something? I’ll have to visit Mainland China and file suit in their court system.</p>
 <h2 id="mcetoc_1e368b3953"><a href="https://cnbj1.fds.api.xiaomi.com/html/en/mihome_privacy_policy.html">Privacy Policy</a></h2>
 <p><code>What information is collected, and how we use it</code></p>
 <p><code>Types of information collected</code></p>
@@ -692,18 +693,18 @@ your device, model name, and network operator. We may also collect
 information about the device associated with your account. For example, 
 MAC address, DID, network  status of the device (IP/network signal), and
  the version of your firmware.</code></p>
-<p>Xiaomi collects just about everything that it can about my smartphone or tablet.</p>
+<p class="msg msg--highlight ">Xiaomi collects just about everything that it can about my smartphone or tablet.</p>
 <p><code>Information we designate that is about you: We may collect and use content such as information related to your Xiaomi account.</code></p>
 <p><code>Location information (only for specific services/ 
 functionalities): various types of information on your location. For 
 example, region, country code, city code, mobile network code, mobile 
 country code, cell identity, district name, longitude and latitude 
 information, time zone settings, language settings.</code></p>
-<p>…and collects just about everything related to my location.</p>
+<p class="msg msg--highlight ">…and collects just about everything related to my location.</p>
 <p><code>Other information: environmental characteristics value (ECV) 
 (i.e. value generated from Xiaomi Account ID, phone device ID, connected
  Wi-Fi ID and location value).</code></p>
-<p>And some sort of algorithmic identifier based on all of the above.</p>
+<p class="msg msg--highlight ">And creates some sort of algorithmic identifier based on all of the above.</p>
 <p><code>How this personal information can be used</code></p>
 <p><code>Direct marketing</code></p>
 <p><code>We may use your name, phone number, email address, Xiaomi or Mi
@@ -720,11 +721,11 @@ email communications you may opt-out by following the unsubscribe link
 located at the bottom of each communication. We will not transfer your 
 personal data to our business partners for use by our business partners 
 in direct marketing.</code></p>
-<p>They may deliver marketing messages, either directly from Xiaomi or “Business Partners.” It’s not clear if they share personal information with these partners to deliver the message or if the messages are sent through Xiaomi’s services.</p>
-<p>Here’s the important stuff.</p>
+<p class="msg msg--highlight ">They may deliver marketing messages, either directly from Xiaomi or “Business Partners.” It’s not clear if they share personal information with these partners to deliver the message or if the messages are sent through Xiaomi’s services.</p>
+<p class="msg msg--highlight ">Here’s the important stuff.</p>
 <p><code>With whom we share your information?</code></p>
 <p><code>We do not sell any personal information to third parties.</code></p>
-<p>So far, so good…</p>
+<p class="msg msg--highlight ">So far, so good…</p>
 <p><code>We may disclose your personal information to third parties (as 
 defined below) in order to provide products or services that you have 
 requested.</code></p>
@@ -741,7 +742,7 @@ obligations to comply with applicable local data protection laws. Xiaomi
  will contractually ensure compliance by any Third Party Service 
 Providers with the privacy standards that apply to them in your home 
 jurisdiction.</code></p>
-<p>It looks like they won’t share personal information without explicit consent and will obligate compliance of any third-parties with whom they share the information.</p>
+<p class="msg msg--highlight ">It looks like they won’t share personal information without explicit consent and will obligate compliance of any third-parties with whom they share the information.</p>
 <p><code>Sharing with our group and third-party service provider</code></p>
 <p><code>In order to operate successfully and provide you with the full 
 functionality of our products and services, We may disclose your 
@@ -759,7 +760,7 @@ applications on our devices, we may share your IP address with third
 parties in order to provide you with some of the services you requested.
  If you would no longer wish to allow us to share this information, 
 please contact us by sending an email to privacy@xiaomi.com.</code></p>
-<p>As per GDPR and CCPA requirements they call out the use of sub-processors.</p>
+<p class="msg msg--highlight ">As per GDPR and CCPA requirements they call out the use of sub-processors.</p>
 <p><code>Sharing information with our group's ecosystem companies</code></p>
 <p><code>Xiaomi works with a group of very forward-thinking companies. 
 Together, they form the Xiaomi Ecosystem. Xiaomi Ecosystem companies are
@@ -780,7 +781,7 @@ acquisition, or sale of all or part of its assets, we will notify you of
  any change to the ownership of, use of, or any of the choices you have 
 regarding your personal information by email and/or by posting a notice 
 on our website.</code></p>
-<p>…but they may share my personal information with “Xiaomi Ecosystem Companies.” Regardless of ownership structure, these are companies with whom I have not given explicit permission to receive and use my personal information.</p>
+<p class="msg msg--highlight ">…but they may share my personal information with “Xiaomi Ecosystem Companies.” Regardless of ownership structure, these are companies with whom I have not given explicit permission to receive and use my personal information.</p>
 <p><code>Sharing of information with others</code></p>
 <p><code>Xiaomi may disclose your personal information to others without further consent when required under applicable law.</code></p>
 <p><code>Information not requiring consent</code></p>
@@ -796,7 +797,7 @@ laws (to, for example, comply with a subpoena). We may also disclose
 your information without your consent if we believe in good faith that 
 it must be disclosed in order to protect our rights, your safety, or the
  safety of others; investigate fraud; or respond to government requests.</code></p>
-<p>If law enforcement wants to know if my robot vacuum committed a crime, I’m fine with it.</p>
+<p class="msg msg--highlight ">If law enforcement wants to know if my robot vacuum committed a crime, I’m fine with it.</p>
 <p><code>Retention policy</code></p>
 <p><code>We retain information we collect about you as long as it is 
 still needed for the purposes we obtained it or as long as it is needed 
@@ -810,7 +811,7 @@ archiving purposes in the public interest, scientific or historical
 research purposes or statistical purposes according to the applicable 
 laws, the data can be further retained by Xiaomi even if the further 
 processing is incompatible with original purposes.</code></p>
-<p>Basically, Xiaomi reserves the right to keep personal information on file in perpetuity.</p>
+<p class="msg msg--highlight ">Basically, Xiaomi reserves the right to keep personal information on file in perpetuity.</p>
 <h2 id="mcetoc_1e368b3954">Summary</h2>
 <p>In the final analysis, I’m happy with the Roborock S5 during the short time that I’ve owned it, but I’m not terribly excited by the ambiguity of the personal information protections.</p>
 <p>A device of this type is wonderfully convenient, but it opens up a huge can of proverbial worms. We’re no longer just concerned about simple data like name, email address and telephone number – we’re now concerned with the entire layout of a home, its size and contents.</p>
