@@ -3,7 +3,7 @@
     <title>Ad Hoc</title>
     <link href="https://gadgetboy.org/feed.xml" rel="self" />
     <link href="https://gadgetboy.org" />
-    <updated>2020-04-18T09:13:39-05:00</updated>
+    <updated>2020-04-18T17:20:47-05:00</updated>
     <author>
         <name>John A. Federico</name>
     </author>
@@ -937,7 +937,7 @@ processing is incompatible with original purposes.</code></p>
         <id>https://gadgetboy.org/a-tesla-road-trip/</id>
             <category term="Tesla"/>
 
-        <updated>2020-03-11T21:48:48-05:00</updated>
+        <updated>2020-04-18T09:21:53-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/11/tesla_road_trip_sante_fe.png" alt="" />
@@ -968,7 +968,7 @@ processing is incompatible with original purposes.</code></p>
 <p>Again, this was a mistake.</p>
 <p>ABRP indicated that we could travel from Amarillo, TX to Sweetwater, TX and arrive with a 14% SoC. Based on my earlier experience, I knew this wasn’t going to be accurate. I worked the problem and came up with a solution: we stopped for dinner at the Overton Hotel in Lubbock where they had four Tesla Destination Chargers.</p>
 <p>We charged for almost 2.5 hours while we had a nice, leisurely dinner and added about 110 miles of range.</p>
-<p>We arrived at our hotel (where the Supercharger was*) in Sweetwater with plenty of charge to spare.</p>
+<p>We arrived at our hotel (<a href="#mcetoc_1e66qi1dh0" title="Footnotes">where the Supercharger was*</a>) in Sweetwater with plenty of charge to spare.</p>
 <p>Finally, after leaving Sweetwater for Austin, we had a similar scare. We were traveling at the speed limit (75 MPH in Texas) when we received a warning: “Reduce speed to below 75 MPH to arrive at destination.” This is Tesla’s polite way of saying, “Yo! You are going to have to call a flatbed truck to take you to the nearest Supercharger if you don’t conserve your battery.”</p>
 <p>After dropping to 75 MPH, I received the same warning, indicating that I should travel below 60 MPH.</p>
 <p>The car indicated that we would arrive with 9% SoC and as you would expect, I didn’t want to risk it. We ended up driving further South to the Supercharger in Junction, TX where we grabbed a snack and charged to 90% SoC before heading to Austin. It added about an hour to the trip but we were all more relaxed (and cool, since we could run the AC without concern) so it was worth it.</p>
@@ -984,6 +984,8 @@ processing is incompatible with original purposes.</code></p>
 <p>I have a Long Range Model 3 and I could barely make it between Superchargers on my route. A Standard Range Model 3 would never have made it. (We need more Superchargers, Elon!) Granted, your route and destination matters – we traveled through the wide expanse of West Texas to get to New Mexico – so it might be different for other destinations.</p>
 <h3 id="mcetoc_1e36a7jvd8">I would do it again.</h3>
 <p>It was fun but more importantly, I really can’t drive an ICE car anymore. I find it cumbersome. I will drive my Tesla everywhere, range permitting.</p>
+<hr>
+<h4 id="mcetoc_1e66qi1dh0">Footnotes</h4>
 <p>* Tesla must have cut a nice deal with Holiday Inn as most of the Superchargers we encountered were in Holiday Inn/Express parking lots. Learning what I did on this trip, I will always choose the hotel with the Supercharger, event if it costs a few dollars more. Score for Holiday Inn.</p>
             ]]>
         </content>
