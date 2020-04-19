@@ -3,7 +3,7 @@
     <title>Ad Hoc</title>
     <link href="https://gadgetboy.org/feed.xml" rel="self" />
     <link href="https://gadgetboy.org" />
-    <updated>2020-04-18T17:20:47-05:00</updated>
+    <updated>2020-04-19T07:48:28-05:00</updated>
     <author>
         <name>John A. Federico</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://gadgetboy.org/review-system76-lemur-pro/"/>
         <id>https://gadgetboy.org/review-system76-lemur-pro/</id>
 
-        <updated>2020-04-18T07:45:22-05:00</updated>
+        <updated>2020-04-19T07:48:19-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/43/lemur.jpg" alt="Just a Lemur." />
@@ -322,7 +322,7 @@
 <p>Here's what I did:</p>
 <p>I unplugged the machine from the power supply and spent 4 hours writing this post, responding to email, watching YouTube tutorials on how to optimize OpenMediaVault and NextCloud, downloading software, and connecting with friends and family on social media.</p>
 <p>I didn't do any video rendering or stream a ton of HD video, and I didn't compile any code. Basically, I just used it like an average consumer.</p>
-<p>At the end of the 4 hours, my battery was at 91%. Pop!_OS indicated that I still had over 20 hours of use.</p>
+<p>At the end of the 4 hours, my battery was at 91%. Pop!_OS indicated that I still had over 20 hours of use. The Pop!_OS power management profile was set to "Balanced."</p>
 <p>It's not a scientific benchmark, but it should give you some idea about the battery life of the Lemur Pro: it's remarkable.</p>
 <figure class="post__image post__image--center" ><img src="https://gadgetboy.org/media/posts/43/power_after_4_hours.png" alt="Power Indicator after 4 hours" width="327" height="445">
 <figcaption >Power indicator after 4 hours of use.</figcaption>
