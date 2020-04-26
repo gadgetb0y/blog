@@ -3,7 +3,7 @@
     <title>Ad Hoc</title>
     <link href="https://gadgetboy.org/feed.xml" rel="self" />
     <link href="https://gadgetboy.org" />
-    <updated>2020-04-26T10:37:45-05:00</updated>
+    <updated>2020-04-26T15:05:06-05:00</updated>
     <author>
         <name>John A. Federico</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://gadgetboy.org/protect-your-privacy-with-firefox-containers/"/>
         <id>https://gadgetboy.org/protect-your-privacy-with-firefox-containers/</id>
 
-        <updated>2020-04-26T10:37:34-05:00</updated>
+        <updated>2020-04-26T10:50:01-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/45/shipping_containers_firefox.png" alt="Shipping Containers" />
@@ -47,7 +47,7 @@
 <p>All of these companies use this tactic (called "retargeting" in ad industry parlance) but the worst part about it is not the relevant ads - that's actually a benefit to you - it's the massive amounts of data that these companies gather about you in the process: what sites you visit, when you use a web application (Hello, "Login with Facebook".), what purchases you're considering, what medications you may be taking, any health conditions you may have - the list goes on and on.</p>
 <p>You can do some things to help protect your privacy - use a privacy-respecting search engine like DuckDuckGo, turn on "Do Not Track" in your browser, install ad blockers in your browser - but if you're really serious about preventing data exhaust, the best thing you can do is to use a different web browser for every site you visit.</p>
 <p>Wait. What?! How is that even possible?!</p>
-<p>It's not. There are too many web sites and not enough browsers to use this strategy.</p>
+<p>It's not. There are too many web sites and not enough browsers to use this strategy. Plus, it would be a huge pain in the ass.</p>
 <p>That's where <a href="https://support.mozilla.org/en-US/kb/containers" target="_blank" rel="noopener noreferrer" title="Firefox Multi-Account Containers">Firefox Multi-Account Containers</a> ("Firefox Containers") come to the rescue.</p>
 <h2 id="mcetoc_1e6rbc2um1">Firefox Multi-Account Containers</h2>
 <p>From the Mozilla web site:</p>
@@ -127,7 +127,7 @@
 <p>When I tell people about my use of Firefox Multi-Account Containers, inevitably, I receive questions like, "How long did it take you to set this up?" and "Who has time for all this?"</p>
 <p>Set up is easy - you can follow the instructions I've provided above and be done in 5 minutes or less. However, at the start, you do need to think differently about how you use your browser, but that's a short learning curve.</p>
 <p>Installing Temporary Containers helped me a lot here, since I no longer had to worry about accidentally opening something in a permanent Default container.</p>
-<p>I suggest you give it a try. You'll notice a signficant drop in the number of retargeting ads that you receive and that's key indicator that it's working.</p>
+<p>I suggest you give it a try. You'll notice a signficant drop in the number of retargeting ads that you receive and that's the key indicator that it's working.</p>
 <p>You can always go back to your usual browing habits, if you find the process onerous.</p>
 <h2 id="mcetoc_1e6rd5q7o5">Bonus: Protect Your Privacy on Your Smartphone</h2>
 <p>Firefox on iOS doesn't support add-ons and never will due to Apple's strict security model. On Android, the uBlock Origin and Privacy Badger add-ons can be installed, but not Firefox Multi-Account containers.</p>
