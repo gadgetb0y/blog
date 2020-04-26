@@ -3,7 +3,7 @@
     <title>Ad Hoc</title>
     <link href="https://gadgetboy.org/feed.xml" rel="self" />
     <link href="https://gadgetboy.org" />
-    <updated>2020-04-26T15:05:06-05:00</updated>
+    <updated>2020-04-26T15:24:44-05:00</updated>
     <author>
         <name>John A. Federico</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://gadgetboy.org/protect-your-privacy-with-firefox-containers/"/>
         <id>https://gadgetboy.org/protect-your-privacy-with-firefox-containers/</id>
 
-        <updated>2020-04-26T10:50:01-05:00</updated>
+        <updated>2020-04-26T15:21:03-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/45/shipping_containers_firefox.png" alt="Shipping Containers" />
@@ -31,10 +31,10 @@
 <p>There's just too much personal information and metadata about you collected from too many sources and you have no control over any of it - who has it, how it's used, how it can be combined - nothing. Privacy regulations like <a href="https://en.wikipedia.org/wiki/General_Data_Protection_Regulation" target="_blank" rel="noopener noreferrer" title="GDPR on Wikipedia">GDPR</a> and <a href="https://en.wikipedia.org/wiki/California_Consumer_Privacy_Act" target="_blank" rel="noopener noreferrer" title="CCPA on Wikipedia">CCPA</a> are a step in the right direction, but they won't protect you nearly as much as they claim.</p>
 <p>In the "good old days," (prior to 1995) marketers and other users of personal information were basically limited to credit card data (sold by your credit card company, natch), public records (e.g. the car you own, your address) and consumer research.</p>
 <p>Today, there is a treasure trove of data available about you, your habits and your intentions based solely on your online activity. </p>
-<p>Going forward, the best you can hope for is to prevent further escape of your personal information and metadata into the wild. (Sometimes referred to as "data leakage" or "<a href="https://en.wikipedia.org/wiki/Data_exhaust" target="_blank" rel="noopener noreferrer" title="Data Exhaust on Wikipedia">data exhaust</a>.")</p>
+<p>Going forward, the best you can hope for is to prevent further escape of your personal information and metadata into the wild. (Sometimes referred to as "<a href="https://en.wikipedia.org/wiki/Data_exhaust" target="_blank" rel="noopener noreferrer" title="Data Exhaust on Wikipedia">data exhaust</a>.")</p>
 <p>But how?</p>
 <h2 id="mcetoc_1e6rb816m0">The use (and abuse) of Cookies</h2>
-<p>There are many types strategies and tactics for capturing your personal metadata, but the greatest culprit is probably browser cookies.</p>
+<p>There are many types of strategies and tactics for capturing your personal metadata, but the greatest culprit is probably browser cookies.</p>
 <p><a href="https://en.wikipedia.org/wiki/HTTP_cookie" target="_blank" rel="noopener noreferrer" title="HTTP Cookie on Wikipedia">Cookies</a> were originally created by <a href="https://en.wikipedia.org/wiki/Netscape" target="_blank" rel="noopener noreferrer" title="Netscape on Wikipedia">Netscape</a> in the 1990's for use in their Navigator web browser. Their original design was to uniquely identify internet users to that you could stay logged in to a web site between sessions or to help ecommerce sites keep track of what items are in your shoppping cart.</p>
 <p>Since then, they've been used for a variety of reasons, almost all of which are designed to <strong>track you on the internet</strong>.</p>
 <p>Cross-site tracking cookies are the worst offenders.</p>
@@ -106,10 +106,10 @@
 <p>I use keyboard shortcuts as much as possible. They enable me to accomplish things so much faster than navigating through application menus. So, if you're like me, that means you probably create tabs using "Ctrl + T" on Linux and Windows or "Cmd + T" on a Mac.</p>
 <p>When you do this, you launch a Default tab (and related container) in Firefox. Doing this means that any time you use the Default tab, you're potentially exposing your online activites across sites.</p>
 <h3 id="mcetoc_1e6rbqb7u4">Temporary Containers</h3>
-<p>To solve his problem (and some others, which I'll get into), install the <a href="https://addons.mozilla.org/en-US/firefox/addon/temporary-containers/" target="_blank" rel="noopener noreferrer" title="Temporary Containers Add-on on Mozilla">Temporary Containers</a> add-on. Next, go to the Add-ons menu item in Firefox, find Temporary Containers, select the ellipse menu, then select Preferences. This add-on is very configurable, but you don't need to worry about that. Select the checkbox "Automatic Mode" then close that tab.</p>
+<p>To solve his problem (and some others, which I'll get into), install the <a href="https://addons.mozilla.org/en-US/firefox/addon/temporary-containers/" target="_blank" rel="noopener noreferrer" title="Temporary Containers Add-on on Mozilla">Temporary Containers</a> add-on. Next, go to the Add-ons menu item in Firefox, find Temporary Containers, select the ellipse menu, then select Preferences. This add-on is very configurable, but you don't need to worry about that. Select the checkbox for "Automatic Mode" then close that tab.</p>
 <p>Automatic Mode, as defined by the add-on creator:</p>
 <blockquote>
-<p class="msg msg--info">Instantly reopen new tabs in Temporary Containers. You might lose the first few already typed characters in the address bar when reopening takes too long, but it prevents new tabs from writing and reading cookies in the default container (default) </p>
+<p class="msg msg--info">Instantly reopen new tabs in Temporary Containers. You might lose the first few already typed characters in the address bar when reopening takes too long, but it prevents new tabs from writing and reading cookies in the default container.</p>
 </blockquote>
 <p>Now that the Temporary Containers tab is installed, any time you create a new tab using keyboard shortcuts or use the "+" icon on the toolbar, Firefox will create a new Temporary tab. When you close the tab, all of the cookies that were set in that tab will be deleted, erasing any trace of your visit to that site. </p>
 <p class="msg msg--highlight "><strong>Note:</strong> unlike Private Windows, visits to sites in Temporary Containers will still show up in your browser history.</p>
