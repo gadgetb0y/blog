@@ -3,7 +3,7 @@
     <title>Ad Hoc</title>
     <link href="https://gadgetboy.org/feed.xml" rel="self" />
     <link href="https://gadgetboy.org" />
-    <updated>2020-04-28T10:24:51-05:00</updated>
+    <updated>2020-04-30T18:51:47-05:00</updated>
     <author>
         <name>John A. Federico</name>
     </author>
@@ -158,7 +158,7 @@
         <link href="https://gadgetboy.org/review-system76-lemur-pro/"/>
         <id>https://gadgetboy.org/review-system76-lemur-pro/</id>
 
-        <updated>2020-04-19T09:48:10-05:00</updated>
+        <updated>2020-04-30T18:51:41-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/43/lemur.jpg" alt="Just a Lemur." />
@@ -271,7 +271,7 @@
 <p>The bottom panel flexes a wee bit but it doesn't detract from the overall build quality of the machine. I've only noticed it when I close the lid and grip the PC with one hand.</p>
 <p>The 14.1" 1080p screen has a matte finish and is bright, crisp and seemingly color accurate. The Lemur Pro's screen is pleasingly larger than my 13" devices and the form factor is just about perfect.</p>
 <p class="msg msg--info">Even though it would be nice to have a larger screen on-the-go, I recently discovered that the tradeoffs of a 15.6" machine just aren't worth it - especially the keyboard layout.</p>
-<p class="msg msg--info">I don't understand why just about every PC OEM feels the need to fill the keyboard deck of larger devices with a number pad, shifting the trackpad and keyboard to the left. It's an awkward experience. Instead of the number pad, why not center the keyboard and add front-firing speakers on each side or a maybe just a fingerprint reader that actually works more than 20% of the time? Anyone who really needs a number pad can get one from <a href="https://amzn.to/2XENFXu" target="_blank" rel="noopener noreferrer" title="USB Numbers Pads on Amazon.com">Amazon for less than $20</a>.</p>
+<p class="msg msg--info">I don't understand why just about every PC OEM feels the need to fill the keyboard deck of larger devices with a number pad, shifting the trackpad and keyboard to the left. It's an awkward experience. Instead of the number pad, why not center the keyboard and add front-firing speakers on each side or maybe just a fingerprint reader that <em>actually works</em> more than 20% of the time? Anyone who really needs a number pad can get one from <a href="https://amzn.to/2XENFXu" target="_blank" rel="noopener noreferrer" title="USB Numbers Pads on Amazon.com">Amazon for less than $20</a>.</p>
 <h4 id="mcetoc_1e62rs7enh">Trackpad</h4>
 <p>The trackpad on this machine is excellent. Is it as good as a MacBook Pro or a Dell XPS? Not quite, but it's pretty damn close. The fact that it doesn't have buttons is a real plus.</p>
 <h4 id="mcetoc_1e62nfi3mf">Power Supply</h4>
@@ -413,7 +413,7 @@
 <p>If you've ever installed Pop!_OS on your machine, the experience of having it installed on a new PC is exactly the same as booting from a live session: select your country, keyboard layout, disk encryption preference, etc. When it's done, it will ask you to create a user, after a restart.</p>
 <div class="gallery"   >
 <figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/neofetch.png" ><img src="https://gadgetboy.org/media/posts/43/gallery/neofetch-thumbnail.png" alt="neofetch on my System76 Lemur Pro" width="768" height="435"></a>
-<figcaption class="gallery-description">neofetch on my System76 Lemur Pro</figcaption>
+<figcaption class="gallery-description">neofetch on my System76 Lemur Pro (Image Credit: me)</figcaption>
 </figure>
 </div>
 <h4 id="mcetoc_1e62eso1da">Processor &amp; GPU</h4>
@@ -442,7 +442,7 @@
 </ul>
 <div class="gallery"   >
 <figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/htop.png" ><img src="https://gadgetboy.org/media/posts/43/gallery/htop-thumbnail.png" alt="HTOP on my System76 Lemur Pro" width="768" height="458"></a>
-<figcaption class="gallery-description">HTOP on my System76 Lemur Pro</figcaption>
+<figcaption class="gallery-description">HTOP on my System76 Lemur Pro (Image Credit: me)</figcaption>
 </figure>
 </div>
 <p id="mcetoc_1e643u0b0j"><strong>Thermals</strong></p>
@@ -458,7 +458,7 @@
 <p>My preferred configuration is to have a small (&lt;250 GB) NVMe drive for the OS and a second, larger NVMe drive for my /home directory and files. However, after lots of shopping around, it doesn't appear that the smaller NVMe drives even come close to the performance of those that are 500 GB or larger, which is an important consideration for the OS drive.</p>
 <p>With that in mind, I selected the smallest, fastest NVMe drive available during system configuration for both the OS and my files - <a href="https://amzn.to/2VchDk4" target="_blank" rel="noopener noreferrer" title="Samsung EVO Pro">a 512 GB Samsung EVO Pro</a>. I could have gotten a 1 TB drive with the same read/write specs, but most of my larger media files are stored on NAS on my LAN, and in the cloud. I can upgrade to a larger drive or add a second drive at a later time, if I need it.</p>
 <h4 id="mcetoc_1e61vcm076">Networking</h4>
-<p>The Lemur Pro uses the onboard Intel networking controller with the 802.11ac spec and speeds up to 867 Mbps. I have other machines with 802.11ac but this feels much snappier, perhaps because web pages render so quickly. File transfers over SAMBA, SFTP, NFS and HTTPS also seemed very fast.</p>
+<p>The Lemur Pro uses the onboard Intel networking controller with the 802.11ac spec and speeds up to 867 Mbps. I have other machines with 802.11ac but this feels much snappier, perhaps because web pages render so quickly. File transfers over SAMBA, SFTP, NFS and HTTPS also seem very fast.</p>
 <h4 id="mcetoc_1e61vlsac9">Battery Life</h4>
 <p>If you've read this far, you know that I am not a professional PC reviewer so I had to improvise the battery life evaluation.</p>
 <p>Here's what I did:</p>
@@ -467,7 +467,7 @@
 <p>At the end of the 4 hours, my battery was at 91%. Pop!_OS indicated that I still had over 20 hours of use. The Pop!_OS power management profile was set to "Balanced."</p>
 <p>It's not a scientific benchmark, but it should give you some idea about the battery life of the Lemur Pro: it's remarkable.</p>
 <figure class="post__image post__image--center" ><img src="https://gadgetboy.org/media/posts/43/power_after_4_hours.png" alt="Power Indicator after 4 hours" width="327" height="445">
-<figcaption >Power indicator after 4 hours of use.</figcaption>
+<figcaption >Power indicator after 4 hours of use. (Image Credit: me)</figcaption>
 </figure>
 <p>Eventually, I'll get a feel for how the battery life holds up under heavier loads.</p>
 <h2 id="mcetoc_1e62ini9lc">Final Thoughts</h2>
