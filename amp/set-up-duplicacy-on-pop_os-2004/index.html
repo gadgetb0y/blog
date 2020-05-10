@@ -1,0 +1,582 @@
+<!doctype html><html amp lang="en"><head><meta charset="utf-8"><title>Set Up Duplicacy on Pop!_OS 20.04 - Ad Hoc</title><meta name="description" content="Learn how to set up Duplicacy backup software on Pop!_OS 20.04, Ubuntu and other distributions."><link rel="canonical" href="https://gadgetboy.org/set-up-duplicacy-on-pop_os-2004/"><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"><link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" type="text/css"><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script><script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://gadgetboy.org/amp/set-up-duplicacy-on-pop_os-2004/"},"headline":"Set Up Duplicacy on Pop!_OS 20.04","datePublished":"2020-05-10T09:54","dateModified":"2020-05-10T09:54","image":{"@type":"ImageObject","url":"https://gadgetboy.org/media/posts/46/duplicacy_backup_feature.png","height":608,"width":1056},"description":"I had no backup plan.I switched to Pop!_OS as my daily driver but&hellip;","author":{"@type":"Person","name":"John A. Federico"},"publisher":{"@type":"Organization","name":"John A. Federico"}}</script><style amp-custom>article,
+aside,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+amp-img {
+  max-width: 100%; }
+
+button,
+input,
+select,
+textarea {
+  font: inherit; }
+
+html {
+  font-size: 1rem; }
+
+body {
+  background: #f1f1f1;
+  color: #262626;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.6; }
+
+a {
+  color:  #039be5;
+  text-decoration: none;
+  -webkit-transition: all 0.12s linear 0s;
+  -o-transition: all 0.12s linear 0s;
+  transition: all 0.12s linear 0s; }
+
+a:hover {
+  color: #262626;
+  text-decoration: underline;
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip: ink; }
+
+a:active {
+  color: #262626; }
+
+a:focus {
+  outline: 2px dotted #039be5; }
+
+figure,
+blockquote,
+p,
+ul,
+ol,
+dl,
+table,
+hr,
+fieldset {
+  margin-top: 1.6rem; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #262626;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 2.13333rem; }
+
+h1 {
+  font-size: 1.67583rem;
+  font-weight: normal; }
+
+h2 {
+  font-size: 1.4729rem; }
+
+h3 {
+  font-size: 1.29454rem; }
+
+h4 {
+  font-size: 1.13778rem; }
+
+h5 {
+  font-size: 1rem; }
+
+h6 {
+  font-size: 0.87891rem; }
+
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+  margin-top: 0.8rem; }
+
+b,
+strong {
+  font-weight: 600; }
+
+blockquote {
+  color: #6c7175;
+  font-family: "Droid Serif", "Times", "Source Serif Pro", serif;
+  font-style: italic;
+  padding: 1.33333rem 0.53333rem 1.33333rem 3.2rem;
+  position: relative; }
+  blockquote:before {
+    display: block;
+    content: "\201C";
+    font-size: 4.41226rem;
+    position: absolute;
+    left: 0;
+    top: -12px;
+    color: rgba(108, 113, 117, 0.5); }
+  blockquote > :nth-child(1) {
+    margin-top: 0; }
+
+ul,
+ol {
+  margin-left: 2rem; }
+  ul > li,
+  ol > li {
+    list-style: inherit;
+    padding: 0 0 0.26667rem 0.26667rem; }
+
+dl dt {
+  color: #262626;
+  font-weight: 600; }
+
+code,
+pre {
+  background-color: #f1f1f1;
+  font-family: monospace; }
+
+pre {
+  margin: 1.6rem 0 0;
+  padding: 1.6rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: auto; }
+  pre > code {
+    color: #262626;
+    padding: 0; }
+
+code {
+  border-radius: 3px;
+  color: #262626;
+  padding: 0.26667rem 0.53333rem; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #d4d4d4;
+  width: 100%;
+  overflow-x: auto;
+  vertical-align: top;
+  text-align: left;
+  white-space: nowrap; }
+  table th {
+    font-weight: 500;
+    padding: 0.53333rem 1.06667rem; }
+  table tr {
+    border-bottom: 1px solid #d4d4d4; }
+    table tr:nth-child(2n) {
+      background: #f1f1f1; }
+  table td {
+    padding: 0.53333rem 1.06667rem; }
+
+figcaption {
+  clear: both;
+  color: rgba(108, 113, 117, 0.6);
+  font-size: 0.82397rem;
+  margin: 0.8rem 0 0;
+  text-align: center; }
+
+sub,
+sup {
+  font-size: 65%; }
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+
+.btn, [type=button],
+[type=submit],
+button {
+  background: #039be5;
+  border: none;
+  border-radius: 2px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.87891rem;
+  font-weight: 500;
+  line-height: 1.9;
+  padding: 0.53333rem 1.33333rem;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all .15s ease;
+  -o-transition: all .15s ease;
+  transition: all .15s ease;
+  width: auto; }
+  .btn:hover, [type=button]:hover,
+  [type=submit]:hover,
+  button:hover {
+    background: #262626;
+    color: #ffffff; }
+  .btn:focus, [type=button]:focus,
+  [type=submit]:focus,
+  button:focus {
+    outline: none; }
+  .btn-outline {
+    border: 1px solid #ddd;
+    background: #ffffff;
+    border-radius: 3px;
+    color: #262626; }
+
+[type=button],
+[type=submit],
+button {
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+
+.navbar {
+  background: #039be5;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+  line-height: 3;
+  max-height: 4rem; }
+  .navbar > div {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto; }
+  .navbar a {
+    color: #ffffff;
+    text-decoration: none; }
+  .navbar-sidebar-toggle {
+    left: 0;
+    position: relative;
+    text-indent: -99999rem; }
+    .navbar-sidebar-toggle:before {
+      content: "";
+      display: block;
+      border-top: 0.375rem double #ffffff;
+      border-bottom: 0.125rem solid #ffffff;
+      height: 0.125rem;
+      position: absolute;
+      text-indent: 0;
+      top: 50%;
+      width: 1.3rem;
+      -webkit-transform: translate(0px, -50%);
+      -ms-transform: translate(0px, -50%);
+      transform: translate(0px, -50%); }
+
+
+.logo {
+            display: inline-block;
+  font-weight: 600;
+  line-height: 1;
+            margin: 0 auto;
+            height: 2rem;
+            text-indent: -9999px;
+            width: 240px;vertical-align: middle;
+        }
+        .logo.logo-text {
+            line-height: 2;
+            text-align: center;
+            text-indent: 0;
+        }
+
+amp-sidebar {
+  background: #ffffff;
+  width: 240px; }
+  amp-sidebar > ul {
+    margin: 0.8rem 0 0;
+    padding: 0; }
+    amp-sidebar > ul ul {
+      border-left: 1px solid #d4d4d4;
+      margin: 0.53333rem 0 0; }
+    amp-sidebar > ul li {
+      color: #262626;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      list-style: none;
+      line-height: 1.4;
+      padding: 0.42667rem 1.06667rem; }
+      amp-sidebar > ul li li {
+        font-weight: normal;
+        padding: 0.26667rem 0 0.26667rem 1.06667rem; }
+    amp-sidebar > ul a,
+    amp-sidebar > ul a:visited {
+      color: #262626; }
+
+.bg-white {
+  background: #ffffff; }
+
+.wrap-page {
+  max-width: 700px;
+  margin: 0 auto; }
+
+@media all and (max-width: 43.6875em) {
+  .wrap-inner {
+    padding: 0 6%; } }
+
+.page-title {
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  margin-bottom: 0.8rem;
+  padding: 1.6rem 6%; }
+  .page-title > h1 {
+    margin: 0;
+    font-size: 1.29454rem; }
+  .page-title > p {
+    font-size: 0.87891rem;
+    color: #6c7175;
+    line-height: 1.3;
+    margin: 0.26667rem 0 0; }
+  .page-title-author {
+    border-radius: 50%;
+    float: left;
+    height: 2.5rem;
+    width: 2.5rem; }
+    .page-title-author + h1 {
+      margin-left: 3.5rem; }
+      .page-title-author + h1 + p {
+        margin-left: 3.5rem; }
+
+.card {
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  margin-bottom: 0.8rem;
+  padding-bottom: 1.06667rem; }
+
+  .card-meta {
+    border-top: 1px solid #d4d4d4;
+    color: rgba(108, 113, 117, 0.6);
+    font-size: 0.7242rem;
+    font-weight: 500;
+    margin-top: 1.06667rem;
+    padding-top: 1.06667rem;
+    text-transform: uppercase; }
+    .card-meta a + time:before {
+      content: "";
+      background: #d4d4d4;
+      display: inline-block;
+      height: 3px;
+      margin: 0 8px;
+      width: 3px;
+      vertical-align: middle;
+      border-radius: 50%; }
+  .card-text {
+    font-size: 0.9375rem;
+    overflow: hidden;
+    padding: 0 6%; }
+    .card-text h2 {
+      font-size: 1.13778rem; }
+
+.post {
+  margin-bottom: 2.13333rem; }
+  .post-featured-image {
+    margin-top: 0;
+    position: relative; }
+    .post-featured-image > figcaption {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 3px;
+      color: #ffffff;
+      position: absolute;
+      bottom: 0.8rem;
+      padding: 0 0.26667rem;
+      right: 6%; }
+  .post-header {
+    margin-bottom: 2.13333rem; }
+  .post-meta {
+    border-bottom: 1px solid #d4d4d4;
+    color: rgba(108, 113, 117, 0.6);
+    font-size: 0.7242rem;
+    font-weight: 500;
+    margin-top: 1.06667rem;
+    padding-bottom: 1.06667rem;
+    text-transform: uppercase; }
+    .post-meta a + time:before {
+      content: "";
+      background: #d4d4d4;
+      display: inline-block;
+      height: 3px;
+      margin: 0 8px;
+      width: 3px;
+      vertical-align: middle;
+      border-radius: 50%; }
+  .post-tag {
+    margin: 0; }
+    .post-tag > li {
+      display: inline-block;
+      padding: 0; }
+      .post-tag > li a {
+        background: #f1f1f1;
+        border-radius: 2px;
+        color: #6c7175;
+        font-size: 0.77248rem;
+        display: inline-block;
+        margin: 0 0.26667rem 0.26667rem 0;
+        padding: 0.26667rem 0.53333rem; }
+        .post-tag > li a:hover {
+          background: #039be5;
+          color: #ffffff;
+          text-decoration: none; }
+  .post-share {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 1.6rem;
+    width: 100%; }
+    .post-share amp-social-share {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
+      background-size: 24px; }
+  .post-scroll {
+    color: #ffffff;
+    background: #039be5;
+    bottom: 10px;
+    border-radius: 50%;
+    border: none;
+    -webkit-box-shadow: 0 1px 1.5px 0 rgba(38, 38, 38, 0.12), 0 1px 1px 0 rgba(38, 38, 38, 0.24);
+    box-shadow: 0 1px 1.5px 0 rgba(38, 38, 38, 0.12), 0 1px 1px 0 rgba(38, 38, 38, 0.24);
+    font-size: 1.13778rem;
+    height: 46px;
+    opacity: 0;
+    outline: none;
+    position: fixed;
+    padding: 0;
+    right: 4%;
+    visibility: hidden;
+    width: 46px;
+    z-index: 9999; }
+    .post-scroll-marker {
+      height: 0px;
+      position: absolute;
+      top: 100px;
+      width: 0px; }
+        .post-pagination {
+    background: #f1f1f1;
+    -webkit-box-shadow: inset 0 2px 3px rgba(38, 38, 38, 0.1);
+    box-shadow: inset 0 2px 3px rgba(38, 38, 38, 0.1);
+    border-top: 1px solid #d4d4d4;
+    padding: 1.06667rem 0; }
+    .post-pagination > div {
+      line-height: 1.2;
+      padding: 0.53333rem 1.06667rem;
+      text-align: center; }
+      .post-pagination > div span {
+        display: block;
+        color: #6c7175;
+        font-size: 0.7242rem;
+        font-weight: 500;
+        margin-bottom: 0.26667rem;
+        text-transform: uppercase; }
+    .post-pagination-prev a:before {
+      content: "\2190";
+      margin-right: 0.26667rem; }
+    .post-pagination-next a:after {
+      content: "\2192";
+      margin-left: 0.26667rem; }
+
+aside {
+  margin: 1.6rem 0 0; }
+
+.align-left {
+  text-align: left; }
+
+.align-right {
+  text-align: right; }
+
+.align-center {
+  text-align: center; }
+
+.align-justify {
+  text-align: justify; }
+
+.msg {
+  border-left: 2px solid transparent;
+  padding: 1.06667rem 1.06667rem; }
+  .msg--highlight {
+    background-color: #fff8e6;
+    border-color: #e2ac4f; }
+  .msg--info {
+    background: rgba(45, 97, 201, 0.03);
+    border-color: #039be5; }
+  .msg--success {
+    background: #f7fbf6;
+    border-color: #5ab44b; }
+  .msg--warning {
+    background: #fff3f3;
+    border-color: #c06367;
+    color: #a94442; }
+
+.dropcap:first-letter {
+  float: left;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 2.16943rem;
+  line-height: 0.7;
+  margin-right: 0.53333rem;
+  padding: 0.53333rem 0.53333rem 0.53333rem 0; }
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0.8rem 0; }
+  .pagination > a {
+    padding-left: 0;
+    padding-right: 0;
+    width: 49%; }
+  .pagination-right {
+    margin-left: auto; }
+
+.bottom {
+  background: #039be5;
+  color: #ffffff;
+  padding: 1.06667rem 4%;
+  text-align: center; }</style><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><script async src="https://cdn.ampproject.org/v0.js"></script><script custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js" async></script><script custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js" async></script></head><body class="bg-white"><nav class="navbar wrap-inner" id="top"><div><a on="tap:navbar-sidebar.toggle" class="navbar-sidebar-toggle" title="Menu">Menu</a> <a class="logo logo-text" href="https://gadgetboy.org/amp/">Ad Hoc</a></div></nav><main class="wrap-page"><article class="post"><figure class="post-featured-image"><amp-img src="https://gadgetboy.org/media/posts/46/duplicacy_backup_feature.png" alt="Set Up Duplicacy on Pop!_OS 20.04" srcset="https://gadgetboy.org/media/posts/46/responsive/duplicacy_backup_feature-xs.png 300w ,https://gadgetboy.org/media/posts/46/responsive/duplicacy_backup_feature-sm.png 480w ,https://gadgetboy.org/media/posts/46/responsive/duplicacy_backup_feature-md.png 768w" sizes="(max-width: 768px) 100vw, 768px" height="608" layout="responsive" width="1056"></amp-img></figure><div class="wrap-inner"><header class="post-header"><h1>Set Up Duplicacy on Pop!_OS 20.04</h1><p class="post-meta"><time datetime="2020-05-10T09:54">May 10, 2020</time></p></header><h2>I had no backup plan.</h2><p><a href="https://gadgetboy.org/amp/review-system76-lemur-pro/" title="Review: System76 Lemur Pro" target="_blank" rel="noopener noreferrer">I switched to Pop!_OS as my daily driver </a>but I didn't yet move my files from my old MacBook Pro. Everything was backed up using Mac software, and I didn't have a plan for Linux backup.</p><p>On the Mac, I backed up locally to a 1 TB external USB 3.0 drive using Time Machine and off-site to Dropbox <em>and</em> Amazon S3 using Arq Backup. Yeah, it was overkill, but you can't put a price on data loss, especially 25 years of family photos and videos.</p><p>I also recently built a NAS system on my LAN for our family file storage, but it's not yet ready for backups, so I needed both a short term solution for my Linux laptop and a long term solution that I could use for all of our household backups.</p><p>It doesn't matter what your preferred backup software is but, in general, I follow these basic guidelines:</p><ul><li><strong>Automate</strong> your backups on a regular schedule</li><li>Have a <strong>local copy</strong> of your backups for quick retrieval (USB drive, NAS, etc.)</li><li>Have an <strong>off-site/cloud copy</strong> of your backups for redundancy</li><li>Check the <strong>integrity</strong> of your backups regularly</li><li>Have a recovery <strong>plan</strong>. (Do you know how to recover your data, especially since your backup software was running on your now dead computer?)</li></ul><p>After investigating a number of backup solutions, including <a href="https://github.com/teejee2008/timeshift" target="_blank" rel="noopener noreferrer" title="TimeShift on GitHub">TimeShift</a> and <a href="https://www.duplicati.com/" target="_blank" rel="noopener noreferrer" title="Duplicati Home">Duplicati</a>, I decided upon <a href="https://duplicacy.com" target="_blank" rel="noopener noreferrer" title="Duplicacy Backup Software">Duplicacy</a>, mostly based upon community reviews.</p><p class="msg msg--info">Duplicacy is developed by <a href="https://acrosync.com" target="_blank" rel="noopener noreferrer" title="Acrosync Home">Acrosync</a>. If you're comfortable working with the command line, there is <strong>no cost for a CLI license</strong> since it's open source. <em>Thanks, Acrosync.</em></p><p>While the core Duplicacy backup engine is open source, the web-GUI version is not, nor is it free. That's fine with me - I'm happy to contribute to open source projects through commercial offerings.</p><p>The pricing for a personal license is a little outside the norm - not quite SaaS, not quite a one-time purchase - but I ended up getting a 5-year license for $40.</p><p class="msg msg--info">The Duplicacy web-GUI version has a lengthy free trial period, so you have plenty of time to decide if it works for you.</p><p>Here's how to set it up.</p><h2>Wizards and Magic</h2><p>My experience with backup software has typically been wizard-driven:</p><p>[Launch backup software]</p><ol><li>What files would you like to backup?</li><li>Where do you want to put those files?</li><li>Do you want those files to be encrypted?</li><li>How often do you want to backup?</li><li>How long do you want to keep your backups?</li></ol><p>[Save]</p><p>After that, everything just backs up automagically.</p><p>Duplicacy addresses all the same considerations, but instead of being wizard-driven, set up is performed using commands and configuration files. Luckily, I could ramp up quickly using the web-GUI version. I'll use this version for my laptop, but will use the command line version for backing up my NAS to the cloud.</p><h2>Concepts</h2><p>To get started with Duplicacy, you first need to understand some concepts and definitions. Again, wizard-driven backup solutions use these same concepts, but they're abstracted. In Duplicacy, they are explicit and uniquely configured. This approach took me a few minutes to get my head around, but now it makes perfect sense.</p><h3>Repository</h3><p>A Repository is the location of the files that you want to backup. (e.g. /home/yourdirectory or /etc/opt)</p><h3>Snapshot ID</h3><p>A Snapshot ID is a unique identifier for the repository you want to backup. For example, if you want to backup your home directory, you might give it a Snapshot ID of "Home."</p><h3>Revision</h3><p>After the first backup of a repository, each subsequent backup generates a Revision. A revision contains the changes (additions, deletions, edits) since the last backup (sometimes referred to as Incremental or Differential backup). Revisions provide faster backups and conserve disk space.</p><h3>Storage</h3><p>Where will you store your backups? You will need to initialize that storage by providing a path to the local or remote file system. If you're backing up off-site to cloud storage, you'll need to authenticate with that service before you can select it as a backup location. The process of authenticating Duplicacy varies based on the service you're using, so I won't cover that here.</p><p>Currently, Duplicacy supports the following backends:</p><ul><li>Local File System</li><li>SFTP</li><li>Dropbox</li><li>Amazon S3 (or API equivalent)</li><li>Wasabi</li><li>DigitalOcean Spaces</li><li>Google Cloud</li><li>Microsoft Azure</li><li>Backblaze B2</li><li>Google Drive</li><li>Microsoft OneDrive</li><li>Hubic</li><li>OpenStack Swift</li><li>WebDav</li></ul><p><a href="https://forum.duplicacy.com/t/supported-storage-backends/1107" target="_blank" rel="noopener noreferrer" title="Storage Backends on the Duplicacy Forum">You can find details and CLI commands on the Duplicacy Forum.</a></p><p>In my short term use case, I'll be backing up to a <a href="https://amzn.to/2zr7uaz" target="_blank" rel="noopener noreferrer" title="Sandick High Endurance Micro SD Card 256 GB">High Endurance Micro SD card</a> (Local File System) every few hours and Google Drive each night.</p><p>When my NAS is properly set up, I plan to continue with the Micro SD card for hourly backups, use the NAS for nightly backups and use <a href="https://aws.amazon.com/glacier/" target="_blank" rel="noopener noreferrer" title="Amazon S3 Glacier &amp; S3 Glacier Deep Archive">Amazon S3 Glacier</a> for weekly off-site backups.</p><h3>Backup</h3><p>A Backup is defined as the collection of files or directories you want to backup and the location where you want to put them. In order to configure a Backup, you first need to have initialized your Storage.</p><h3>Schedule</h3><p>A Schedule contains the timing of your backups (Day, time of day, etc.) and the Backup job you want to run. You can have multiple schedules for the same backup, multiple backups in a single schedule, etc. In order to configure a Schedule, you first need to have initialized your Storage and created at least one Backup.</p><h3>Prune</h3><p>The Prune function is similar to step 5 in the wizard-driven software example above but again, you need to explicitly define it. To do this, you need to create a Schedule that runs a Prune job, select the appropriate Backup, then indicate the parameters for when to start pruning data.</p><h3>Restore</h3><p>You can restore your data from any shapshot contained in your backup library. Keep in mind that these are not bootable system backups - only your data. If your Linux installation doesn't have a bootable recovery partition, you may want to keep a bootable USB drive handy in case of system failure.</p><h3>Additional Concepts</h3><p>There are some additional concepts and commands that you may want to explore, but the above is enough to get you started.</p><h2>Setting up Duplicacy</h2><h3>Installation</h3><p>You have two options for installing the Duplicacy web version:</p><ol><li>Download a self-contained binary or;</li><li>Build it from source.</li></ol><p>I selected the easiest option and <a href="https://duplicacy.com/download.html" target="_blank" rel="noopener noreferrer" title="Download Duplicacy">downloaded the binary for x64 systems</a>. Once downloaded, I ran a checksum to ensure that it wasn't corrupted.</p><p><code>cd /home/gadgetboy/Downloads</code></p><p><code>sha256sum duplicacy_web_linux_x64_1.3.0</code></p><p> Next, I moved the application to /opt/Duplicacy</p><p><code>sudo mkdir /opt/Duplicacy</code></p><p><code>sudo mv /home/gadgetboy/Downloads/duplicacy_web_linux_x64_1.3.0 /opt/Duplicacy</code></p><p>You also need to change permissions on the file so that it can be executed as a program. You can do this from the command line or using the Files application by right-clicking the file, selecting <strong>Permissions</strong>, then selecting the checkbox, "Allow executing file as program."</p><figure class="post__image post__image--center"><amp-img src="https://gadgetboy.org/media/posts/46/duplicacy_permissions_markup.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://gadgetboy.org/media/posts/46/responsive/duplicacy_permissions_markup-xs.png 300w ,https://gadgetboy.org/media/posts/46/responsive/duplicacy_permissions_markup-sm.png 480w ,https://gadgetboy.org/media/posts/46/responsive/duplicacy_permissions_markup-md.png 768w ,https://gadgetboy.org/media/posts/46/responsive/duplicacy_permissions_markup-lg.png 1024w" alt="Set File as Executable in Files" width="461" height="493" layout="responsive"></amp-img><figcaption>Set executable file permissions (Image Credit: me)</figcaption></figure><h4>Launching Duplicacy at Startup</h4><p>Even though Duplicacy is now ready to launch, you'll want to do one more thing: make sure Duplicacy launches after a restart. Otherwise, your automated backups won't run unless you remember to launch Duplicacy every time you reboot your machine.</p><p>Select the <strong>Activities</strong> menu in the Pop!_OS panel, in the top left corner. Select the <strong>Show Applications</strong> icon in the Dash, then find the <strong>Startup Applications</strong> app and launch it.</p><p>Click <strong>Add</strong>, then enter the name of the application. Next, enter the path of the application or select it by navigating to it by clicking <strong>Browse...</strong> </p><div class="gallery" data-is-empty="false" data-columns="1"><figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/add_startup_program.png" data-size="663x599"><amp-img src="https://gadgetboy.org/media/posts/46/gallery/add_startup_program-thumbnail.png" alt="Add Startup Program" width="663" height="599" layout="responsive"></amp-img></a><figcaption class="gallery-description">Add Startup Program (Image Credit: me)</figcaption></figure></div><p class="msg msg--info"><strong>Optional:</strong> If you're not the only user or administrator of this machine, you may want to enter a comment so that other people know why it's set to run at startup.</p><p>Okay, we're finally ready to start backing up some files, so let's launch Duplicacy. It will load the control interface in your default web browser.</p><p class="msg msg--highlight msg--info">The Duplicacy web-GUI version runs a small web server so that you can setup and manage it using a web browser. By default, it responds only to requests from <em>localhost</em> at 127.0.0.1:3875. If you'd like to change this configuration so you can access it remotely, you can do that by selecting <strong>Setting</strong> in the toolbar. I'm going to focus only on the localhost use case in this post. Review <a href="https://forum.duplicacy.com/t/how-to-access-the-duplicacy-web-interface-remotely/1664/7?u=christoph" target="_blank" rel="noopener noreferrer" title="How to access the duplicacy web-interface remotely">this forum post</a> if you'd like learn how to setup remote access.</p><h3>Application Password</h3><p>Duplicacy will ask you to create a password to secure your credentials stored in local configuration files. You can choose to store this password in your Keychain. I use <a href="https://bitwarden.com/" target="_blank" rel="noopener noreferrer" title="Bitwarden Home">Bitwarden</a> for all my passwords, so I unchecked this box.</p><p class="msg msg--highlight">You can click any of the images below to enlarge them.</p><div class="gallery" data-is-empty="false" data-columns="1"><figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/duplicacy_web_password.png" data-size="1247x567"><amp-img src="https://gadgetboy.org/media/posts/46/gallery/duplicacy_web_password-thumbnail.png" alt="Duplicacy Web Password Entry" width="768" height="349" layout="responsive"></amp-img></a><figcaption class="gallery-description">Duplicacy Web Password Entry (Image Credit: Acrosync)</figcaption></figure></div><p>Once your password has been configured, Duplicacy will load the Dashboard. There's nothing yet to see here since we haven't yet initializied Storage, created a Backup or set a Schedule.</p><div class="gallery" data-is-empty="false" data-columns="1"><figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/duplicacy_web_start.png" data-size="1247x567"><amp-img src="https://gadgetboy.org/media/posts/46/gallery/duplicacy_web_start-thumbnail.png" alt="Duplicacy Web Start Up" width="768" height="349" layout="responsive"></amp-img></a><figcaption class="gallery-description">Duplicacy Web Start Up (Image Credit: Acrosync)</figcaption></figure></div><h3>Identifying and Initializing Storage</h3><p>To add a place to store your backups, select <strong>Storage</strong> from the toolbar, then select the "<strong>+</strong>" icon in the lower left corner of the screen. You'll be presented with the Storage configuration options.</p><div class="gallery" data-is-empty="false" data-columns="1"><figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/duplicacy_storage_configuration.png" data-size="611x298"><amp-img src="https://gadgetboy.org/media/posts/46/gallery/duplicacy_storage_configuration-thumbnail.png" alt="Duplicacy Storage Selection" width="611" height="298" layout="responsive"></amp-img></a><figcaption class="gallery-description">Duplicacy Storage Selection (Image Credit: me)</figcaption></figure></div><p>I'm going to continue on with own use case in this how-to, so I'll select a directory on my Micro SD card.</p><div class="gallery" data-is-empty="false" data-columns="1"><figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/select_storage_location.png" data-size="614x546"><amp-img src="https://gadgetboy.org/media/posts/46/gallery/select_storage_location-thumbnail.png" alt="Select Storage Location for Backups" width="614" height="546" layout="responsive"></amp-img></a><figcaption class="gallery-description">Select Storage Location for Backups (Image Credit: me)</figcaption></figure></div><p>Finally, to initialize the Storage, you'll need to give it a name. You can optionally add a password used to encrypt your Storage (<strong>RECOMMENDED</strong>).</p><div class="gallery" data-is-empty="false" data-columns="1"><figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/storage_name_password.png" data-size="608x545"><amp-img src="https://gadgetboy.org/media/posts/46/gallery/storage_name_password-thumbnail.png" alt="Naming your Storage" width="608" height="545" layout="responsive"></amp-img></a><figcaption class="gallery-description">Naming your Storage (Image Credit: me)</figcaption></figure></div><p class="msg msg--info"><strong>Optional:</strong> Select the Copy-compatible checkbox to explicitly indicate that the source Storage is compatible with the destination storage.</p><p>Execute this operation by clicking the <strong>Add</strong> button. Once completed, the Storage will appear when you select <strong>Storage</strong> from the toolbar. In the screenshot below, you'll see the storage for both my hourly backups to the Micro SD card ("2004_Backups") and my Nightly backups to Google Drive ("Nightly").</p><div class="gallery" data-is-empty="false" data-columns="1"><figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/initialized_storage.png" data-size="1276x853"><amp-img src="https://gadgetboy.org/media/posts/46/gallery/initialized_storage-thumbnail.png" alt="Initialized Storage" width="768" height="513" layout="responsive"></amp-img></a><figcaption class="gallery-description">Initialized Storage (Image Credit: me)</figcaption></figure></div><h3>Defining a Backup</h3><p>Select <strong>Backup</strong> from the toolbar, then click the "<strong>+</strong>" button in the upper right corner. Here, you'll select the <strong>Directory</strong> (your files) that you want to backup, the destination (the initialized Storage created above) and a <strong>Backup ID</strong>. Give your Backup ID a memorable name like "My_Home_Directory" or "My_Photos."</p><div class="gallery" data-is-empty="false" data-columns="1"><figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/define_duplicacy_backup.png" data-size="611x542"><amp-img src="https://gadgetboy.org/media/posts/46/gallery/define_duplicacy_backup-thumbnail.png" alt="Define a Backup in Duplicacy" width="611" height="542" layout="responsive"></amp-img></a><figcaption class="gallery-description">Define a Backup in Duplicacy (Image Credit: me)</figcaption></figure></div><p>Save this configuration by clicking the <strong>Save</strong> button. You'll return to the Backup screen where you will now see your new Backup configuration. In the screenshot below, you'll see both my local Backup ("home") and my Google Drive Backup ("Offsite").</p><div class="gallery" data-is-empty="false" data-columns="1"><figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/duplicacy_configured_backup.png" data-size="1277x849"><amp-img src="https://gadgetboy.org/media/posts/46/gallery/duplicacy_configured_backup-thumbnail.png" alt="Duplicacy Backup Configured" width="768" height="511" layout="responsive"></amp-img></a><figcaption class="gallery-description">Duplicacy Backup Configured (Image Credit: me)</figcaption></figure></div><p>In theory, you could stop here. When you want to perform a backup, you could just click the green arrow/triangle below the Backup name, but we don't want to have to remember to do that - we want it to happen automatically.</p><h3>Creating a Schedule</h3><p>Select <strong>Schedule</strong> from the toolbar, then select the "<strong>+</strong>" icon in the lower left corner. Give your Schedule a name (e.g. "Nightly"), select the <strong>time of day</strong> you'd like it to start, select the <strong>frequency</strong> in which you want it to run, then select the <strong>day(s) of the week</strong> you would like it to run.</p><div class="gallery" data-is-empty="false" data-columns="1"><figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/duplicacy_create_schedule.png" data-size="611x544"><amp-img src="https://gadgetboy.org/media/posts/46/gallery/duplicacy_create_schedule-thumbnail.png" alt="Creat a Schedule in Duplicacy" width="611" height="544" layout="responsive"></amp-img></a><figcaption class="gallery-description">Creat a Schedule in Duplicacy (Image Credit: me)</figcaption></figure></div><p class="msg msg--highlight msg--info"><strong>Optional:</strong> Select the <strong>Maximum Run Time</strong>. I don't particularly grok the use case for this. Perhaps if it's a production machine, like a file server, you'd want to make sure it's finished before 9 AM, when people start working. Or, maybe, if it's your laptop and you need to leave for work at a certain time, you want to make sure you don't interrupt the job and corrupt the backup. Someone with more experience will have to give me a real use case. Personally, I want the job to finish, no matter how long it takes.</p><h3>Testing</h3><p>This is the last and most important step in any backup plan. If you don't validate your backup, it's like not having a backup at all.</p><p>Click <strong>Backup</strong> from the toolbar.</p><p>Run a manual Backup job by clicking the green arrow icon. If this is your first time, go get a cup of coffee. Or a cocktail. It could take a while.</p><p>Once the job is completed, click <strong>Restore</strong> from the toolbar.</p><div class="gallery" data-is-empty="false" data-columns="1"><figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/duplicacy_restore.png" data-size="1266x848"><amp-img src="https://gadgetboy.org/media/posts/46/gallery/duplicacy_restore-thumbnail.png" alt="Duplicacy Restore Screen" width="768" height="514" layout="responsive"></amp-img></a><figcaption class="gallery-description">Duplicacy Restore Screen (Image Credit: me)</figcaption></figure></div><p>Select the initialized <strong>Storage</strong> where your backups are kept from the drop down menu, then select the <strong>Backup ID</strong> of your files. Now, select a <strong>Revision</strong>. This could be from any point in time as indicated by the time stamp at the end of each entry. Finally, indicate the directory where you'd like to put your restored files.</p><p class="msg msg--info">For information on <strong>Options</strong>, visit the <a href="https://forum.duplicacy.com/" target="_blank" rel="noopener noreferrer" title="Duplicacy forum">Duplicacy forum</a>.</p><p>After you've selected your revision, Duplicacy will present you with the files or directories contained within. Select the file or directory that you want to restore, then click the <strong>Restore</strong> button at the bottom of the screen. </p><p>Your files will be unpacked and copied to the directory you've specified above.</p><h3>Review Your Files</h3><p>Does everything look OK? Is anything missing? Are you able to open your files? Yes?</p><p class="msg msg--success"><strong>Congratulations!</strong> You've set up the Duplicacy web-GUI version to backup your files automatically.</p><h3>The Check Job</h3><p>You've now setup Duplicacy and performed a successful backup and restore of your data, but do you plan to do that after <em>every</em> backup?</p><p>Of course not.</p><p>To ensure Snapshot integrity, you'll want to run the <strong>Check</strong> command. You can run a Check at any time but it's probably best to schedule a Check job after a completed backup.</p><p>By default, the Check command will only verify that a referenced file chunk exists in your snapshots. If you want to automatically verify the integrity of each individual file, see <a href="https://forum.duplicacy.com/t/check-command-details/1081" target="_blank" rel="noopener noreferrer" title="Check command details">this post on the Duplicacy forum</a> for options.</p><p>To setup a Check job, you can create a new schedule or add the job to an existing schedule. In my case, I've added it to my "Nightly" schedule so that it runs after each daily cloud backup.</p><p>Once your schedule is created, click the "<strong>+</strong>" icon to add a new job. Select <strong>Check</strong> from the drop down menu, then select which <strong>Destination</strong> you want to check. To learn more about <strong>Options</strong>, visit the forum post linked above.</p><div class="gallery" data-is-empty="false" data-columns="1"><figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/duplicacy_add_new_check_job.png" data-size="612x391"><amp-img src="https://gadgetboy.org/media/posts/46/gallery/duplicacy_add_new_check_job-thumbnail.png" alt="Add a new Check job in Duplicacy" width="612" height="391" layout="responsive"></amp-img></a><figcaption class="gallery-description">Add a new Check job in Duplicacy (Image Credit: me)</figcaption></figure></div><h3>Pruning</h3><p>Technically, you're all set: your backups now run on an automated schedule and you can safely restore your data.</p><p>But unless you have unlimited storage, you'll probably only want to keep backups around for a certain length of time.</p><p>To configure this, we have to create a <strong>Prune</strong> job.</p><p>To recap, I backup my home directory to the Micro SD card every 4 hours. Then, each night, I backup my home directory to Google Drive. (That's two Storage locations, two Backup jobs and two Schedules, if you're keeping track.)</p><p>I created two daily Prune jobs for each referenced Backup.</p><p>To create a Prune job, select <strong>Schedule</strong> from the toolbar, then select the "<strong>+</strong>" icon in the bottom left of the main screen to create a new schedule. In my case, I prune both my local backups and my cloud backups every 7 days. Choose what works for your peace of mind and your storage limitations.</p><p>Give your schedule a logical name such as "Prune_Local" or "Prune_Cloud." If you intend to run multiple jobs in the same schedule, name the schedule accordingly.</p><p>Now, find your new schedule in the main screen and select the "<strong>+</strong>" icon to add a job to it. This is just like adding the Backup job that we covered above, but instead of selecting <strong>Backup</strong> from the drop down menu, we're going to select <strong>Prune</strong>.</p><div class="gallery" data-is-empty="false" data-columns="1"><figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/duplicacy_prune_setup.png" data-size="613x532"><amp-img src="https://gadgetboy.org/media/posts/46/gallery/duplicacy_prune_setup-thumbnail.png" alt="Duplicacy Prune Job Setup" width="613" height="532" layout="responsive"></amp-img></a><figcaption class="gallery-description">Duplicacy Prune Job Setup (Image Credit: me)</figcaption></figure></div><p>Next, select the <strong>Destination</strong> (your initialized Storage) that you want to Prune and configure your <strong>Retention Policy</strong>. Click <strong>Save</strong> to finish.</p><p> </p>If you found this how-to helpful, pay it forward.<aside><ul class="post-tag"><li><a href="https://gadgetboy.org/amp/tag/how-to/">How-to</a></li><li><a href="https://gadgetboy.org/amp/tag/linux/">Linux</a></li><li><a href="https://gadgetboy.org/amp/tag/pop_os/">Pop!_OS</a></li><li><a href="https://gadgetboy.org/amp/tag/tutorial/">Tutorial</a></li></ul><div class="post-share"><amp-social-share type="system" width="40" height="40" data-param-text="Set Up Duplicacy on Pop!_OS 20.04"></amp-social-share><amp-social-share type="facebook" width="40" height="40" data-param-app_id="" data-param-text="Set Up Duplicacy on Pop!_OS 20.04" data-param-href="https://gadgetboy.org/amp/set-up-duplicacy-on-pop_os-2004/"></amp-social-share><amp-social-share type="twitter" width="40" height="40" data-param-text="Set Up Duplicacy on Pop!_OS 20.04" data-param-url="https://gadgetboy.org/amp/set-up-duplicacy-on-pop_os-2004/"></amp-social-share><amp-social-share type="pinterest" width="40" height="40" data-param-url="https://gadgetboy.org/amp/set-up-duplicacy-on-pop_os-2004/"></amp-social-share><amp-social-share type="tumblr" width="40" height="40" data-param-text="Set Up Duplicacy on Pop!_OS 20.04" data-param-url="https://gadgetboy.org/amp/set-up-duplicacy-on-pop_os-2004/"></amp-social-share><amp-social-share type="whatsapp" width="40" height="40" data-param-text="Set Up Duplicacy on Pop!_OS 20.04"></amp-social-share></div></aside></div></article><nav class="post-pagination wrap-inner"><div class="post-pagination-prev"><span>Previous Post</span> <a href="https://gadgetboy.org/amp/protect-your-privacy-with-firefox-containers/">Protect your Privacy with Firefox Containers</a></div></nav></main><amp-animation id="showAnim" layout="nodisplay"><script type="application/json">{
+                    "duration": "200ms",
+                    "fill": "both",
+                    "iterations": "1",
+                    "direction": "alternate",
+                    "animations": [{
+                        "selector": ".post-scroll",
+                        "keyframes": [{
+                            "opacity": "1",
+                            "visibility": "visible",
+                            "transform": "scale(1)"
+                        }]
+                    }]
+                }</script></amp-animation><amp-animation id="hideAnim" layout="nodisplay"><script type="application/json">{
+                    "duration": "200ms",
+                    "fill": "both",
+                    "iterations": "1",
+                    "direction": "alternate",
+                    "animations": [{
+                        "selector": ".post-scroll",
+                        "keyframes": [{
+                            "opacity": "0",
+                            "visibility": "hidden",
+                            "transform": "scale(0.1)"
+                        }]
+                    }]
+                }</script></amp-animation><div class="post-scroll-marker"><amp-position-observer on="enter:hideAnim.start; exit:showAnim.start" layout="nodisplay"></amp-position-observer></div><button class="post-scroll" on="tap:top.scrollTo(duration=200)">&#8593;</button><footer class="bottom">This is a Google AMP Page</footer><amp-sidebar id="navbar-sidebar" layout="nodisplay"><ul><li><a href="https://gadgetboy.org/amp/about/">About</a></li><li><a href="https://gadgetboy.org/amp/contact/" title="Reach Out">Contact</a></li></ul></amp-sidebar></body></html>

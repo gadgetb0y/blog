@@ -594,6 +594,70 @@
 </image:image>
 </url>
 <url>
+<loc>https://gadgetboy.org/set-up-duplicacy-on-pop_os-2004/</loc>
+<lastmod>2020-05-10T09:54:59-05:00</lastmod>
+<image:image>
+<image:loc>https://gadgetboy.org/media/posts/46/duplicacy_backup_feature.png</image:loc>
+<image:title><![CDATA[Set Up Duplicacy on Pop!_OS 20.04]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://gadgetboy.org/media/posts/46/duplicacy_permissions_markup.png</image:loc>
+<image:title><![CDATA[Set File as Executable in Files]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://gadgetboy.org/media/posts/46/gallery/add_startup_program-thumbnail.png</image:loc>
+<image:title><![CDATA[Add Startup Program]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://gadgetboy.org/media/posts/46/gallery/duplicacy_web_password-thumbnail.png</image:loc>
+<image:title><![CDATA[Duplicacy Web Password Entry]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://gadgetboy.org/media/posts/46/gallery/duplicacy_web_start-thumbnail.png</image:loc>
+<image:title><![CDATA[Duplicacy Web Start Up]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://gadgetboy.org/media/posts/46/gallery/duplicacy_storage_configuration-thumbnail.png</image:loc>
+<image:title><![CDATA[Duplicacy Storage Selection]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://gadgetboy.org/media/posts/46/gallery/select_storage_location-thumbnail.png</image:loc>
+<image:title><![CDATA[Select Storage Location for Backups]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://gadgetboy.org/media/posts/46/gallery/storage_name_password-thumbnail.png</image:loc>
+<image:title><![CDATA[Naming your Storage]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://gadgetboy.org/media/posts/46/gallery/initialized_storage-thumbnail.png</image:loc>
+<image:title><![CDATA[Initialized Storage]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://gadgetboy.org/media/posts/46/gallery/define_duplicacy_backup-thumbnail.png</image:loc>
+<image:title><![CDATA[Define a Backup in Duplicacy]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://gadgetboy.org/media/posts/46/gallery/duplicacy_configured_backup-thumbnail.png</image:loc>
+<image:title><![CDATA[Duplicacy Backup Configured]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://gadgetboy.org/media/posts/46/gallery/duplicacy_create_schedule-thumbnail.png</image:loc>
+<image:title><![CDATA[Creat a Schedule in Duplicacy]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://gadgetboy.org/media/posts/46/gallery/duplicacy_restore-thumbnail.png</image:loc>
+<image:title><![CDATA[Duplicacy Restore Screen]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://gadgetboy.org/media/posts/46/gallery/duplicacy_add_new_check_job-thumbnail.png</image:loc>
+<image:title><![CDATA[Add a new Check job in Duplicacy]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://gadgetboy.org/media/posts/46/gallery/duplicacy_prune_setup-thumbnail.png</image:loc>
+<image:title><![CDATA[Duplicacy Prune Job Setup]]></image:title>
+</image:image>
+</url>
+<url>
 <loc>https://gadgetboy.org/steve-jobs-is-gone-why-am-i-so-upset/</loc>
 <lastmod>2020-04-18T09:08:16-05:00</lastmod>
 <image:image>
@@ -654,6 +718,9 @@
 </url>
 <url>
 <loc>https://gadgetboy.org/tag/home-automation/</loc>
+</url>
+<url>
+<loc>https://gadgetboy.org/tag/how-to/</loc>
 </url>
 <url>
 <loc>https://gadgetboy.org/tag/innovation/</loc>
@@ -729,6 +796,9 @@
 </url>
 <url>
 <loc>https://gadgetboy.org/tag/tesla/</loc>
+</url>
+<url>
+<loc>https://gadgetboy.org/tag/tutorial/</loc>
 </url>
 <url>
 <loc>https://gadgetboy.org/tag/ubuntu/</loc>
