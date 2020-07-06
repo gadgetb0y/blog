@@ -3,7 +3,7 @@
     <title>Ad Hoc</title>
     <link href="https://gadgetboy.org/feed.xml" rel="self" />
     <link href="https://gadgetboy.org" />
-    <updated>2020-06-10T09:04:21-05:00</updated>
+    <updated>1969-12-31T18:00:00-06:00</updated>
     <author>
         <name>John A. Federico</name>
     </author>
@@ -21,7 +21,7 @@
             <category term="Linux"/>
             <category term="How-to"/>
 
-        <updated>2020-05-10T09:54:59-05:00</updated>
+        <updated>2020-07-06T07:08:05-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/46/duplicacy_backup_feature.png" alt="Set Up Duplicacy on Pop!_OS 20.04" />
@@ -31,7 +31,7 @@
         <content type="html">
             <![CDATA[
                     <img src="https://gadgetboy.org/media/posts/46/duplicacy_backup_feature.png" alt="Set Up Duplicacy on Pop!_OS 20.04" />
-                <h2 id="mcetoc_1e7mepmgq0">I had no backup plan.</h2>
+                <h2>I had no backup plan.</h2>
 <p><a href="https://gadgetboy.org/review-system76-lemur-pro/" title="Review: System76 Lemur Pro" target="_blank" rel="noopener noreferrer">I switched to Pop!_OS as my daily driver </a>but I didn't yet move my files from my old MacBook Pro. Everything was backed up using Mac software, and I didn't have a plan for Linux backup.</p>
 <p>On the Mac, I backed up locally to a 1 TB external USB 3.0 drive using Time Machine and off-site to Dropbox <em>and</em> Amazon S3 using Arq Backup. Yeah, it was overkill, but you can't put a price on data loss, especially 25 years of family photos and videos.</p>
 <p>I also recently built a NAS system on my LAN for our family file storage, but it's not yet ready for backups, so I needed both a short term solution for my Linux laptop and a long term solution that I could use for all of our household backups.</p>
@@ -49,7 +49,7 @@
 <p>The pricing for a personal license is a little outside the norm - not quite SaaS, not quite a one-time purchase - but I ended up getting a 5-year license for $40.</p>
 <p class="msg msg--info">The Duplicacy web-GUI version has a lengthy free trial period, so you have plenty of time to decide if it works for you.</p>
 <p>Here's how to set it up.</p>
-<h2 id="mcetoc_1e7qb24h21">Wizards and Magic</h2>
+<h2>Wizards and Magic</h2>
 <p>My experience with backup software has typically been wizard-driven:</p>
 <p>[Launch backup software]</p>
 <ol>
@@ -62,15 +62,15 @@
 <p>[Save]</p>
 <p>After that, everything just backs up automagically.</p>
 <p>Duplicacy addresses all the same considerations, but instead of being wizard-driven, set up is performed using commands and configuration files. Luckily, I could ramp up quickly using the web-GUI version. I'll use this version for my laptop, but will use the command line version for backing up my NAS to the cloud.</p>
-<h2 id="mcetoc_1e7qb2brs2">Concepts</h2>
+<h2>Concepts</h2>
 <p>To get started with Duplicacy, you first need to understand some concepts and definitions. Again, wizard-driven backup solutions use these same concepts, but they're abstracted. In Duplicacy, they are explicit and uniquely configured. This approach took me a few minutes to get my head around, but now it makes perfect sense.</p>
-<h3 id="mcetoc_1e7qlnnj1e">Repository</h3>
+<h3>Repository</h3>
 <p>A Repository is the location of the files that you want to backup. (e.g. /home/yourdirectory or /etc/opt)</p>
-<h3 id="mcetoc_1e7qeevd69">Snapshot ID</h3>
+<h3>Snapshot ID</h3>
 <p>A Snapshot ID is a unique identifier for the repository you want to backup. For example, if you want to backup your home directory, you might give it a Snapshot ID of "Home."</p>
-<h3 id="mcetoc_1e7qem9u5a">Revision</h3>
+<h3>Revision</h3>
 <p>After the first backup of a repository, each subsequent backup generates a Revision. A revision contains the changes (additions, deletions, edits) since the last backup (sometimes referred to as Incremental or Differential backup). Revisions provide faster backups and conserve disk space.</p>
-<h3 id="mcetoc_1e7qb4ade3">Storage</h3>
+<h3>Storage</h3>
 <p>Where will you store your backups? You will need to initialize that storage by providing a path to the local or remote file system. If you're backing up off-site to cloud storage, you'll need to authenticate with that service before you can select it as a backup location. The process of authenticating Duplicacy varies based on the service you're using, so I won't cover that here.</p>
 <p>Currently, Duplicacy supports the following backends:</p>
 <ul>
@@ -92,18 +92,18 @@
 <p><a href="https://forum.duplicacy.com/t/supported-storage-backends/1107" target="_blank" rel="noopener noreferrer" title="Storage Backends on the Duplicacy Forum">You can find details and CLI commands on the Duplicacy Forum.</a></p>
 <p>In my short term use case, I'll be backing up to a <a href="https://amzn.to/2zr7uaz" target="_blank" rel="noopener noreferrer" title="Sandick High Endurance Micro SD Card 256 GB">High Endurance Micro SD card</a> (Local File System) every few hours and Google Drive each night.</p>
 <p>When my NAS is properly set up, I plan to continue with the Micro SD card for hourly backups, use the NAS for nightly backups and use <a href="https://aws.amazon.com/glacier/" target="_blank" rel="noopener noreferrer" title="Amazon S3 Glacier &amp; S3 Glacier Deep Archive">Amazon S3 Glacier</a> for weekly off-site backups.</p>
-<h3 id="mcetoc_1e7qcn5cf4">Backup</h3>
+<h3>Backup</h3>
 <p>A Backup is defined as the collection of files or directories you want to backup and the location where you want to put them. In order to configure a Backup, you first need to have initialized your Storage.</p>
-<h3 id="mcetoc_1e7qcv00d5">Schedule</h3>
+<h3>Schedule</h3>
 <p>A Schedule contains the timing of your backups (Day, time of day, etc.) and the Backup job you want to run. You can have multiple schedules for the same backup, multiple backups in a single schedule, etc. In order to configure a Schedule, you first need to have initialized your Storage and created at least one Backup.</p>
-<h3 id="mcetoc_1e7qd95l57">Prune</h3>
+<h3>Prune</h3>
 <p>The Prune function is similar to step 5 in the wizard-driven software example above but again, you need to explicitly define it. To do this, you need to create a Schedule that runs a Prune job, select the appropriate Backup, then indicate the parameters for when to start pruning data.</p>
-<h3 id="mcetoc_1e7qd3ih46">Restore</h3>
+<h3>Restore</h3>
 <p>You can restore your data from any shapshot contained in your backup library. Keep in mind that these are not bootable system backups - only your data. If your Linux installation doesn't have a bootable recovery partition, you may want to keep a bootable USB drive handy in case of system failure.</p>
-<h3 id="mcetoc_1e7qf8konb">Additional Concepts</h3>
+<h3>Additional Concepts</h3>
 <p>There are some additional concepts and commands that you may want to explore, but the above is enough to get you started.</p>
-<h2 id="mcetoc_1e7qfdvo4c">Setting up Duplicacy</h2>
-<h3 id="mcetoc_1e7qg2tjld">Installation</h3>
+<h2>Setting up Duplicacy</h2>
+<h3>Installation</h3>
 <p>You have two options for installing the Duplicacy web version:</p>
 <ol>
 <li>Download a self-contained binary or;</li>
@@ -116,113 +116,113 @@
 <p><code>sudo mkdir /opt/Duplicacy</code></p>
 <p><code>sudo mv /home/gadgetboy/Downloads/duplicacy_web_linux_x64_1.3.0 /opt/Duplicacy</code></p>
 <p>You also need to change permissions on the file so that it can be executed as a program. You can do this from the command line or using the Files application by right-clicking the file, selecting <strong>Permissions</strong>, then selecting the checkbox, "Allow executing file as program."</p>
-<figure class="post__image post__image--center" ><img src="https://gadgetboy.org/media/posts/46/duplicacy_permissions_markup.png" alt="Set File as Executable in Files" width="461" height="493">
+<figure class="post__image post__image--center" ><img loading="lazy" src="https://gadgetboy.org/media/posts/46/duplicacy_permissions_markup.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://gadgetboy.org/media/posts/46/responsive/duplicacy_permissions_markup-xs.png 300w ,https://gadgetboy.org/media/posts/46/responsive/duplicacy_permissions_markup-sm.png 480w ,https://gadgetboy.org/media/posts/46/responsive/duplicacy_permissions_markup-md.png 768w ,https://gadgetboy.org/media/posts/46/responsive/duplicacy_permissions_markup-lg.png 1024w"  alt="Set File as Executable in Files" width="461" height="493">
 <figcaption >Set executable file permissions (Image Credit: me)</figcaption>
 </figure>
-<h4 id="mcetoc_1e7spohdjm">Launching Duplicacy at Startup</h4>
+<h4>Launching Duplicacy at Startup</h4>
 <p>Even though Duplicacy is now ready to launch, you'll want to do one more thing: make sure Duplicacy launches after a restart. Otherwise, your automated backups won't run unless you remember to launch Duplicacy every time you reboot your machine.</p>
 <p>Select the <strong>Activities</strong> menu in the Pop!_OS panel, in the top left corner. Select the <strong>Show Applications</strong> icon in the Dash, then find the <strong>Startup Applications</strong> app and launch it.</p>
 <p>Click <strong>Add</strong>, then enter the name of the application. Next, enter the path of the application or select it by navigating to it by clicking <strong>Browse...</strong> </p>
-<div class="gallery"   >
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/add_startup_program.png" ><img src="https://gadgetboy.org/media/posts/46/gallery/add_startup_program-thumbnail.png" alt="Add Startup Program" width="663" height="599"></a>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-columns="1">
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/add_startup_program.png" data-size="663x599"><img loading="lazy" src="https://gadgetboy.org/media/posts/46/gallery/add_startup_program-thumbnail.png" alt="Add Startup Program" width="663" height="599"></a>
 <figcaption class="gallery-description">Add Startup Program (Image Credit: me)</figcaption>
 </figure>
-</div>
+</div></div>
 <p class="msg msg--info"><strong>Optional:</strong> If you're not the only user or administrator of this machine, you may want to enter a comment so that other people know why it's set to run at startup.</p>
 <p>Okay, we're finally ready to start backing up some files, so let's launch Duplicacy. It will load the control interface in your default web browser.</p>
 <p class="msg msg--highlight  msg--info">The Duplicacy web-GUI version runs a small web server so that you can setup and manage it using a web browser. By default, it responds only to requests from <em>localhost</em> at 127.0.0.1:3875. If you'd like to change this configuration so you can access it remotely, you can do that by selecting <strong>Setting</strong> in the toolbar. I'm going to focus only on the localhost use case in this post. Review <a href="https://forum.duplicacy.com/t/how-to-access-the-duplicacy-web-interface-remotely/1664/7?u=christoph" target="_blank" rel="noopener noreferrer" title="How to access the duplicacy web-interface remotely">this forum post</a> if you'd like learn how to setup remote access.</p>
-<h3 id="mcetoc_1e7qo97rcf">Application Password</h3>
+<h3>Application Password</h3>
 <p>Duplicacy will ask you to create a password to secure your credentials stored in local configuration files. You can choose to store this password in your Keychain. I use <a href="https://bitwarden.com/" target="_blank" rel="noopener noreferrer" title="Bitwarden Home">Bitwarden</a> for all my passwords, so I unchecked this box.</p>
 <p class="msg msg--highlight ">You can click any of the images below to enlarge them.</p>
-<div class="gallery"   >
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/duplicacy_web_password.png" ><img src="https://gadgetboy.org/media/posts/46/gallery/duplicacy_web_password-thumbnail.png" alt="Duplicacy Web Password Entry" width="768" height="349"></a>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-columns="1">
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/duplicacy_web_password.png" data-size="1247x567"><img loading="lazy" src="https://gadgetboy.org/media/posts/46/gallery/duplicacy_web_password-thumbnail.png" alt="Duplicacy Web Password Entry" width="768" height="349"></a>
 <figcaption class="gallery-description">Duplicacy Web Password Entry (Image Credit: Acrosync)</figcaption>
 </figure>
-</div>
+</div></div>
 <p>Once your password has been configured, Duplicacy will load the Dashboard. There's nothing yet to see here since we haven't yet initializied Storage, created a Backup or set a Schedule.</p>
-<div class="gallery"   >
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/duplicacy_web_start.png" ><img src="https://gadgetboy.org/media/posts/46/gallery/duplicacy_web_start-thumbnail.png" alt="Duplicacy Web Start Up" width="768" height="349"></a>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-columns="1">
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/duplicacy_web_start.png" data-size="1247x567"><img loading="lazy" src="https://gadgetboy.org/media/posts/46/gallery/duplicacy_web_start-thumbnail.png" alt="Duplicacy Web Start Up" width="768" height="349"></a>
 <figcaption class="gallery-description">Duplicacy Web Start Up (Image Credit: Acrosync)</figcaption>
 </figure>
-</div>
-<h3 id="mcetoc_1e7qoi3b4g">Identifying and Initializing Storage</h3>
+</div></div>
+<h3>Identifying and Initializing Storage</h3>
 <p>To add a place to store your backups, select <strong>Storage</strong> from the toolbar, then select the "<strong>+</strong>" icon in the lower left corner of the screen. You'll be presented with the Storage configuration options.</p>
-<div class="gallery"   >
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/duplicacy_storage_configuration.png" ><img src="https://gadgetboy.org/media/posts/46/gallery/duplicacy_storage_configuration-thumbnail.png" alt="Duplicacy Storage Selection" width="611" height="298"></a>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-columns="1">
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/duplicacy_storage_configuration.png" data-size="611x298"><img loading="lazy" src="https://gadgetboy.org/media/posts/46/gallery/duplicacy_storage_configuration-thumbnail.png" alt="Duplicacy Storage Selection" width="611" height="298"></a>
 <figcaption class="gallery-description">Duplicacy Storage Selection (Image Credit: me)</figcaption>
 </figure>
-</div>
+</div></div>
 <p>I'm going to continue on with own use case in this how-to, so I'll select a directory on my Micro SD card.</p>
-<div class="gallery"   >
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/select_storage_location.png" ><img src="https://gadgetboy.org/media/posts/46/gallery/select_storage_location-thumbnail.png" alt="Select Storage Location for Backups" width="614" height="546"></a>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-columns="1">
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/select_storage_location.png" data-size="614x546"><img loading="lazy" src="https://gadgetboy.org/media/posts/46/gallery/select_storage_location-thumbnail.png" alt="Select Storage Location for Backups" width="614" height="546"></a>
 <figcaption class="gallery-description">Select Storage Location for Backups (Image Credit: me)</figcaption>
 </figure>
-</div>
+</div></div>
 <p>Finally, to initialize the Storage, you'll need to give it a name. You can optionally add a password used to encrypt your Storage (<strong>RECOMMENDED</strong>).</p>
-<div class="gallery"   >
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/storage_name_password.png" ><img src="https://gadgetboy.org/media/posts/46/gallery/storage_name_password-thumbnail.png" alt="Naming your Storage" width="608" height="545"></a>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-columns="1">
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/storage_name_password.png" data-size="608x545"><img loading="lazy" src="https://gadgetboy.org/media/posts/46/gallery/storage_name_password-thumbnail.png" alt="Naming your Storage" width="608" height="545"></a>
 <figcaption class="gallery-description">Naming your Storage (Image Credit: me)</figcaption>
 </figure>
-</div>
+</div></div>
 <p class="msg msg--info"><strong>Optional:</strong> Select the Copy-compatible checkbox to explicitly indicate that the source Storage is compatible with the destination storage.</p>
 <p>Execute this operation by clicking the <strong>Add</strong> button. Once completed, the Storage will appear when you select <strong>Storage</strong> from the toolbar. In the screenshot below, you'll see the storage for both my hourly backups to the Micro SD card ("2004_Backups") and my Nightly backups to Google Drive ("Nightly").</p>
-<div class="gallery"   >
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/initialized_storage.png" ><img src="https://gadgetboy.org/media/posts/46/gallery/initialized_storage-thumbnail.png" alt="Initialized Storage" width="768" height="513"></a>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-columns="1">
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/initialized_storage.png" data-size="1276x853"><img loading="lazy" src="https://gadgetboy.org/media/posts/46/gallery/initialized_storage-thumbnail.png" alt="Initialized Storage" width="768" height="513"></a>
 <figcaption class="gallery-description">Initialized Storage (Image Credit: me)</figcaption>
 </figure>
-</div>
-<h3 id="mcetoc_1e7slemtih">Defining a Backup</h3>
+</div></div>
+<h3>Defining a Backup</h3>
 <p>Select <strong>Backup</strong> from the toolbar, then click the "<strong>+</strong>" button in the upper right corner. Here, you'll select the <strong>Directory</strong> (your files) that you want to backup, the destination (the initialized Storage created above) and a <strong>Backup ID</strong>. Give your Backup ID a memorable name like "My_Home_Directory" or "My_Photos."</p>
-<div class="gallery"   >
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/define_duplicacy_backup.png" ><img src="https://gadgetboy.org/media/posts/46/gallery/define_duplicacy_backup-thumbnail.png" alt="Define a Backup in Duplicacy" width="611" height="542"></a>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-columns="1">
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/define_duplicacy_backup.png" data-size="611x542"><img loading="lazy" src="https://gadgetboy.org/media/posts/46/gallery/define_duplicacy_backup-thumbnail.png" alt="Define a Backup in Duplicacy" width="611" height="542"></a>
 <figcaption class="gallery-description">Define a Backup in Duplicacy (Image Credit: me)</figcaption>
 </figure>
-</div>
+</div></div>
 <p>Save this configuration by clicking the <strong>Save</strong> button. You'll return to the Backup screen where you will now see your new Backup configuration. In the screenshot below, you'll see both my local Backup ("home") and my Google Drive Backup ("Offsite").</p>
-<div class="gallery"   >
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/duplicacy_configured_backup.png" ><img src="https://gadgetboy.org/media/posts/46/gallery/duplicacy_configured_backup-thumbnail.png" alt="Duplicacy Backup Configured" width="768" height="511"></a>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-columns="1">
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/duplicacy_configured_backup.png" data-size="1277x849"><img loading="lazy" src="https://gadgetboy.org/media/posts/46/gallery/duplicacy_configured_backup-thumbnail.png" alt="Duplicacy Backup Configured" width="768" height="511"></a>
 <figcaption class="gallery-description">Duplicacy Backup Configured (Image Credit: me)</figcaption>
 </figure>
-</div>
+</div></div>
 <p>In theory, you could stop here. When you want to perform a backup, you could just click the green arrow/triangle below the Backup name, but we don't want to have to remember to do that - we want it to happen automatically.</p>
-<h3 id="mcetoc_1e7smc4ipi">Creating a Schedule</h3>
+<h3>Creating a Schedule</h3>
 <p>Select <strong>Schedule</strong> from the toolbar, then select the "<strong>+</strong>" icon in the lower left corner. Give your Schedule a name (e.g. "Nightly"), select the <strong>time of day</strong> you'd like it to start, select the <strong>frequency</strong> in which you want it to run, then select the <strong>day(s) of the week</strong> you would like it to run.</p>
-<div class="gallery"   >
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/duplicacy_create_schedule.png" ><img src="https://gadgetboy.org/media/posts/46/gallery/duplicacy_create_schedule-thumbnail.png" alt="Creat a Schedule in Duplicacy" width="611" height="544"></a>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-columns="1">
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/duplicacy_create_schedule.png" data-size="611x544"><img loading="lazy" src="https://gadgetboy.org/media/posts/46/gallery/duplicacy_create_schedule-thumbnail.png" alt="Creat a Schedule in Duplicacy" width="611" height="544"></a>
 <figcaption class="gallery-description">Creat a Schedule in Duplicacy (Image Credit: me)</figcaption>
 </figure>
-</div>
+</div></div>
 <p class="msg msg--highlight  msg--info"><strong>Optional:</strong> Select the <strong>Maximum Run Time</strong>. I don't particularly grok the use case for this. Perhaps if it's a production machine, like a file server, you'd want to make sure it's finished before 9 AM, when people start working. Or, maybe, if it's your laptop and you need to leave for work at a certain time, you want to make sure you don't interrupt the job and corrupt the backup. Someone with more experience will have to give me a real use case. Personally, I want the job to finish, no matter how long it takes.</p>
-<h3 id="mcetoc_1e7sn3gtqj">Testing</h3>
+<h3>Testing</h3>
 <p>This is the last and most important step in any backup plan. If you don't validate your backup, it's like not having a backup at all.</p>
 <p>Click <strong>Backup</strong> from the toolbar.</p>
 <p>Run a manual Backup job by clicking the green arrow icon. If this is your first time, go get a cup of coffee. Or a cocktail. It could take a while.</p>
 <p>Once the job is completed, click <strong>Restore</strong> from the toolbar.</p>
-<div class="gallery"   >
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/duplicacy_restore.png" ><img src="https://gadgetboy.org/media/posts/46/gallery/duplicacy_restore-thumbnail.png" alt="Duplicacy Restore Screen" width="768" height="514"></a>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-columns="1">
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/duplicacy_restore.png" data-size="1266x848"><img loading="lazy" src="https://gadgetboy.org/media/posts/46/gallery/duplicacy_restore-thumbnail.png" alt="Duplicacy Restore Screen" width="768" height="514"></a>
 <figcaption class="gallery-description">Duplicacy Restore Screen (Image Credit: me)</figcaption>
 </figure>
-</div>
+</div></div>
 <p>Select the initialized <strong>Storage</strong> where your backups are kept from the drop down menu, then select the <strong>Backup ID</strong> of your files. Now, select a <strong>Revision</strong>. This could be from any point in time as indicated by the time stamp at the end of each entry. Finally, indicate the directory where you'd like to put your restored files.</p>
 <p class="msg msg--info">For information on <strong>Options</strong>, visit the <a href="https://forum.duplicacy.com/" target="_blank" rel="noopener noreferrer" title="Duplicacy forum">Duplicacy forum</a>.</p>
 <p>After you've selected your revision, Duplicacy will present you with the files or directories contained within. Select the file or directory that you want to restore, then click the <strong>Restore</strong> button at the bottom of the screen. </p>
 <p>Your files will be unpacked and copied to the directory you've specified above.</p>
-<h3 id="mcetoc_1e7snrtbvk">Review Your Files</h3>
+<h3>Review Your Files</h3>
 <p>Does everything look OK? Is anything missing? Are you able to open your files? Yes?</p>
 <p class="msg msg--success"><strong>Congratulations!</strong> You've set up the Duplicacy web-GUI version to backup your files automatically.</p>
-<h3 id="mcetoc_1e7su44njo">The Check Job</h3>
+<h3>The Check Job</h3>
 <p>You've now setup Duplicacy and performed a successful backup and restore of your data, but do you plan to do that after <em>every</em> backup?</p>
 <p>Of course not.</p>
 <p>To ensure Snapshot integrity, you'll want to run the <strong>Check</strong> command. You can run a Check at any time but it's probably best to schedule a Check job after a completed backup.</p>
 <p>By default, the Check command will only verify that a referenced file chunk exists in your snapshots. If you want to automatically verify the integrity of each individual file, see <a href="https://forum.duplicacy.com/t/check-command-details/1081" target="_blank" rel="noopener noreferrer" title="Check command details">this post on the Duplicacy forum</a> for options.</p>
 <p>To setup a Check job, you can create a new schedule or add the job to an existing schedule. In my case, I've added it to my "Nightly" schedule so that it runs after each daily cloud backup.</p>
 <p>Once your schedule is created, click the "<strong>+</strong>" icon to add a new job. Select <strong>Check</strong> from the drop down menu, then select which <strong>Destination</strong> you want to check. To learn more about <strong>Options</strong>, visit the forum post linked above.</p>
-<div class="gallery"   >
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/duplicacy_add_new_check_job.png" ><img src="https://gadgetboy.org/media/posts/46/gallery/duplicacy_add_new_check_job-thumbnail.png" alt="Add a new Check job in Duplicacy" width="612" height="391"></a>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-columns="1">
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/duplicacy_add_new_check_job.png" data-size="612x391"><img loading="lazy" src="https://gadgetboy.org/media/posts/46/gallery/duplicacy_add_new_check_job-thumbnail.png" alt="Add a new Check job in Duplicacy" width="612" height="391"></a>
 <figcaption class="gallery-description">Add a new Check job in Duplicacy (Image Credit: me)</figcaption>
 </figure>
-</div>
-<h3 id="mcetoc_1e7sqt1pjn">Pruning</h3>
+</div></div>
+<h3>Pruning</h3>
 <p>Technically, you're all set: your backups now run on an automated schedule and you can safely restore your data.</p>
 <p>But unless you have unlimited storage, you'll probably only want to keep backups around for a certain length of time.</p>
 <p>To configure this, we have to create a <strong>Prune</strong> job.</p>
@@ -231,11 +231,11 @@
 <p>To create a Prune job, select <strong>Schedule</strong> from the toolbar, then select the "<strong>+</strong>" icon in the bottom left of the main screen to create a new schedule. In my case, I prune both my local backups and my cloud backups every 7 days. Choose what works for your peace of mind and your storage limitations.</p>
 <p>Give your schedule a logical name such as "Prune_Local" or "Prune_Cloud." If you intend to run multiple jobs in the same schedule, name the schedule accordingly.</p>
 <p>Now, find your new schedule in the main screen and select the "<strong>+</strong>" icon to add a job to it. This is just like adding the Backup job that we covered above, but instead of selecting <strong>Backup</strong> from the drop down menu, we're going to select <strong>Prune</strong>.</p>
-<div class="gallery"   >
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/duplicacy_prune_setup.png" ><img src="https://gadgetboy.org/media/posts/46/gallery/duplicacy_prune_setup-thumbnail.png" alt="Duplicacy Prune Job Setup" width="613" height="532"></a>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-columns="1">
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/46/gallery/duplicacy_prune_setup.png" data-size="613x532"><img loading="lazy" src="https://gadgetboy.org/media/posts/46/gallery/duplicacy_prune_setup-thumbnail.png" alt="Duplicacy Prune Job Setup" width="613" height="532"></a>
 <figcaption class="gallery-description">Duplicacy Prune Job Setup (Image Credit: me)</figcaption>
 </figure>
-</div>
+</div></div>
 <p>Next, select the <strong>Destination</strong> (your initialized Storage) that you want to Prune and configure your <strong>Retention Policy</strong>. Click <strong>Save</strong> to finish.</p>
 <p> </p>
 If you found this how-to helpful, pay it forward.
@@ -250,7 +250,7 @@ If you found this how-to helpful, pay it forward.
         <link href="https://gadgetboy.org/protect-your-privacy-with-firefox-containers/"/>
         <id>https://gadgetboy.org/protect-your-privacy-with-firefox-containers/</id>
 
-        <updated>2020-04-28T10:24:44-05:00</updated>
+        <updated>2020-07-06T07:08:05-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/45/shipping_containers_firefox.png" alt="Shipping Containers" />
@@ -266,7 +266,7 @@ If you found this how-to helpful, pay it forward.
 <p>Today, there is a treasure trove of data available about you, your habits and your intentions based solely on your online activity. </p>
 <p>Going forward, the best you can hope for is to prevent further escape of your personal information and metadata into the wild. (Sometimes referred to as "<a href="https://en.wikipedia.org/wiki/Data_exhaust" target="_blank" rel="noopener noreferrer" title="Data Exhaust on Wikipedia">data exhaust</a>.")</p>
 <p>But how?</p>
-<h2 id="mcetoc_1e6rb816m0">The use (and abuse) of Cookies</h2>
+<h2>The use (and abuse) of Cookies</h2>
 <p>There are many types of strategies and tactics for capturing your personal metadata, but the greatest culprit is probably browser cookies.</p>
 <p><a href="https://en.wikipedia.org/wiki/HTTP_cookie" target="_blank" rel="noopener noreferrer" title="HTTP Cookie on Wikipedia">Cookies</a> were originally created by <a href="https://en.wikipedia.org/wiki/Netscape" target="_blank" rel="noopener noreferrer" title="Netscape on Wikipedia">Netscape</a> in the 1990's for use in their Navigator web browser. Their original design was to uniquely identify internet users to help ecommerce sites keep track of what items are in your shoppping cart.</p>
 <p>Since then, they've been used for a variety of reasons, almost all of which are designed to <strong>track you on the internet</strong>.</p>
@@ -282,7 +282,7 @@ If you found this how-to helpful, pay it forward.
 <p>Wait. What?! How is that even possible?!</p>
 <p>It's not. There are too many web sites and not enough browsers to use this strategy. Plus, it would be a huge pain in the ass.</p>
 <p>That's where <a href="https://support.mozilla.org/en-US/kb/containers" target="_blank" rel="noopener noreferrer" title="Firefox Multi-Account Containers">Firefox Multi-Account Containers</a> ("Firefox Containers") come to the rescue.</p>
-<h2 id="mcetoc_1e6rbc2um1">Firefox Multi-Account Containers</h2>
+<h2>Firefox Multi-Account Containers</h2>
 <p>From the Mozilla web site:</p>
 <blockquote>
 <p class="msg msg--info"><a href="https://addons.mozilla.org/firefox/addon/multi-account-containers/">Multi-Account Containers</a> is a Firefox add-on that lets you separate your work, shopping or personal browsing without having to clear your history, log in and out, or use multiple browsers. Container tabs are like normal tabs except that the sites you visit will have access to a separate slice of the browser's storage. This means your site preferences, logged in sessions, and advertising tracking data won't carry over to the new container. Likewise, any browsing you do within the new container will not affect your logged in sessions, or tracking data of your other containers.</p>
@@ -295,7 +295,7 @@ If you found this how-to helpful, pay it forward.
 <p>I'm assuming that you already have Firefox installed. If not, <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank" rel="noopener noreferrer" title="Download Firefox">go ahead and do that</a>. Now, you're ready to get started with Firefox Multi-Account Containers.</p>
 <p>First, you have to <a href="https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/" target="_blank" rel="noopener noreferrer" title="Download Firefox Multi-Account Containers">install the add-on from Mozilla</a> since it's not included by default. (It really should be.)</p>
 <p>Once that's done, you'll see a new icon in your toolbar:</p>
-<figure class="post__image post__image--center" ><img src="https://gadgetboy.org/media/posts/45/Screenshot-from-2020-04-26-07-20-31.png" alt="Firefox Multi-Account Containers Icon" width="227" height="90">
+<figure class="post__image post__image--center" ><img loading="lazy" src="https://gadgetboy.org/media/posts/45/Screenshot-from-2020-04-26-07-20-31.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://gadgetboy.org/media/posts/45/responsive/Screenshot-from-2020-04-26-07-20-31-xs.png 300w ,https://gadgetboy.org/media/posts/45/responsive/Screenshot-from-2020-04-26-07-20-31-sm.png 480w ,https://gadgetboy.org/media/posts/45/responsive/Screenshot-from-2020-04-26-07-20-31-md.png 768w ,https://gadgetboy.org/media/posts/45/responsive/Screenshot-from-2020-04-26-07-20-31-lg.png 1024w"  alt="Firefox Multi-Account Containers Icon" width="227" height="90">
 <figcaption >Firefox Multi-Account Containers Icon (Image Credit: me)</figcaption>
 </figure>
 <p>Selecting it will show you some sample containers that have already been created for you to use or test. I haven't completed a fresh install of this plugin in awhile, but the starter containers are usually:</p>
@@ -309,37 +309,37 @@ If you found this how-to helpful, pay it forward.
 </ul>
 <p>You can edit the name, color and icon to your liking. </p>
 <p>(Ignore the "tmp" containers you see below, for now. I'll explain them shortly.)</p>
-<figure class="post__image post__image--center" ><img src="https://gadgetboy.org/media/posts/45/Screenshot-from-2020-04-26-07-23-13.png" alt="Firefox Multi-Account Containers Menu" width="319" height="593">
+<figure class="post__image post__image--center" ><img loading="lazy" src="https://gadgetboy.org/media/posts/45/Screenshot-from-2020-04-26-07-23-13.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://gadgetboy.org/media/posts/45/responsive/Screenshot-from-2020-04-26-07-23-13-xs.png 300w ,https://gadgetboy.org/media/posts/45/responsive/Screenshot-from-2020-04-26-07-23-13-sm.png 480w ,https://gadgetboy.org/media/posts/45/responsive/Screenshot-from-2020-04-26-07-23-13-md.png 768w ,https://gadgetboy.org/media/posts/45/responsive/Screenshot-from-2020-04-26-07-23-13-lg.png 1024w"  alt="Firefox Multi-Account Containers Menu" width="319" height="593">
 <figcaption >Firefox Multi-Account Containers Menu (Image Credit: me)</figcaption>
 </figure>
 <p>If you select "Personal" from this menu, it will launch a new Personal container.  Now, try this: visit any web site where you have an account, then login. (Not social media, yet.)</p>
 <p>Next, create a new Default tab using the standard Firefox controls. ("Ctrl + T" on Linux and Windows, "Cmd + T" on a Mac or clicking the "+" icon in the toolbar). Now, visit that same web site again in the Default tab. You'll immediately notice that you're not logged in to the site in that tab.</p>
 <p>That's because Firefox containers have (as the name implies) contained your activities for that web site within the Personal set of tabs (you can have as many container tabs open as your computer will allow). If this is a site that you login to frequently, you can check the box just below the page title in the Firefox containers menu, so that you can "Always open in Personal." By doing that, any time you launch a new tab and enter the URL for that web site, regardless of the container you're using, Firefox will load that web site in the Personal container automatically.</p>
 <p>But wait - it gets better.</p>
-<h2 id="mcetoc_1e6rbj1d52">The Facebook Container</h2>
-<figure class="post__image post__image--center" ><img src="https://gadgetboy.org/media/posts/45/facebook_container_icon.png" alt="Facebook Container Fence Icon" width="160" height="27">
+<h2>The Facebook Container</h2>
+<figure class="post__image post__image--center" ><img loading="lazy" src="https://gadgetboy.org/media/posts/45/facebook_container_icon.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://gadgetboy.org/media/posts/45/responsive/facebook_container_icon-xs.png 300w ,https://gadgetboy.org/media/posts/45/responsive/facebook_container_icon-sm.png 480w ,https://gadgetboy.org/media/posts/45/responsive/facebook_container_icon-md.png 768w ,https://gadgetboy.org/media/posts/45/responsive/facebook_container_icon-lg.png 1024w"  alt="Facebook Container Fence Icon" width="160" height="27">
 <figcaption >Facebook Container Fence Icon (Image Credit: me)</figcaption>
 </figure>
 <p>Now, install the <a href="https://addons.mozilla.org/en-US/firefox/addon/facebook-container/" target="_blank" rel="noopener noreferrer" title="Facebook Container on Mozilla.org">Facebook Container</a> add-on. The Facebook Container is a special add-on that not only keeps your Facebook activity in the Firefox container, but it also blocks the loading of any Facebook cookies, code or off-site applications, such as "Share to Facebook" or "Login with Facebook."</p>
 <p>Try it: open a tab in any other container, then visit any web site that has Facebook "Share" buttons. You'll see something like this. The tooltip text will load if you hover over the icon.</p>
-<div class="gallery"   >
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/45/gallery/facebook_container.png" ><img src="https://gadgetboy.org/media/posts/45/gallery/facebook_container-thumbnail.png" alt="Facebook Share Button Blocked" width="768" height="231"></a>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-columns="1">
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/45/gallery/facebook_container.png" data-size="1276x383"><img loading="lazy" src="https://gadgetboy.org/media/posts/45/gallery/facebook_container-thumbnail.png" alt="Facebook Share Button Blocked" width="768" height="231"></a>
 <figcaption class="gallery-description">Facebook Share Button Blocked (Image Credit: Mozilla)</figcaption>
 </figure>
-</div>
+</div></div>
 <p>If the Facebook share button is served from Facebook.com, the Facebook Container will deactivate the button and prevent Facebook from knowing that you visited that site.</p>
 <p>The same will happen if you visit a site that uses "Login with Facebook."</p>
-<div class="gallery"   >
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/45/gallery/allow_facebook.png" ><img src="https://gadgetboy.org/media/posts/45/gallery/allow_facebook-thumbnail.png" alt="Login with Facebook Blocked" width="768" height="372"></a>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-columns="1">
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/45/gallery/allow_facebook.png" data-size="1275x617"><img loading="lazy" src="https://gadgetboy.org/media/posts/45/gallery/allow_facebook-thumbnail.png" alt="Login with Facebook Blocked" width="768" height="372"></a>
 <figcaption class="gallery-description">Login with Facebook Blocked (Image Credit: Mozilla)</figcaption>
 </figure>
-</div>
+</div></div>
 <p>You always have the option of over-riding this setting by clicking the button but then, you'll be exposing your online activites to Facebook - but at least the choice is <em>yours</em>.</p>
 <p>There are similar add-ons for <a href="https://addons.mozilla.org/en-US/firefox/addon/twitter-container/" target="_blank" rel="noopener noreferrer" title="Twitter Container Add-on on Mozilla">Twitter</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/contain-amazon/" target="_blank" rel="noopener noreferrer" title="Amazon Container Add-on on Mozilla">Amazon</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/google-container/" target="_blank" rel="noopener noreferrer" title="Google Container Add-on on Mozilla">Google</a>, and other sites. I recommend you install as many of them as possible.</p>
-<h2 id="mcetoc_1e6rbmn1t3">The Default Tab</h2>
+<h2>The Default Tab</h2>
 <p>I use keyboard shortcuts as much as possible. They enable me to accomplish things so much faster than navigating through application menus. So, if you're like me, that means you probably create tabs using "Ctrl + T" on Linux and Windows or "Cmd + T" on a Mac.</p>
 <p>When you do this, you launch a Default tab (and related container) in Firefox. Doing this means that the more frequently you use the Default tab, you're more likely to expose your online activites across sites.</p>
-<h3 id="mcetoc_1e6rbqb7u4">Temporary Containers</h3>
+<h3>Temporary Containers</h3>
 <p>To solve his problem, install the <a href="https://addons.mozilla.org/en-US/firefox/addon/temporary-containers/" target="_blank" rel="noopener noreferrer" title="Temporary Containers Add-on on Mozilla">Temporary Containers</a> add-on. Next, go to the Add-ons menu item in Firefox, find Temporary Containers, select the ellipse menu, then select Preferences. This add-on is very configurable, but you don't need to worry about that. Select the checkbox for "Automatic Mode" then close that tab.</p>
 <p>Automatic Mode, as defined by the add-on creator:</p>
 <blockquote>
@@ -348,10 +348,10 @@ If you found this how-to helpful, pay it forward.
 <p>Now that the Temporary Containers tab is installed, any time you create a new tab using keyboard shortcuts or use the "+" icon on the toolbar, Firefox will create a new Temporary tab. When you close the tab, all of the cookies that were set in that tab will be deleted, erasing any trace of your visit to that site. </p>
 <p class="msg msg--highlight "><strong>Note:</strong> unlike Private Windows, visits to sites in Temporary Containers will still show up in your browser history.</p>
 <p>But what happens if you use a Temporary container and wind up on a site where you have an account and would like to be remembered? Right-click the current tab and select the "Reopen in Container" menu, then select your chosen container. You can then select the Firefox containers icon in the toolbar and check the box to always open that site in that container.</p>
-<figure class="post__image post__image--center" ><img src="https://gadgetboy.org/media/posts/45/reopen_in_container.gif" alt="Reopen in Container Animation" width="386" height="298">
+<figure class="post__image post__image--center" ><img loading="lazy" src="https://gadgetboy.org/media/posts/45/reopen_in_container.gif" alt="Reopen in Container Animation" width="386" height="298">
 <figcaption >Reopen in Container (Image Credit: me)</figcaption>
 </figure>
-<h2 id="mcetoc_1e6rflvm49">Go Further</h2>
+<h2>Go Further</h2>
 <p>If you'd like to take additional steps to protect your privacy (and speed up your web browsing in the process) I recommend installing the following add-ons:</p>
 <ul>
 <li><a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/" target="_blank" rel="noopener noreferrer" title="uBlock Origin add-on on Mozilla">uBlock Origin</a></li>
@@ -360,22 +360,22 @@ If you found this how-to helpful, pay it forward.
 <p>uBlock Origin is a fast ad-blocker that is efficient with resources. It doesn't hog a lot of memory or noticeably slow down your computer.</p>
 <p>Privacy Badger has some similar functionality, but it's main purpose is to automatically learn which sites are tracking you, then block them accordingly.</p>
 <p class="msg msg--highlight "><strong>Note:</strong> like most ad blocking add-ons, these applications can sometimes prevent sites from working properly. If you find yourself in that situation, you can turn off uBlock Origin or Privacy Badger for that site while leaving them turned on for other sites you visit.</p>
-<h2 id="mcetoc_1e6reurvg8">In Conlusion or "Who has time for all this?"</h2>
+<h2>In Conclusion or "Who has time for all this?"</h2>
 <p>When I tell people about my use of Firefox Multi-Account Containers, inevitably, I receive questions like, "How long did it take you to set this up?" and "Who has time for all this?"</p>
 <p>Set up is easy - you can follow the instructions I've provided above and be done in 5 minutes or less. However, at the start, you do need to think differently about how you use your browser, but that's a short learning curve.</p>
 <p>Installing Temporary Containers helped me a lot here, since I no longer had to worry about accidentally opening something in a permanent Default container.</p>
-<p>I suggest you give it a try. You'll notice a signficant drop in the number of retargeting ads that you receive and that's <strong>the</strong> key indicator that it's working.</p>
-<p>If you find it too complicated for day-to-day use, you can always switch back to your usual browing habits.</p>
-<h2 id="mcetoc_1e6rd5q7o5">Bonus: Protect Your Privacy on Your Smartphone</h2>
+<p>I suggest you give it a try. You'll notice a significant drop in the number of re-targeting ads that you receive and that's <strong>the</strong> key indicator that it's working.</p>
+<p>If you find it too complicated for day-to-day use, you can always switch back to your usual browsing habits.</p>
+<h2>Bonus: Protect Your Privacy on Your Smartphone</h2>
 <p>Firefox on iOS doesn't support add-ons - and never will - due to Apple's strict software security model. On Android, the uBlock Origin and Privacy Badger add-ons can be installed, but not Firefox Multi-Account containers. (insert sad face here)</p>
 <p>This can be problematic as it exposes the data exhaust from your mobile browsing, but there are other things you can do to help prevent that.</p>
-<h3 id="mcetoc_1e6rdoe386">Apps</h3>
+<h3>Apps</h3>
 <p>If you use any of the sites mentioned above, all of them have their own apps for your phone. If you need to buy something on Amazon or search for something on Google, use the site's respective app. Generally speaking, any activity in those apps stays in those apps.</p>
-<p>My personal exception to this rule is Facebook. The Facebook app has been notorious for not respecting privacy settings, like when you turn off Location Services for the app. Twitter is better, but still aggressive.</p>
+<p>My personal exception to this rule is Facebook. The Facebook app is notorious for not respecting privacy settings, like when you turn off Location Services for the app. Twitter is better, but still aggressive.</p>
 <p>For these sites, I use a separate browser: I installed Brave, a browser that, like Firefox, also helps protect your privacy. The only two sites that I use in Brave?</p>
 <p>Facebook and Twitter.</p>
 <p>Those two sites both have very good mobile web experiences and are the only way I can be certain that they're not tracking my location or other web activities.</p>
-<h3 id="mcetoc_1e6re9em37">Sensitive Searches</h3>
+<h3>Sensitive Searches</h3>
 <p>I use DuckDuckGo for web searches on both my laptop and smartphone. While I trust DuckDuckGo to not track me all over the web, that doesn't mean that I trust the sites to which it links.</p>
 <p>For this, I sometimes use the nuclear option for sensitive searches: <a href="https://www.mozilla.org/en-US/firefox/mobile/" target="_blank" rel="noopener noreferrer" title="Firefox Focus on Mozilla">Firefox Focus</a>, a browser that clears everything from your device (including history) when the app is closed. It's available on both Android and iOS and, in practice, functions like the Temporary Containers add-on I described above.</p>
 <p>I use this when I'm searching for things that I don't want anyone to attribute to me. For example, a new cholesterol medication or mortgage refinancing rates. The first search and subsequent site visits to the sites in the search results may expose the fact that I have high cholesterol (I don't) and that's health data that no one needs to know, other than my doctor. The second protects me from incessant retargeting by mortgage lenders and brokers.</p>
@@ -391,7 +391,7 @@ If you found this how-to helpful, pay it forward.
         <link href="https://gadgetboy.org/review-system76-lemur-pro/"/>
         <id>https://gadgetboy.org/review-system76-lemur-pro/</id>
 
-        <updated>2020-04-30T18:51:41-05:00</updated>
+        <updated>2020-07-06T07:08:05-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/43/lemur.jpg" alt="Just a Lemur." />
@@ -404,25 +404,25 @@ If you found this how-to helpful, pay it forward.
                 <p>I decided it was time to replace my aging 2015 MacBook Pro. Even though it's still in mint physical condition with a beautiful HiDPI ("Retina") display and is generally great to type on, the battery was beginning to show its age and it will become ineligible for OS upgrades in the near future.</p>
 <p>I experimented with a Chromebook for a short while, then found myself <a href="https://gadgetboy.org/my-new-chromebook-isnt-a-chromebook-at-all/" target="_blank" rel="noopener noreferrer">running Pop!_OS on a 13" Dell 2-in-1</a>, which I've enjoyed a lot. Using that machine has generally been a great experience, especially since Ubuntu seems to support all the hardware. My only complaint has been the trackpad - it's just not as precise as I'm used to and can be really frustrating to use. (It's not a Linux problem - it's the same running Windows 10.)</p>
 <p>While immersing myself in some projects at home, I decided that I wanted a more powerful machine with a bigger, matte screen and a passable trackpad. After much deliberation, I bought a <a href="https://www.dell.com/en-us/shop/dell-laptops/new-inspiron-15-7000-laptop/spd/inspiron-15-7591-laptop" target="_blank" rel="noopener noreferrer" title="Dell Inspiron 15 7591">Dell Inspiron 15 7591</a>. It's an awesome machine that's a joy to type on and, with a 32 GB RAM kit and NVIDIA Graphics, it's screaming fast. The trackpad is pretty damn good, too, and the aluminium shell feels and looks great. It supports two NVMe drives and yet another 2.5" mass storage drive (SSD, Hybrid or Hard Drive). It's a beautiful beast that won't break the bank.</p>
-<figure class="post__image post__image--center" ><img src="https://gadgetboy.org/media/posts/43/inspiron_7591.png" alt="Dell Inspiron 15 7591" width="1140" height="473">
+<figure class="post__image post__image--center" ><img loading="lazy" src="https://gadgetboy.org/media/posts/43/inspiron_7591.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://gadgetboy.org/media/posts/43/responsive/inspiron_7591-xs.png 300w ,https://gadgetboy.org/media/posts/43/responsive/inspiron_7591-sm.png 480w ,https://gadgetboy.org/media/posts/43/responsive/inspiron_7591-md.png 768w ,https://gadgetboy.org/media/posts/43/responsive/inspiron_7591-lg.png 1024w"  alt="Dell Inspiron 15 7591" width="1140" height="473">
 <figcaption >Image Credit: Dell</figcaption>
 </figure>
 <p> </p>
-<p>(Full Disclosure: <a href="https://www.linkedin.com/in/johnfederico/" target="_blank" rel="noopener noreferrer" title="John Federico on LinkedIn.com">I work for Dell</a> running software partnerships, making this post a little...uncomfortable to write. I'm not involved in the hardware side of the business in any way other than I can sometimes get my hands on some machines before they're released to the <a href="#mcetoc_1e5km0bsc0" title="Footnotes">public*</a>.) <span >😉</span></p>
+<p>(Full Disclosure: <a href="https://www.linkedin.com/in/johnfederico/" target="_blank" rel="noopener noreferrer" title="John Federico on LinkedIn.com">I work for Dell</a> running software partnerships, making this post a little...uncomfortable to write. I'm not involved in the hardware side of the business in any way other than I can sometimes get my hands on some machines before they're released to the <a href="#mcetoc_1e5km0bsc0" title="Footnotes">public*</a>.) <span data-offset-key="7su1a-0-0">😉</span></p>
 <p>I was generally in love with the 7591, but there was just one problem with it: I couldn't get it to properly run any flavor of Linux. Even though the machine is <a href="https://certification.ubuntu.com/hardware/201903-26880" target="_blank" rel="noopener noreferrer" title="Dell Inspiron 15 7591 Ubuntu Certification">Ubuntu Certified</a> (which is a key reason I chose it), I couldn't get the PCI sound card to work. USB audio input and output both worked fine, but troubleshooting the built-in sound card was an exercise in frustration.</p>
 <p>I think we all take for granted that our laptops can play sound until you find yourself trying to learn something from a YouTube video and have to switch to a different PC or your smartphone.</p>
 <p>Since the machine didn't ship with Ubuntu pre-installed, I was unable to get support from Dell. Look, I get it: successfully supporting millions of consumers (many of them not very tech savvy) is no small feat. If you buy a new car, then completely replace the engine with something else, you can't expect the manufacturer to support it. This appears to be industry wide, not just at Dell. (Though, I will ask, why bother certifying a PC for Ubuntu if you're not going to support it with that OS? But, I digress...)</p>
 <p>The Pop!_OS and Ubuntu communities are great resources, but I finally gave up after three weeks and sold it on eBay. The shop where I bought the 32 GB RAM kit won't accept returns unless the memory is DOA and I didn't feel like negotiating the restocking fee on the PC, nor create a support incident for the Dell support team to deal with - with so many people working from home now, they are likely overwhelmed. It was easier to just restore the Windows 10 OS factory image and sell it as "New, Open Box."</p>
 <p>So, even as I returned to my 13" machine, I was trying to figure out my options. I didn't want to spend a ton of money on a PC that wasn't my daily driver, I wasn't willing to buy a similar machine and hope for a better trackpad and, most importantly, I didn't want to have to wrestle with a PC from any major OEM to get Linux running on it. Even users of Thinkpads, which are famously great for supporting Linux across the product line, were having issues getting Ubuntu to run properly on models that I would have considered.</p>
 <p>I wanted a Linux machine with hardware support out of the box, but any device with Linux pre-installed from a major PC OEM is typically sold as a "<a href="#mcetoc_1e5km0bsc0" title="Footnote">Developer Edition*</a>," which means it's <a href="https://www.dell.com/en-us/work/shop/overview/cp/linuxsystems" target="_blank" rel="noopener noreferrer" title="Dell Project Sputnik">built - and priced - for business use</a>.</p>
-<p><img class="post__image post__image--center" src="https://gadgetboy.org/media/posts/43/System76-System76_Logo_Blue-by_Kate_Hazen_of_System76.jpg" alt="System76 Branded Desktop Image" width="640" height="360"></p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://gadgetboy.org/media/posts/43/System76-System76_Logo_Blue-by_Kate_Hazen_of_System76.jpg" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://gadgetboy.org/media/posts/43/responsive/System76-System76_Logo_Blue-by_Kate_Hazen_of_System76-xs.jpg 300w ,https://gadgetboy.org/media/posts/43/responsive/System76-System76_Logo_Blue-by_Kate_Hazen_of_System76-sm.jpg 480w ,https://gadgetboy.org/media/posts/43/responsive/System76-System76_Logo_Blue-by_Kate_Hazen_of_System76-md.jpg 768w ,https://gadgetboy.org/media/posts/43/responsive/System76-System76_Logo_Blue-by_Kate_Hazen_of_System76-lg.jpg 1024w"  alt="System76 Branded Desktop Image" width="640" height="360"></figure>
 <p>So, I started searching for other PC's with Linux pre-installed and, not surprisngly, System76 kept popping up with great reviews and a huge community of super fans. Of course, I knew of System76 as they're the creator and maintainer of Pop!_OS, but I was still thinking (hoping?) that I could get a better spec'd and more economical machine from Dell that would run Linux.</p>
 <p>As I was overthinking the whole decision, I made my 3,000th visit to the Sytem76 web site so I could (again) configure a 15" <a href="https://system76.com/laptops/darter" target="_blank" rel="noopener noreferrer" title="Darter Pro on System76.com">Darter Pro</a> machine and noticed that System76 was about to release a new PC - the 2020 14" <a href="https://system76.com/laptops/lemur" target="_blank" rel="noopener noreferrer" title="Lemur Pro on System76.com">Lemur Pro</a>.</p>
-<figure class="post__image post__image--center" ><img src="https://gadgetboy.org/media/posts/43/lemur_pro.png" alt="Lemur Pro" width="952" height="582">
+<figure class="post__image post__image--center" ><img loading="lazy" src="https://gadgetboy.org/media/posts/43/lemur_pro.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://gadgetboy.org/media/posts/43/responsive/lemur_pro-xs.png 300w ,https://gadgetboy.org/media/posts/43/responsive/lemur_pro-sm.png 480w ,https://gadgetboy.org/media/posts/43/responsive/lemur_pro-md.png 768w ,https://gadgetboy.org/media/posts/43/responsive/lemur_pro-lg.png 1024w"  alt="Lemur Pro" width="952" height="582">
 <figcaption >Image Credit: System76</figcaption>
 </figure>
 <p> </p>
-<figure class="post__image post__image--center" ><img src="https://gadgetboy.org/media/posts/43/lemur_pro_angles.png" alt="Lemur Pro from different angles" width="1327" height="769">
+<figure class="post__image post__image--center" ><img loading="lazy" src="https://gadgetboy.org/media/posts/43/lemur_pro_angles.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://gadgetboy.org/media/posts/43/responsive/lemur_pro_angles-xs.png 300w ,https://gadgetboy.org/media/posts/43/responsive/lemur_pro_angles-sm.png 480w ,https://gadgetboy.org/media/posts/43/responsive/lemur_pro_angles-md.png 768w ,https://gadgetboy.org/media/posts/43/responsive/lemur_pro_angles-lg.png 1024w"  alt="Lemur Pro from different angles" width="1327" height="769">
 <figcaption >Image Credit: System76</figcaption>
 </figure>
 <p>In addition to all of the other benefits of a System76 machine (Disabled Intel ME, CoreBoot open source firmware, full Pop!_Os support, etc.) they were touting 14 hours of battery life, a 10th Gen Intel Core processor, a matte 1080p display and up to 40 GB of RAM in a slim, attractive PC with a modern, no-button trackpad.</p>
@@ -430,69 +430,69 @@ If you found this how-to helpful, pay it forward.
 <p>I configured and ordered a Lemur Pro with 40 GB RAM and a 512 GB NVMe drive. (I can still add another NVMe drive, if I have a need for it.)</p>
 <p>The next morning, I received both a friendly email and a phone call from System76, letting me know that my order was processed and that it was in the production queue. (Each System76 machine is built-to-order.) 24 hours later, I received another email message telling me that my machine was built and on its way to me via UPS.</p>
 <p>My Lemur Pro arrived four days later. UPS required a signature for delivery but I was able to just flash my ID through the glass on our front door and the driver left it on the porch - a perfect COVID-19, no-contact delivery.</p>
-<h2 id="mcetoc_1e5ko9see1">Unboxing</h2>
-<h3 id="mcetoc_1e62ogl9jg">First Impressions</h3>
+<h2>Unboxing</h2>
+<h3>First Impressions</h3>
 <p>I'm not going to lie: when I was exploring Linux distros, one of the reasons I was attracted to Pop!_OS was the brand messaging, desktop graphics and overall user experience of the OS. I found their packaging to be consistent with that and right on-brand. </p>
 <p>In what appears to be taking a queue from Apple, System76 ships the device secured in a reusable plastic-and-cardboard mechanism. It's worth keeping around in case you need to ship your machine for service or maybe want to sell it in the future.</p>
 <p>The envelope containing System76 and Pop!_OS stickers was a nice touch.</p>
-<div class="gallery"   >
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_closed_box.jpg" ><img src="https://gadgetboy.org/media/posts/43/gallery/system76_closed_box-thumbnail.jpg" alt="System76 sealed box" width="768" height="459"></a>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-columns="3">
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_closed_box.jpg" data-size="3052x1824"><img loading="lazy" src="https://gadgetboy.org/media/posts/43/gallery/system76_closed_box-thumbnail.jpg" alt="System76 sealed box" width="768" height="459"></a>
 <figcaption class="gallery-description">System76 sealed box</figcaption>
 </figure>
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_box_unleash.jpg" ><img src="https://gadgetboy.org/media/posts/43/gallery/system76_box_unleash-thumbnail.jpg" alt="System76 box side closeup" width="768" height="477"></a>
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_box_unleash.jpg" data-size="2893x1796"><img loading="lazy" src="https://gadgetboy.org/media/posts/43/gallery/system76_box_unleash-thumbnail.jpg" alt="System76 box side closeup" width="768" height="477"></a>
 <figcaption class="gallery-description">System76 box side closeup</figcaption>
 </figure>
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_box_inside_cover.jpg" ><img src="https://gadgetboy.org/media/posts/43/gallery/system76_box_inside_cover-thumbnail.jpg" alt="System76 inside box cover" width="768" height="427"></a>
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_box_inside_cover.jpg" data-size="3284x1824"><img loading="lazy" src="https://gadgetboy.org/media/posts/43/gallery/system76_box_inside_cover-thumbnail.jpg" alt="System76 inside box cover" width="768" height="427"></a>
 <figcaption class="gallery-description">System76 inside box cover</figcaption>
 </figure>
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_in_box.jpg" ><img src="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_in_box-thumbnail.jpg" alt="System76 inside box cover with Lemur Pro" width="768" height="940"></a>
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_in_box.jpg" data-size="1824x2232"><img loading="lazy" src="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_in_box-thumbnail.jpg" alt="System76 inside box cover with Lemur Pro" width="768" height="940"></a>
 <figcaption class="gallery-description">System76 inside box cover with Lemur Pro</figcaption>
 </figure>
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_packaging_front.jpg" ><img src="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_packaging_front-thumbnail.jpg" alt="System76 Lemur Pro packaging, front" width="768" height="350"></a>
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_packaging_front.jpg" data-size="4000x1824"><img loading="lazy" src="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_packaging_front-thumbnail.jpg" alt="System76 Lemur Pro packaging, front" width="768" height="350"></a>
 <figcaption class="gallery-description">System76 Lemur Pro packaging, front</figcaption>
 </figure>
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_packaging_behind.jpg" ><img src="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_packaging_behind-thumbnail.jpg" alt="System76 Lemur Pro packaging, behind" width="768" height="350"></a>
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_packaging_behind.jpg" data-size="4000x1824"><img loading="lazy" src="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_packaging_behind-thumbnail.jpg" alt="System76 Lemur Pro packaging, behind" width="768" height="350"></a>
 <figcaption class="gallery-description">System76 Lemur Pro packaging, behind</figcaption>
 </figure>
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_power_supply_packaging.jpg" ><img src="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_power_supply_packaging-thumbnail.jpg" alt="System76 Lemur Pro power supply packaging" width="768" height="350"></a>
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_power_supply_packaging.jpg" data-size="4000x1824"><img loading="lazy" src="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_power_supply_packaging-thumbnail.jpg" alt="System76 Lemur Pro power supply packaging" width="768" height="350"></a>
 <figcaption class="gallery-description">System76 Lemur Pro power supply packaging</figcaption>
 </figure>
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_inside_box_bottom.jpg" ><img src="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_inside_box_bottom-thumbnail.jpg" alt="System76 Lemur Pro, inside bottom of box" width="768" height="350"></a>
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_inside_box_bottom.jpg" data-size="4000x1824"><img loading="lazy" src="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_inside_box_bottom-thumbnail.jpg" alt="System76 Lemur Pro, inside bottom of box" width="768" height="350"></a>
 <figcaption class="gallery-description">System76 Lemur Pro, inside bottom of box</figcaption>
 </figure>
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_bottom.jpg" ><img src="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_bottom-thumbnail.jpg" alt="System76 Lemur Pro bottom" width="768" height="391"></a>
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_bottom.jpg" data-size="3561x1814"><img loading="lazy" src="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_bottom-thumbnail.jpg" alt="System76 Lemur Pro bottom" width="768" height="391"></a>
 <figcaption class="gallery-description">System76 Lemur Pro bottom</figcaption>
 </figure>
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_closed_1.jpg" ><img src="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_closed_1-thumbnail.jpg" alt="System76 Lemur Pro with lid closed" width="768" height="350"></a>
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_closed_1.jpg" data-size="4000x1824"><img loading="lazy" src="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_closed_1-thumbnail.jpg" alt="System76 Lemur Pro with lid closed" width="768" height="350"></a>
 <figcaption class="gallery-description">System76 Lemur Pro with lid closed</figcaption>
 </figure>
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_opened.jpg" ><img src="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_opened-thumbnail.jpg" alt="System76 Lemur Pro opened" width="768" height="930"></a>
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_opened.jpg" data-size="1824x2209"><img loading="lazy" src="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_opened-thumbnail.jpg" alt="System76 Lemur Pro opened" width="768" height="930"></a>
 <figcaption class="gallery-description">System76 Lemur Pro opened</figcaption>
 </figure>
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_with_power_supply.jpg" ><img src="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_with_power_supply-thumbnail.jpg" alt="System76 Lemur Pro with power supply" width="768" height="1336"></a>
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_with_power_supply.jpg" data-size="1824x3174"><img loading="lazy" src="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_with_power_supply-thumbnail.jpg" alt="System76 Lemur Pro with power supply" width="768" height="1336"></a>
 <figcaption class="gallery-description">System76 Lemur Pro with power supply</figcaption>
 </figure>
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_envelope.jpg" ><img src="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_envelope-thumbnail.jpg" alt="Lemur Pro with System76 branded envelope" width="768" height="409"></a>
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_envelope.jpg" data-size="3419x1820"><img loading="lazy" src="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_envelope-thumbnail.jpg" alt="Lemur Pro with System76 branded envelope" width="768" height="409"></a>
 <figcaption class="gallery-description">Lemur Pro with System76 branded envelope</figcaption>
 </figure>
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_envelope_opened.jpg" ><img src="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_envelope_opened-thumbnail.jpg" alt="Contents of the System76 branded envelope" width="768" height="350"></a>
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_envelope_opened.jpg" data-size="4000x1824"><img loading="lazy" src="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_envelope_opened-thumbnail.jpg" alt="Contents of the System76 branded envelope" width="768" height="350"></a>
 <figcaption class="gallery-description">Contents of the System76 branded envelope</figcaption>
 </figure>
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_welcome_card.jpg" ><img src="https://gadgetboy.org/media/posts/43/gallery/system76_welcome_card-thumbnail.jpg" alt="System76 Welcome Card" width="768" height="1053"></a>
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_welcome_card.jpg" data-size="1824x2502"><img loading="lazy" src="https://gadgetboy.org/media/posts/43/gallery/system76_welcome_card-thumbnail.jpg" alt="System76 Welcome Card" width="768" height="1053"></a>
 <figcaption class="gallery-description">System76 Welcome Card</figcaption>
 </figure>
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_first_boot.jpg" ><img src="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_first_boot-thumbnail.jpg" alt="System76 Lemur Pro first boot" width="768" height="892"></a>
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_first_boot.jpg" data-size="1824x2119"><img loading="lazy" src="https://gadgetboy.org/media/posts/43/gallery/system76_lemur_pro_first_boot-thumbnail.jpg" alt="System76 Lemur Pro first boot" width="768" height="892"></a>
 <figcaption class="gallery-description">System76 Lemur Pro first boot</figcaption>
 </figure>
-</div>
-<h3 id="mcetoc_1e61vbefv0">Weight &amp; Design</h3>
+</div></div>
+<h3>Weight &amp; Design</h3>
 <p>The Lemur Pro is as powerful as the current MacBook Pro but weighs <em>less.</em> <strong>I</strong>t's also ligher than the current MacBook Air and even ligher than the amazing <a href="https://www.dell.com/en-us/shop/dell-laptops/new-xps-13-2-in-1-laptop/spd/xps-13-7390-2-in-1-laptop" target="_blank" rel="noopener noreferrer" title="XPS 7391 on Dell.com">XPS 13" 7391</a> that I use every day at work. (Though, to be fair, the 7391 is a 2-in-1 and has some added weight due to the touchscreen and sophisticated hinge mechanism.)</p>
 <p>The Lemur Pro is so light that I can load both my work machine <em>and</em> my personal machine into my backpack and not even realize that I'm carrying two PC's. Even better, both machines can be powered by USC Type-C Power Delivery, so I only have to carry one charger. This will be great for business trips, when I want to work on personal projects after hours or watch movies on the plane.</p>
 <p>The design is the same as what you would expect from any top-tier PC OEM. It has clean lines and relatively modern design touches. The System76 logo on the lid appears to be laser etched.</p>
 <p>The biggest and most obvious design decision was the webcam. Rather than increase the size of the bezel, System76 decided to add a small bump above the screen to house the camera and built-in microphone. It's not distracting at all when using the machine, but obviously protrudes by a few millimeters when the lid is closed. I'm hoping that the chassis will adequately protect it during transit.</p>
 <p>For some unknown reason, System76 made the decision to place the power button on the right<strong> side</strong> of the machine, not on the keyboard deck. Depending on your perspective, this could be a poor design choice, something to just get used to, or both.</p>
 <p>During my first full day of using the Lemur Pro, I plugged-in a USB Type-C cable with Power Delivery and DisplayPort (which is on the left side) so that I could use it with my <a href="https://amzn.to/2K9NA6f" target="_blank" rel="noopener noreferrer" title="Dell U3818DW">38" Dell display</a> to get some work done. Naturally, since the machine is so light, I braced it with my right hand and accidentally pushed the power button, putting it into Suspend mode. I definitely need to remember that in the future.</p>
-<h3 id="mcetoc_1e61vbms51">Materials &amp; Build Quality</h3>
+<h3>Materials &amp; Build Quality</h3>
 <p>At the time this post is written, System76 doesn't indicate what materials are used to build the Lemur Pro chassis on its web site. While looking at the photos during the buying process, I guessed that it was a nice, Thinkpad-like plastic or some kind of aluminum or magnesium alloy.</p>
 <p>After it arrived, I realized it was metal but didn't know what kind, so I asked the System76 support team and they responded almost immediately:</p>
 <blockquote>
@@ -505,162 +505,162 @@ If you found this how-to helpful, pay it forward.
 <p>The 14.1" 1080p screen has a matte finish and is bright, crisp and seemingly color accurate. The Lemur Pro's screen is pleasingly larger than my 13" devices and the form factor is just about perfect.</p>
 <p class="msg msg--info">Even though it would be nice to have a larger screen on-the-go, I recently discovered that the tradeoffs of a 15.6" machine just aren't worth it - especially the keyboard layout.</p>
 <p class="msg msg--info">I don't understand why just about every PC OEM feels the need to fill the keyboard deck of larger devices with a number pad, shifting the trackpad and keyboard to the left. It's an awkward experience. Instead of the number pad, why not center the keyboard and add front-firing speakers on each side or maybe just a fingerprint reader that <em>actually works</em> more than 20% of the time? Anyone who really needs a number pad can get one from <a href="https://amzn.to/2XENFXu" target="_blank" rel="noopener noreferrer" title="USB Numbers Pads on Amazon.com">Amazon for less than $20</a>.</p>
-<h4 id="mcetoc_1e62rs7enh">Trackpad</h4>
+<h4>Trackpad</h4>
 <p>The trackpad on this machine is excellent. Is it as good as a MacBook Pro or a Dell XPS? Not quite, but it's pretty damn close. The fact that it doesn't have buttons is a real plus.</p>
-<h4 id="mcetoc_1e62nfi3mf">Power Supply</h4>
+<h4>Power Supply</h4>
 <p>From the perspective of portability, the power supply is great. It's relatively small and lightweight and gets the job done. And while System76 definitely considered the needs of road warriors and hallway walkers with the Lemur Pro's great battery life, they missed the mark with the power supply. The total length of the cables is so ridiculously short, it's almost comical. I'm going to have carry an extension cord or find a longer main lead with the right connector for the power supply.</p>
 <p>Everything else about the device is so well thought out that this decision left me scratching my head.</p>
 <p class="msg msg--highlight "><strong>Update:</strong> Right now, I'm using a spare power cord from a Sonos speaker that's 6 feet long for the main lead, but you can replace it with a <a href="https://amzn.to/3cw9FrE" target="_blank" rel="noopener noreferrer" title="Non-Polarized 10ft AC Power Cord">high quality, non-polarized cord for around $8 USD</a>.</p>
-<h3 id="mcetoc_1e61vbums2">Performance</h3>
+<h3>Performance</h3>
 <p>First, let's look at the specs of my particular configuration, outlined in the table below.</p>
-<table >
-<tbody >
-<tr >
-<td ><strong>Operating System</strong></td>
-<td >
+<table data-v-7b22f3a8="">
+<tbody data-v-7b22f3a8="">
+<tr data-v-7b22f3a8="">
+<td data-v-7b22f3a8=""><strong>Operating System</strong></td>
+<td data-v-7b22f3a8="">
 <p>Pop!_OS 19.10 (64-bit)</p>
 </td>
 </tr>
-<tr >
-<td ><strong>Firmware</strong></td>
-<td >
+<tr data-v-7b22f3a8="">
+<td data-v-7b22f3a8=""><strong>Firmware</strong></td>
+<td data-v-7b22f3a8="">
 <p>System76 Open Firmware (Coreboot, EDK2, System76 Firmware Apps)</p>
 <p>System76 Open Source Embedded Controller Firmware</p>
 </td>
 </tr>
-<tr >
-<td ><strong>Processor</strong></td>
-<td >
+<tr data-v-7b22f3a8="">
+<td data-v-7b22f3a8=""><strong>Processor</strong></td>
+<td data-v-7b22f3a8="">
 <p>10th Gen Intel® Core i7-10510U<strong>:</strong> 1.8 GHz (up to 4.9 GHz burst mode) - 8MB Cache - 4 Cores - 8 Threads (<em>upgraded from i5</em>)</p>
 </td>
 </tr>
-<tr >
-<td ><strong>Display</strong></td>
-<td >
+<tr data-v-7b22f3a8="">
+<td data-v-7b22f3a8=""><strong>Display</strong></td>
+<td data-v-7b22f3a8="">
 <p>14.1″ 1920×1080 FHD, Matte Finish</p>
 </td>
 </tr>
-<tr >
-<td ><strong>Graphics</strong></td>
-<td >
+<tr data-v-7b22f3a8="">
+<td data-v-7b22f3a8=""><strong>Graphics</strong></td>
+<td data-v-7b22f3a8="">
 <p>Intel® UHD Graphics</p>
 </td>
 </tr>
-<tr >
-<td ><strong>Memory</strong></td>
-<td >
+<tr data-v-7b22f3a8="">
+<td data-v-7b22f3a8=""><strong>Memory</strong></td>
+<td data-v-7b22f3a8="">
 <p>40 GB DDR4 @ 2666 MHz</p>
 </td>
 </tr>
-<tr >
-<td ><strong>Storage</strong></td>
-<td >
+<tr data-v-7b22f3a8="">
+<td data-v-7b22f3a8=""><strong>Storage</strong></td>
+<td data-v-7b22f3a8="">
 <p>1× M.2 NVMe SSD @ 512 GB</p>
 <p>Sequential Read Speed: 3,500 MB/s, Sequential Write Speed: 3,200 MB/s</p>
 </td>
 </tr>
-<tr >
-<td ><strong>Expansion</strong></td>
-<td >
+<tr data-v-7b22f3a8="">
+<td data-v-7b22f3a8=""><strong>Expansion</strong></td>
+<td data-v-7b22f3a8="">
 <p>USB 3.1 Type-C, 2× USB 3.0 Type-A, MicroSD Card Reader</p>
 </td>
 </tr>
-<tr >
-<td ><strong>Input</strong></td>
-<td >
+<tr data-v-7b22f3a8="">
+<td data-v-7b22f3a8=""><strong>Input</strong></td>
+<td data-v-7b22f3a8="">
 <p>Multitouch Clickpad, Backlit US QWERTY Keyboard</p>
 </td>
 </tr>
-<tr >
-<td ><strong>Networking</strong></td>
-<td >
+<tr data-v-7b22f3a8="">
+<td data-v-7b22f3a8=""><strong>Networking</strong></td>
+<td data-v-7b22f3a8="">
 <p>Intel® Wireless-AC Wi-Fi, Bluetooth</p>
 </td>
 </tr>
-<tr >
-<td ><strong>Video Ports</strong></td>
-<td >
+<tr data-v-7b22f3a8="">
+<td data-v-7b22f3a8=""><strong>Video Ports</strong></td>
+<td data-v-7b22f3a8="">
 <p>HDMI, USB 3.1 Type-C w/ DisplayPort</p>
 </td>
 </tr>
-<tr >
-<td ><strong>Audio</strong></td>
-<td >
+<tr data-v-7b22f3a8="">
+<td data-v-7b22f3a8=""><strong>Audio</strong></td>
+<td data-v-7b22f3a8="">
 <p>Stereo Speakers, 1× Headphone/Microphone Combo (TRRS)</p>
 </td>
 </tr>
-<tr >
-<td ><strong>Camera</strong></td>
-<td >
+<tr data-v-7b22f3a8="">
+<td data-v-7b22f3a8=""><strong>Camera</strong></td>
+<td data-v-7b22f3a8="">
 <p>720p HD Webcam</p>
 </td>
 </tr>
-<tr >
-<td ><strong>Security</strong></td>
-<td >
+<tr data-v-7b22f3a8="">
+<td data-v-7b22f3a8=""><strong>Security</strong></td>
+<td data-v-7b22f3a8="">
 <p>Disabled Intel ME, Kensington® Lock</p>
 </td>
 </tr>
-<tr >
-<td ><strong>Battery</strong></td>
-<td >
+<tr data-v-7b22f3a8="">
+<td data-v-7b22f3a8=""><strong>Battery</strong></td>
+<td data-v-7b22f3a8="">
 <p>Li-Ion - 73 Wh</p>
 </td>
 </tr>
-<tr >
-<td ><strong>Charger</strong></td>
-<td >
+<tr data-v-7b22f3a8="">
+<td data-v-7b22f3a8=""><strong>Charger</strong></td>
+<td data-v-7b22f3a8="">
 <p>65 W, AC-in 100–240 V, 50–60 Hz</p>
 <p>65W+ USB Type-C Charging Compatible</p>
 </td>
 </tr>
-<tr >
-<td ><strong>Dimensions</strong></td>
-<td >
+<tr data-v-7b22f3a8="">
+<td data-v-7b22f3a8=""><strong>Dimensions</strong></td>
+<td data-v-7b22f3a8="">
 <p>12.64″ × 8.5″ × 0.61″ (32.1 × 21.6 × 1.55 cm)</p>
 </td>
 </tr>
-<tr >
-<td ><strong>Weight</strong></td>
-<td >
+<tr data-v-7b22f3a8="">
+<td data-v-7b22f3a8=""><strong>Weight</strong></td>
+<td data-v-7b22f3a8="">
 <p>2.2 lbs (.99kg)</p>
 </td>
 </tr>
-<tr >
-<td ><strong>Warranty</strong></td>
-<td >
+<tr data-v-7b22f3a8="">
+<td data-v-7b22f3a8=""><strong>Warranty</strong></td>
+<td data-v-7b22f3a8="">
 <p>1 Year</p>
 </td>
 </tr>
-<tr >
-<td ><strong>Price as configured</strong></td>
-<td >
+<tr data-v-7b22f3a8="">
+<td data-v-7b22f3a8=""><strong>Price as configured</strong></td>
+<td data-v-7b22f3a8="">
 <p>$1,688 + $32 for UPS Ground shipping</p>
 </td>
 </tr>
 </tbody>
 </table>
-<h4 id="mcetoc_1e61ved6v8">First Boot</h4>
+<h4>First Boot</h4>
 <p>I chose to capture the unboxing in photos and not video as my other cameras and tripods are in storage at the moment. So, when it came to booting the machine for the first time, I wanted to snap a few photos of the process.</p>
 <p>The Lemur Pro boots so fast that I couldn't even unlock my phone quickly enough to take a picture! In seconds, the machine booted into system setup.</p>
 <p>If you've ever installed Pop!_OS on your machine, the experience of having it installed on a new PC is exactly the same as booting from a live session: select your country, keyboard layout, disk encryption preference, etc. When it's done, it will ask you to create a user, after a restart.</p>
-<div class="gallery"   >
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/neofetch.png" ><img src="https://gadgetboy.org/media/posts/43/gallery/neofetch-thumbnail.png" alt="neofetch on my System76 Lemur Pro" width="768" height="435"></a>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-columns="1">
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/neofetch.png" data-size="801x454"><img loading="lazy" src="https://gadgetboy.org/media/posts/43/gallery/neofetch-thumbnail.png" alt="neofetch on my System76 Lemur Pro" width="768" height="435"></a>
 <figcaption class="gallery-description">neofetch on my System76 Lemur Pro (Image Credit: me)</figcaption>
 </figure>
-</div>
-<h4 id="mcetoc_1e62eso1da">Processor &amp; GPU</h4>
+</div></div>
+<h4>Processor &amp; GPU</h4>
 <p>The CPU is a 10th Generation Intel i7 processor (an upgrade from the 10th Gen i5 in the base model Lemur Pro) in the "U" spec, which indicates that it's designed for Ultrabooks that require longer battery life. Spec-for-spec, it certainly doesn't pack the horespower of the Dell Inspiron 7591 I gave up.</p>
 <p class="msg msg--info">The Dell Inspiron 7591 has a 9th Gen Intel i7 in the "H" spec (high performance) with 6 cores - 12 threads, 12 MB cache and burst mode up to 4.5 GHz. More importantly, it has a dedicated NVIDIA GPU which helps render video faster. (And improves gaming performance, but I'm not much of a gamer.)</p>
 <p>With that said, the Lemur Pro defintely punches above its weight. It's surprisingly fast for its specs and the onboard Intel GPU works well, powering both the built-in display and my <a href="https://amzn.to/3cwwFXN" target="_blank" rel="noopener noreferrer" title="Dell U3818DW Curved Display">large (3840 x 1600) external display</a> simultaneously. Video playback and video conferences are smooth and consistent.</p>
 <p>It quickly renders web pages in Firefox, which is typically a small step behind the speed of the Chromium and WebKit rendering engines.</p>
 <p><strong>GeekBench</strong></p>
 <p>Running Geekbench5, the Lemur Pro scored better in Multi-core tests than the Intel 8th Gen U series processor in a Dell Inspiron 7386, but lower in Single-core tests. You can see the full results of the Lemur Pro test <a href="https://browser.geekbench.com/v5/cpu/1817319" target="_blank" rel="noopener noreferrer" title="GeekBench Scores for the System76 Lemur Pro">here</a> and the Dell test <a href="https://browser.geekbench.com/v5/cpu/1717304" target="_blank" rel="noopener noreferrer" title="GeekBench 5 test results for the Dell Inspiron 7386">here</a>.</p>
-<div class="gallery"   >
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/geekbench.png" ><img src="https://gadgetboy.org/media/posts/43/gallery/geekbench-thumbnail.png" alt="GeekBench5 results on my System76 Lemur Pro" width="768" height="124"></a>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-columns="1">
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/geekbench.png" data-size="886x143"><img loading="lazy" src="https://gadgetboy.org/media/posts/43/gallery/geekbench-thumbnail.png" alt="GeekBench5 results on my System76 Lemur Pro" width="768" height="124"></a>
 <figcaption class="gallery-description">GeekBench5 results on my System76 Lemur Pro</figcaption>
 </figure>
-</div>
+</div></div>
 <p>Here's the obiligatory screenshot of HTOP running in a terminal window. I was running the following apps:</p>
 <ul>
 <li>Firefox (at least 20 tabs &amp; windows)</li>
@@ -673,39 +673,39 @@ If you found this how-to helpful, pay it forward.
 <li>Signal</li>
 <li>Flameshot</li>
 </ul>
-<div class="gallery"   >
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/htop.png" ><img src="https://gadgetboy.org/media/posts/43/gallery/htop-thumbnail.png" alt="HTOP on my System76 Lemur Pro" width="768" height="458"></a>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-columns="1">
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/43/gallery/htop.png" data-size="1425x850"><img loading="lazy" src="https://gadgetboy.org/media/posts/43/gallery/htop-thumbnail.png" alt="HTOP on my System76 Lemur Pro" width="768" height="458"></a>
 <figcaption class="gallery-description">HTOP on my System76 Lemur Pro (Image Credit: me)</figcaption>
 </figure>
-</div>
-<p id="mcetoc_1e643u0b0j"><strong>Thermals</strong></p>
+</div></div>
+<p><strong>Thermals</strong></p>
 <p>On a few occasions, the fans spun up like jet engines, then quickly went silent. During those instances, I was installing multiple package updates from Pop!_Shop or running a video conference in Zoom.</p>
 <p>Otherwise, the machine runs quite cool. I can barely feel any excess heat when it's on my lap during general use. (I'm sure I might have a different experience if I was rendering a 4K video with compositing while sitting on the couch.)</p>
-<h4 id="mcetoc_1e61vcb4s4">RAM</h4>
+<h4>RAM</h4>
 <p>Do I really need 40 GB of RAM for a machine that I'm using for hobby projects?</p>
 <p>Generally, no.</p>
 <p>While I do some light video production, photo editing and vector art production, I use my machine mostly for office work, Raspberry Pi and other SBC projects, managing my home lab and testing home automation scripts. </p>
 <p>But I want to <strong>fly</strong> through my workflows. When I'm in The Zone, I don't want to deal with a lagging OS. Having excess memory ensures that the OS almost never has to write anything to the swap partition on the disk. (Also referred to as "Virtual RAM." <a href="https://en.wikipedia.org/wiki/Virtual_memory" target="_blank" rel="noopener noreferrer" title="Virtual RAM on Wikipedia">Wikipedia</a>)</p>
 <p>Plus, maxing out the RAM ensures that the machine will have a long service life without much effort, and the additional memory improves its resale value should I decide to upgrade to a new machine in the future.</p>
-<h4 id="mcetoc_1e61vcfpk5">Storage</h4>
+<h4>Storage</h4>
 <p>My preferred configuration is to have a small (&lt;250 GB) NVMe drive for the OS and a second, larger NVMe drive for my /home directory and files. However, after lots of shopping around, it doesn't appear that the smaller NVMe drives even come close to the performance of those that are 500 GB or larger, which is an important consideration for the OS drive.</p>
 <p>With that in mind, I selected the smallest, fastest NVMe drive available during system configuration for both the OS and my files - <a href="https://amzn.to/2VchDk4" target="_blank" rel="noopener noreferrer" title="Samsung EVO Pro">a 512 GB Samsung EVO Pro</a>. I could have gotten a 1 TB drive with the same read/write specs, but most of my larger media files are stored on NAS on my LAN, and in the cloud. I can upgrade to a larger drive or add a second drive at a later time, if I need it.</p>
-<h4 id="mcetoc_1e61vcm076">Networking</h4>
+<h4>Networking</h4>
 <p>The Lemur Pro uses the onboard Intel networking controller with the 802.11ac spec and speeds up to 867 Mbps. I have other machines with 802.11ac but this feels much snappier, perhaps because web pages render so quickly. File transfers over SAMBA, SFTP, NFS and HTTPS also seem very fast.</p>
-<h4 id="mcetoc_1e61vlsac9">Battery Life</h4>
+<h4>Battery Life</h4>
 <p>If you've read this far, you know that I am not a professional PC reviewer so I had to improvise the battery life evaluation.</p>
 <p>Here's what I did:</p>
 <p>I unplugged the machine from the power supply and spent 4 hours writing this post, responding to email, watching YouTube tutorials on how to optimize OpenMediaVault and NextCloud, downloading software, and connecting with friends and family on social media.</p>
 <p>I didn't do any video rendering or stream a ton of HD video, and I didn't compile any code. Basically, I just used it like an average consumer.</p>
 <p>At the end of the 4 hours, my battery was at 91%. Pop!_OS indicated that I still had over 20 hours of use. The Pop!_OS power management profile was set to "Balanced."</p>
 <p>It's not a scientific benchmark, but it should give you some idea about the battery life of the Lemur Pro: it's remarkable.</p>
-<figure class="post__image post__image--center" ><img src="https://gadgetboy.org/media/posts/43/power_after_4_hours.png" alt="Power Indicator after 4 hours" width="327" height="445">
+<figure class="post__image post__image--center" ><img loading="lazy" src="https://gadgetboy.org/media/posts/43/power_after_4_hours.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://gadgetboy.org/media/posts/43/responsive/power_after_4_hours-xs.png 300w ,https://gadgetboy.org/media/posts/43/responsive/power_after_4_hours-sm.png 480w ,https://gadgetboy.org/media/posts/43/responsive/power_after_4_hours-md.png 768w ,https://gadgetboy.org/media/posts/43/responsive/power_after_4_hours-lg.png 1024w"  alt="Power Indicator after 4 hours" width="327" height="445">
 <figcaption >Power indicator after 4 hours of use. (Image Credit: me)</figcaption>
 </figure>
 <p>Eventually, I'll get a feel for how the battery life holds up under heavier loads.</p>
-<h2 id="mcetoc_1e62ini9lc">Final Thoughts</h2>
+<h2>Final Thoughts</h2>
 <p>I provided my opinion of this laptop based on my specific needs using my own decision making criteria. However, I'm hoping that based on my experience, you can get a sense of how well it might work for you.</p>
-<h3 id="mcetoc_1e62iung6e">Positives:</h3>
+<h3>Positives:</h3>
 <ul>
 <li>Premium specs, look and feel</li>
 <li>Light, Magnesium-Alloy chassis</li>
@@ -718,14 +718,14 @@ If you found this how-to helpful, pay it forward.
 <li>Excellent trackpad performance</li>
 <li>Pop!_OS (of course)</li>
 <li><em>Complete hardware support</em> for Pop!_OS</li>
-<li>An envelope full of cool stickers <span >😉</span></li>
+<li>An envelope full of cool stickers <span data-offset-key="7su1a-0-0">😉</span></li>
 </ul>
-<h3 id="mcetoc_1e62uo586i">Neutrals:</h3>
+<h3>Neutrals:</h3>
 <ul>
 <li>Slight chassis flex in certain use cases</li>
 <li>Camera bump on the top screen bezel</li>
 </ul>
-<h3 id="mcetoc_1e62iud50d">Negatives:</h3>
+<h3>Negatives:</h3>
 <ul>
 <li>Poorly placed power button</li>
 <li>The power supply cables are waaayyy too short</li>
@@ -734,7 +734,7 @@ If you found this how-to helpful, pay it forward.
 <p>Do you have a Lemur Pro? Do you want one? Do you have specific questions about things I didn't cover?</p>
 <p>Let me know in the comments or on <a href="https://twitter.com/gadgetboy" target="_blank" rel="noopener noreferrer" title="@gadgetboy on twitter">Twitter</a>.</p>
 <p>---</p>
-<h6 id="mcetoc_1e5km0bsc0">Footnotes</h6>
+<h6>Footnotes</h6>
 <p>* If you have the budget and you're looking for a machine pre-installed with Ubuntu, you owe it to yourself to explore a <a href="https://www.dell.com/en-us/work/shop/overview/cp/linuxsystems#tab-2" target="_blank" rel="noopener noreferrer" title="Dell XPS 13 Developer Edition">Dell XPS 13 or 15 Developer Edition</a>. I had the privilege of getting to play with the new XPS 13 at CES this year and it's nothing short of amazing.</p>
 <p> </p>
             ]]>
@@ -753,7 +753,7 @@ If you found this how-to helpful, pay it forward.
             <category term="Home Assistant"/>
             <category term="Coding"/>
 
-        <updated>2020-03-13T12:50:11-05:00</updated>
+        <updated>2020-07-06T07:08:05-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/3/staycation_postcard.jpeg" alt="Staycation" />
@@ -787,7 +787,7 @@ If you found this how-to helpful, pay it forward.
             <category term="Internet of Things"/>
             <category term="Home Automation"/>
 
-        <updated>2020-04-18T08:03:29-05:00</updated>
+        <updated>2020-07-06T07:08:05-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/4/sirens.png" alt="Sirens" />
@@ -814,27 +814,27 @@ If you found this how-to helpful, pay it forward.
 <p>So when Amazon presented its 2019 product showcase, as far as I’m concerned, the most interesting thing they announced wasn’t the <a rel="noopener noreferrer" aria-label="Amazon Smart Oven (opens in a new tab)" href="https://amzn.to/2PEku1c" target="_blank">Amazon Smart Oven</a> or the new <a rel="noopener noreferrer" aria-label="Echo Buds (opens in a new tab)" href="https://amzn.to/2YFJXvk" target="_blank">Echo Buds</a>.</p>
 <p>It was the <a href="https://amzn.to/35j2rUG" target="_blank" rel="noopener noreferrer" aria-label=" (opens in a new tab)">Ring Retrofit Alarm Kit</a>.</p>
 <p>This magical device lets you connect your existing wired home security system to a <a rel="noopener noreferrer" aria-label=" (opens in a new tab)" href="https://amzn.to/2PgrXED" target="_blank">Ring Alarm Base Station</a>*. From there, you can get professional monitoring  over the internet – with LTE cellular backup – and control the entire system via the <a rel="noopener noreferrer" aria-label="Ring mobile app (opens in a new tab)" href="https://apps.apple.com/us/app/ring-always-home/id926252661" target="_blank">Ring mobile app</a>, including arming, disarming, guest access and panic mode.</p>
-<figure class="post__image post__image" ><img src="https://gadgetboy.org/media/posts/4/ring_alarm_mobile_app.jpg" alt="" width="1024" height="697">
+<figure class="post__image post__image" ><img loading="lazy" src="https://gadgetboy.org/media/posts/4/ring_alarm_mobile_app.jpg" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://gadgetboy.org/media/posts/4/responsive/ring_alarm_mobile_app-xs.jpg 300w ,https://gadgetboy.org/media/posts/4/responsive/ring_alarm_mobile_app-sm.jpg 480w ,https://gadgetboy.org/media/posts/4/responsive/ring_alarm_mobile_app-md.jpg 768w ,https://gadgetboy.org/media/posts/4/responsive/ring_alarm_mobile_app-lg.jpg 1024w"  alt="" width="1024" height="697">
 <figcaption >Ring Alarm Mobile App (Image Credit: Ring)</figcaption>
 </figure>
 <p>You can also add wireless accessories like <a href="https://amzn.to/34lNr7x" target="_blank" rel="noopener noreferrer" aria-label="motion sensors (opens in a new tab)">motion sensors</a> and <a href="https://amzn.to/36EA0B7" target="_blank" rel="noopener noreferrer" aria-label="keypads (opens in a new tab)">keypads</a>.</p>
 <p>Every component is either battery powered or has battery backup. If, for whatever reason, a thief decides that our home is an attractive target and figures out how to cut the power, the entire system still functions. If said thief decides to cut the internet connection, the system will still send triggers over LTE. (Backup and redundancy are your friends.)</p>
 <p>I installed the <a rel="noopener noreferrer" href="https://amzn.to/2PgrXED" target="_blank">Ring Alarm Base Station</a> before the Retrofit Alarm Kit arrived, which was simple.</p>
-<figure class="post__image post__image" ><img src="https://gadgetboy.org/media/posts/4/ring_base_station.jpg" alt="Ring Alarm Base Station" width="1024" height="683">
+<figure class="post__image post__image" ><img loading="lazy" src="https://gadgetboy.org/media/posts/4/ring_base_station.jpg" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://gadgetboy.org/media/posts/4/responsive/ring_base_station-xs.jpg 300w ,https://gadgetboy.org/media/posts/4/responsive/ring_base_station-sm.jpg 480w ,https://gadgetboy.org/media/posts/4/responsive/ring_base_station-md.jpg 768w ,https://gadgetboy.org/media/posts/4/responsive/ring_base_station-lg.jpg 1024w"  alt="Ring Alarm Base Station" width="1024" height="683">
 <figcaption >Ring Alarm Base Station (Image Credit: Ring)</figcaption>
 </figure>
 <p>I hid the base station (which also acts as the primary siren) behind some picture frames on the entertainment center in the living room and added a second <a rel="noopener noreferrer" aria-label="wireless keypad (opens in a new tab)" href="https://amzn.to/36EA0B7" target="_blank">wireless keypad</a> by the backdoor so that I don’t have to run to the front of the house to disarm the system when my 14-year-old Cocker Spaniel needs to go outside in the middle of the night. (She’s a senior dog. I have to move quickly to get her out or things can get messy.)</p>
-<figure class="post__image post__image" ><img src="https://gadgetboy.org/media/posts/4/ring_keypad.jpg" alt="Ring Alarm Keypad" width="1024" height="683">
+<figure class="post__image post__image" ><img loading="lazy" src="https://gadgetboy.org/media/posts/4/ring_keypad.jpg" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://gadgetboy.org/media/posts/4/responsive/ring_keypad-xs.jpg 300w ,https://gadgetboy.org/media/posts/4/responsive/ring_keypad-sm.jpg 480w ,https://gadgetboy.org/media/posts/4/responsive/ring_keypad-md.jpg 768w ,https://gadgetboy.org/media/posts/4/responsive/ring_keypad-lg.jpg 1024w"  alt="Ring Alarm Keypad" width="1024" height="683">
 <figcaption >Ring Alarm Keypad (Image Credit: Ring)</figcaption>
 </figure>
 <p>Next, I added a <a rel="noopener noreferrer" aria-label=" (opens in a new tab)" href="https://shop.ring.com/collections/accessories/products/dome-siren" target="_blank">Dome Siren</a> to ensure that anyone on the second floor can also hear the alarm and a second <a rel="noopener noreferrer" aria-label=" (opens in a new tab)" href="https://amzn.to/2E9wBhk" target="_blank">motion sensor</a> to cover the front and garage doors.</p>
-<figure class="post__image post__image" ><img src="https://gadgetboy.org/media/posts/4/dome_siren.jpg" alt="" width="1024" height="795">
+<figure class="post__image post__image" ><img loading="lazy" src="https://gadgetboy.org/media/posts/4/dome_siren.jpg" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://gadgetboy.org/media/posts/4/responsive/dome_siren-xs.jpg 300w ,https://gadgetboy.org/media/posts/4/responsive/dome_siren-sm.jpg 480w ,https://gadgetboy.org/media/posts/4/responsive/dome_siren-md.jpg 768w ,https://gadgetboy.org/media/posts/4/responsive/dome_siren-lg.jpg 1024w"  alt="" width="1024" height="795">
 <figcaption >Dome Siren for Ring (Image Credit: Ring)</figcaption>
 </figure>
-<figure class="post__image post__image" ><img src="https://gadgetboy.org/media/posts/4/ring_motion_sensor.jpg" alt="Ring Motion Sensor" width="1024" height="683">
+<figure class="post__image post__image" ><img loading="lazy" src="https://gadgetboy.org/media/posts/4/ring_motion_sensor.jpg" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://gadgetboy.org/media/posts/4/responsive/ring_motion_sensor-xs.jpg 300w ,https://gadgetboy.org/media/posts/4/responsive/ring_motion_sensor-sm.jpg 480w ,https://gadgetboy.org/media/posts/4/responsive/ring_motion_sensor-md.jpg 768w ,https://gadgetboy.org/media/posts/4/responsive/ring_motion_sensor-lg.jpg 1024w"  alt="Ring Motion Sensor" width="1024" height="683">
 <figcaption >Ring Motion Sensor (Image Credit: Ring)</figcaption>
 </figure>
-<h2 id="mcetoc_1e34v4h1n0">Truly Alarming</h2>
+<h2>Truly Alarming</h2>
 <p>While I’m pretty comfortable with most tech, I had a momentary loss of confidence when reading the product page for the Retrofit Kit on Ring.com and opted for professional installation via <a rel="noopener noreferrer" aria-label=" (opens in a new tab)" href="https://www.ontechsmartservices.com/" target="_blank">OnTech</a>.</p>
 <p>That was a huge mistake.</p>
 <p>After showing up an hour later than than the allotted window, the installer – a nice, young man in his early 20’s – had <strong>no idea</strong> what he was doing. He’d never installed one of these before and had <strong>only watched a YouTube video</strong>. I immediately lost confidence.</p>
@@ -847,14 +847,14 @@ If you found this how-to helpful, pay it forward.
 <p>It was a total clusterf*ck.</p>
 <p>First, because it was a <strong>hack</strong> and second, because the Ring Retrofit Alarm Kit runs on Lithium batteries – and there isn’t nearly enough power to activate and monitor multiple zones on a single circuit.</p>
 <p>Since each Retrofit Alarm Kit only has eight zones, I ended up having to buy a second unit so that I could properly wire each zone. For those of you doing the math at home, yes, there will be a few zones that aren’t wired, but all of them require a thirty-foot ladder to get near them, so I feel comfortable leaving them that way, for now. I may grab a third unit when they go on sale in the future, just to make sure all zones are wired.</p>
-<h2 id="mcetoc_1e34v4h1n1">Finishing Touches</h2>
+<h2>Finishing Touches</h2>
 <p>My final configuration will be to <a rel="noopener noreferrer" aria-label=" (opens in a new tab)" href="https://support.ring.com/hc/en-us/articles/360028205592-Using-Alexa-Guard-with-Alarm-to-Detect-Broken-Glass-Smoke-and-Carbon-Monoxide" target="_blank">set up our Echo devices with Alexa Guard to act as glass break, smoke and carbon monoxide sensors</a>. (We own five Echo Dots and a Sonos Play One, though only the Echo devices support this feature.) This is a huge bonus – I don’t have to buy any additional hardware** to let the monitoring station know which sensor is triggered. If no one responds to the safety check, they’ll simply send the appropriate emergency service to the house.</p>
 <p>My favorite part of the whole set up is the remote access. We can now arm and disarm every sensor in the system from our smartphones wherever we are and also grant access to friends and family by giving them a temporary passcode. The convenience is great.</p>
 <p>The icing on the proverbial cake?</p>
 <p>The professional monitoring from Ring is half the cost of monitoring from my existing service provider – and I didn’t have to pay extra for the cellular hardware. The purchase of the Ring products will almost pay for themselves in the <s>first</s> second year and the system includes all the convenience we’ve been waiting for.</p>
 <p>I’ll unload the old system on eBay or Facebook Marketplace.</p>
 <hr class="wp-block-separator">
-<h4 id="mcetoc_1e66m4aml0">Footnotes</h4>
+<h4>Footnotes</h4>
 <p>*Only 8 zones are supported.</p>
 <p>**If you don’t have an Echo device, you can purchase <a rel="noopener noreferrer" aria-label="a sensor that will listen for your smoke or CO alarms (opens in a new tab)" href="https://amzn.to/35l5LyL" target="_blank">a sensor that will listen for your smoke or CO alarms</a> and send the appropriate trigger to the monitoring station.</p>
             ]]>
@@ -871,7 +871,7 @@ If you found this how-to helpful, pay it forward.
             <category term="Fitness Training"/>
             <category term="Fitness"/>
 
-        <updated>2020-03-11T21:12:55-05:00</updated>
+        <updated>2020-07-06T07:08:05-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/6/keto.jpg" alt="Keto" />
@@ -911,7 +911,7 @@ If you found this how-to helpful, pay it forward.
             <category term="Gadgets"/>
             <category term="Chrome OS"/>
 
-        <updated>2020-03-13T13:07:07-05:00</updated>
+        <updated>2020-07-06T07:08:05-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/5/system76-unleash_your_robot_blue-by_kate_hazen_of_system76-e4dcb9252f.png" alt="System76 Pop!_OS Desktop Image" />
@@ -927,7 +927,7 @@ If you found this how-to helpful, pay it forward.
 <p>For context, I’ve been using Mac OS X exclusively since OS X Jaguar was released in 2002. I had the privilege of either working for myself or bringing my own device to work, so Mac OS was my daily driver and I became proficient in using it and the software designed for it. That changed in January 2018 when I began working for a large company that standardized on Windows 10 PC’s.</p>
 <p>While I still have my 2015 MacBook Pro, my interest in the Chromebook was more about daily, personal use – email, social media, writing, watching videos, doing research – and less about the things I used to do on my Mac which included more advanced workflows like image editing and audio and video production.</p>
 <p>After a couple of months, I found the screen on the Chromebook just a wee bit too small and the processor just a wee bit too slow to render web pages and web apps like Office 365 Online (needed for my work), so I started exploring modern Linux distributions.</p>
-<h2 id="mcetoc_1e366h7nm0">Like coming home – only more modern</h2>
+<h2>Like coming home – only more modern</h2>
 <p>Linux is not new to me. I started running Linux under <a href="http://www.slackware.com/announce/1.0.php" target="_blank" rel="noopener noreferrer" aria-label=" (opens in a new tab)">Slackware 1.0</a> and had to build a custom PC just to use it, since so few components were supported in the early 90’s. A lot has changed since then.</p>
 <p>I decided to experiment with Linux on a more powerful <a href="https://amzn.to/2LvmZ4y" target="_blank" rel="noopener noreferrer" aria-label=" (opens in a new tab)">2-in-1 Dell Inspiron 7000</a> device. It’s a great design with a beautiful high resolution Gorilla Glass screen, aluminium body, i7 processor, 16 GB RAM and a lot more storage.</p>
 <p>My first few attempts at installation (<a href="https://www.linuxmint.com/" target="_blank" rel="noopener noreferrer" aria-label=" (opens in a new tab)">Linux Mint</a>) were challenging. This PC is designed to run Windows 10 and there were some BIOS configuration changes I had to figure out in order to convince the machine that it could install Linux instead of Windows.</p>
@@ -939,25 +939,25 @@ If you found this how-to helpful, pay it forward.
 <p>System maintenance is even more like a Mac. For instance, like Mac OS and Windows 10, the OS lets me know when there are software updates available and prompts me to upgrade. All I have to do is enter my credentials and the OS takes care of everything for me. In the “good old days,” of using Linux, I had to monitor the web and Usenet for software updates, then download and compile them from source code.</p>
 <p>Those days are gone.</p>
 <p>There’s also an “app store” called Pop!_Shop where you can find a curated catalog of commonly used Linux software. Again, all updates are managed by the OS, just like Mac OS or Windows 10.</p>
-<figure class="post__image post__image" ><img src="https://gadgetboy.org/media/posts/5/ezgif.com-video-to-gif.gif" alt="" width="600" height="338">
+<figure class="post__image post__image" ><img loading="lazy" src="https://gadgetboy.org/media/posts/5/ezgif.com-video-to-gif.gif" alt="" width="600" height="338">
 <figcaption >Pop! Shop</figcaption>
 </figure>
-<h2 id="mcetoc_1e366h7nm1">Why not just get a new Mac or a faster Chromebook?</h2>
+<h2>Why not just get a new Mac or a faster Chromebook?</h2>
 <p>A new Mac is overkill for my personal computing needs. I love my MacBook Pro and would be happy to be able to use it as my daily driver again, but I don’t see that happening any time soon.</p>
 <p>A faster Chromebook would serve my usual needs, but why spend just about as much on a high-performance Chromebook to only have the limited functionality of Chrome OS? (Comparison: <a href="https://amzn.to/38dSQR2" target="_blank" rel="noopener noreferrer" aria-label=" (opens in a new tab)">Google Pixel</a> vs. <a href="https://amzn.to/2s3JTJt" target="_blank" rel="noopener noreferrer" aria-label=" (opens in a new tab)">Dell Inspiron 7000</a>)</p>
 <p>A Linux laptop running Pop!_OS fits squarely in between an under-powered, education-oriented Chromebook and a new MacBook at a much more competitive price. I get high-performance access to my cloud services but can also occasionally run <a href="https://www.gimp.org/" target="_blank" rel="noopener noreferrer" aria-label=" (opens in a new tab)">Gimp</a> for image editing or <a href="https://www.openshot.org/" target="_blank" rel="noopener noreferrer" aria-label=" (opens in a new tab)">OpenShot</a> for a quick video edit.</p>
 <p>My biggest complaint has been battery life. Again, the battery performance claims for this machine are based on Windows 10 with drivers designed specifically for this hardware. It took me a bit of Googling to learn about modern Linux battery management before I could get the machine to run longer than a couple of hours on a charge. In addition to the Pop!_OS battery management tools (which are pretty good), I eventually installed <a href="https://www.tecmint.com/tlp-increase-and-optimize-linux-battery-life/" target="_blank" rel="noopener noreferrer" aria-label=" (opens in a new tab)">TLP</a> and <a href="https://www.linuxuprising.com/2018/09/tlpui-is-graphical-user-interface-for.html" target="_blank" rel="noopener noreferrer" aria-label=" (opens in a new tab)">TLPGUI</a> for more advanced battery management. After a few weeks of use with this setup, I’ve found battery life to be more than acceptable.</p>
-<figure class="post__image post__image" ><img src="https://gadgetboy.org/media/posts/5/tlpgui.png" alt="" width="1024" height="772">
+<figure class="post__image post__image" ><img loading="lazy" src="https://gadgetboy.org/media/posts/5/tlpgui.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://gadgetboy.org/media/posts/5/responsive/tlpgui-xs.png 300w ,https://gadgetboy.org/media/posts/5/responsive/tlpgui-sm.png 480w ,https://gadgetboy.org/media/posts/5/responsive/tlpgui-md.png 768w ,https://gadgetboy.org/media/posts/5/responsive/tlpgui-lg.png 1024w"  alt="" width="1024" height="772">
 <figcaption >TLP GUI</figcaption>
 </figure>
-<h2 id="mcetoc_1e366h7nm2">Is this setup right for you?</h2>
+<h2>Is this setup right for you?</h2>
 <p>If you’re like me and most of your personal computing is cloud-based (or could be), I think you’d be surprised how much of your needs can be met by a set up like this.</p>
 <p>Sure, you might not want to go through the hassle of tweaking the BIOS settings to get Linux to install, but really, once that’s done, installation is just like Mac OS or Windows 10. (<a href="https://system76.com/laptops" target="_blank" rel="noopener noreferrer" aria-label=" (opens in a new tab)">You could also buy a machine preloaded with Pop!_OS from System76</a> but that option is not as attractive – both in cost and design – as a PC from a major OEM.)</p>
 <p>If you prefer Mac OS-style computing, you can install a desktop environment that looks and behaves almost exactly like the Mac. Ditto for Windows. You can run your favorite browser (<a href="https://itsfoss.com/microsoft-edge-linux/" target="_blank" rel="noopener noreferrer" aria-label=" (opens in a new tab)">even if your favorite browser is Microsoft Edge</a>) to work with G Suite, Office 365 Online – even Apple iCloud.</p>
 <p>That’s because <strong>using</strong> Pop!_OS is easy. If I set up a PC for my wife running Pop!_OS, she could complete her usual tasks with almost no learning curve. But she’s definitely not the sort of person to figure out how to get the PC to accept the installation. It’s not her thing.</p>
 <p>Maybe there’s a cottage industry in setting up user-friendly Linux installations on a device that a customer already owns? Probably not enough mass appeal there, but it’s an interesting idea.</p>
 <p>If you want a quick run through of Pop!_OS you can watch the short video below. There are plenty of others on YouTube but they’re mostly reviews by Linux geeks, for Linux geeks.</p>
-<figure class="post__video"><iframe width="560" height="314" src="https://www.youtube.com/embed/M4TAm9PGvbw" allowfullscreen="allowfullscreen" ></iframe></figure>
+<figure class="post__video"><iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/M4TAm9PGvbw" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></figure>
             ]]>
         </content>
     </entry>
@@ -972,7 +972,7 @@ If you found this how-to helpful, pay it forward.
             <category term="Home Automation"/>
             <category term="Gadgets"/>
 
-        <updated>2020-04-18T08:19:55-05:00</updated>
+        <updated>2020-07-06T07:08:05-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/7/rosie-the-jetsons-free-vector-800x566.jpg" alt="Rosie!" />
@@ -1002,7 +1002,7 @@ If you found this how-to helpful, pay it forward.
 <p>That’s about it.</p>
 <p>(If you really want to geek out when shopping for a robot vacuum, visit the <a href="https://www.youtube.com/channel/UCvavJlMjlTd4wLwi9yKCtew">Vacuum Wars YouTube channel</a>. Yes, that’s a thing.)</p>
 <p>In addition to the above, there is one critical and sometimes overlooked feature of a robot vacuum, especially for larger homes.</p>
-<h2 id="mcetoc_1e368b3950">Navigation</h2>
+<h2>Navigation</h2>
 <p>There are basically two types of navigation: the random, bumping-around-the-house-until-it’s-clean type, and the more intelligent, S-patterned type.</p>
 <p>Inexpensive robot vacuums will basically just bounce off of objects around your home until its onboard software determines that it has covered the area it’s supposed to clean. There’s nothing wrong with this approach, but in larger homes, it can take a long time, especially since it will vacuum over spots it has already cleaned until it has completely covered the floor. This approach also makes it more likely that the robot needs to return to the dock to recharge during a session, extending the completion time even further.</p>
 <p>Also, as part of any navigation system, you’ll want to be able to block the vacuum from going to certain places like, say, your kids playroom or keeping the vacuum from falling down stairs. Inexpensive vacuums can do this but they usually require the placement of some sort of signalling tape that you place around your home. It’s not the most attractive option.</p>
@@ -1011,8 +1011,8 @@ If you found this how-to helpful, pay it forward.
 <p>Once the robot knows the basic layout of your home, it will begin to vacuum floors in a regular back-and-forth motion until it has reached the end of the room, then it will switch to another room and repeat the process until all of your designated floors are clean.</p>
 <p>After researching robot vacuums (and watching <em>way</em> too many Vacuum Wars videos) I decided that this type of navigation was the best option for us.</p>
 <p>When the <a href="https://amzn.to/2rhVDYI">Roborock S5 </a>went on sale (and I had a bunch of Amazon affiliate earnings banked) I made the purchase.</p>
-<h2 id="mcetoc_1e368b3951">Meet Rosie</h2>
-<figure class="post__image post__image" ><img src="https://gadgetboy.org/media/posts/7//roborock_s5.jpg" alt="RoboRock S5" width="930" height="1024">
+<h2>Meet Rosie</h2>
+<figure class="post__image post__image" ><img loading="lazy" src="https://gadgetboy.org/media/posts/7//roborock_s5.jpg" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://gadgetboy.org/media/posts/7//responsive/roborock_s5-xs.jpg 300w ,https://gadgetboy.org/media/posts/7//responsive/roborock_s5-sm.jpg 480w ,https://gadgetboy.org/media/posts/7//responsive/roborock_s5-md.jpg 768w ,https://gadgetboy.org/media/posts/7//responsive/roborock_s5-lg.jpg 1024w"  alt="RoboRock S5" width="930" height="1024">
 <figcaption >RoboRock S5</figcaption>
 </figure>
 <p>Setting up the <a href="https://amzn.to/2rhVDYI">Roborock S5</a> was easy as pie. I unboxed it, plugged in the charger and placed it in its new home. While it was charging, I set up the mobile app (<a href="https://apps.apple.com/us/app/mi-home-xiaomi-smarthome/id957323480">Mi Home</a>) on my iPhone and connected the robot to my Wi-Fi.</p>
@@ -1021,13 +1021,13 @@ If you found this how-to helpful, pay it forward.
 <p>For those of my generation, you’ll remember Rosie, the robot house keeper from The Jetsons. It’s a perfect, geeky, nostalgic name choice.</p>
 <p>When it was fully charged, I gave it a go.</p>
 <p>During its first run, it had a difficult time getting itself up onto the high-pile area rug in the living room and a few times, I realized that I forgot to put away the dog toys or slippers, so I had to run around the house to pick those up. Other than that, it did a nice job of cleaning the floors.</p>
-<p>The second time I ran it, I got the following results.<img class="post__image" src="https://gadgetboy.org/media/posts/7/img-2004.jpg" alt="Floor Map" width="650" height="1023"></p>
+<p>The second time I ran it, I got the following results.<figure class="post__image"><img loading="lazy"  src="https://gadgetboy.org/media/posts/7/img-2004.jpg" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://gadgetboy.org/media/posts/7/responsive/img-2004-xs.jpg 300w ,https://gadgetboy.org/media/posts/7/responsive/img-2004-sm.jpg 480w ,https://gadgetboy.org/media/posts/7/responsive/img-2004-md.jpg 768w ,https://gadgetboy.org/media/posts/7/responsive/img-2004-lg.jpg 1024w"  alt="Floor Map" width="650" height="1023"></figure>
 <p>The yellow dot is Rosie’s home, in the dining room, next to the sideboard.</p>
-<p>Notice the S-pattern throughout the house in almost every room. But here’s what becomes more interesting: if you know the layout of the house, you know exactly why the map looks like it does.<img class="post__image" src="https://gadgetboy.org/media/posts/7/img-2005.jpg" alt="Annotated Floor Map" width="650" height="1025"></p>
+<p>Notice the S-pattern throughout the house in almost every room. But here’s what becomes more interesting: if you know the layout of the house, you know exactly why the map looks like it does.<figure class="post__image"><img loading="lazy"  src="https://gadgetboy.org/media/posts/7/img-2005.jpg" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://gadgetboy.org/media/posts/7/responsive/img-2005-xs.jpg 300w ,https://gadgetboy.org/media/posts/7/responsive/img-2005-sm.jpg 480w ,https://gadgetboy.org/media/posts/7/responsive/img-2005-md.jpg 768w ,https://gadgetboy.org/media/posts/7/responsive/img-2005-lg.jpg 1024w"  alt="Annotated Floor Map" width="650" height="1025"></figure>
 <p>With that discovery, I have to say that I had a minor freakout.</p>
 <p>What does Xiaomi (the manufacturer) do with this data? Is it shared with anyone? Do employees have access to it? Does it know my location?</p>
 <p>I decided to find out.</p>
-<h2 id="mcetoc_1e368b3952"><a href="https://cnbj1.fds.api.xiaomi.com/html/en/mihome_use_agreement.html">Terms of Service</a></h2>
+<h2><a href="https://cnbj1.fds.api.xiaomi.com/html/en/mihome_use_agreement.html">Terms of Service</a></h2>
 <p>The Terms of Service are pretty much what you’d expect, except for a few concerning items.</p>
 <p><code>5.5. Xiaomi specifically brings to the User's attention that, 
 in order to protect the company's business development and right to make
@@ -1057,7 +1057,7 @@ charge begins. Xiaomi and its Partner will do their utmost to notify the
  In the absence of relevant legal provisions, international business 
 practices and/or business practices may be used as references.</code></p>
 <p class="msg msg--highlight ">Do I feel like Xiaomi has breached this agreement or is at fault for something? I’ll have to visit Mainland China and file suit in their court system.</p>
-<h2 id="mcetoc_1e368b3953"><a href="https://cnbj1.fds.api.xiaomi.com/html/en/mihome_privacy_policy.html">Privacy Policy</a></h2>
+<h2><a href="https://cnbj1.fds.api.xiaomi.com/html/en/mihome_privacy_policy.html">Privacy Policy</a></h2>
 <p><code>What information is collected, and how we use it</code></p>
 <p><code>Types of information collected</code></p>
 <p><code>Information related to the handheld device terminal or your SIM
@@ -1187,7 +1187,7 @@ research purposes or statistical purposes according to the applicable
 laws, the data can be further retained by Xiaomi even if the further 
 processing is incompatible with original purposes.</code></p>
 <p class="msg msg--highlight ">Basically, Xiaomi reserves the right to keep personal information on file in perpetuity.</p>
-<h2 id="mcetoc_1e368b3954">Summary</h2>
+<h2>Summary</h2>
 <p>In the final analysis, I’m happy with the Roborock S5 during the short time that I’ve owned it, but I’m not terribly excited by the ambiguity of the personal information protections.</p>
 <p>A device of this type is wonderfully convenient, but it opens up a huge can of proverbial worms. We’re no longer just concerned about simple data like name, email address and telephone number – we’re now concerned with the entire layout of a home, its size and contents.</p>
 <p>I’ll let you know if the cops show up at my door to question Rosie.</p>
@@ -1204,7 +1204,7 @@ processing is incompatible with original purposes.</code></p>
         <id>https://gadgetboy.org/moms-honey-garlic-keto-marinade/</id>
             <category term="Fitness"/>
 
-        <updated>2020-03-11T21:21:43-05:00</updated>
+        <updated>2020-07-06T07:08:05-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/8/grilled-pork-tenderloing.jpg" alt="" />
@@ -1218,7 +1218,7 @@ processing is incompatible with original purposes.</code></p>
 <p>I would get home every day around 3 in the afternoon, usually to find instructions from my Mom on how to get dinner started. One day, she asked me to marinade some meat with this recipe and I’ve been using it ever since. It’s become a staple in my cooking.</p>
 <p>Before starting Keto I generally didn’t measure much in my cooking (except for baking) but now that I’m watching my macros, I figured it was time to write this down.</p>
 <p>I use it on everything – beef, chicken, shrimp, scallops – but my favorite use of this marinade is on pork loin. After marinading it in a ziplock bag, I’ll usually put the whole thing into a <a href="https://amzn.to/32xnSiB">sous vide water bath</a> and cook it slowly for about 90 minutes at 129 degrees Fahrenheit. When it’s done, I just throw it on a hot grill for 2 minutes on each side to sear it.</p>
-<h2 id="mcetoc_1e368ng620">Mom’s Honey Garlic Keto Marinade</h2>
+<h2>Mom’s Honey Garlic Keto Marinade</h2>
 <ul>
 <li>1/2 cup of olive oil</li>
 <li>1/2 cup of soy sauce</li>
@@ -1239,7 +1239,7 @@ processing is incompatible with original purposes.</code></p>
             <category term="Motorcycle Gear"/>
             <category term="Motorcycle"/>
 
-        <updated>2020-03-11T21:45:36-05:00</updated>
+        <updated>2020-07-06T07:08:05-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/10/5ca20fab-6058-4564-9750-35ca23620ea7.jpg" alt="" />
@@ -1253,46 +1253,46 @@ processing is incompatible with original purposes.</code></p>
 <p>This is something I’ve been wrestling with for 5+ years.</p>
 <p>It’s not that difficult, really. Moto GPS units have been around for decades and there are plenty of smartphone mounts to choose from if you prefer to use Google Maps or one of its ilk.</p>
 <p>I’m very particular about my bike and what sort of bits and bobs I put on it. But it’s a lot more than that.</p>
-<h2 id="mcetoc_1e3692hm40">Things to consider</h2>
-<h3 id="mcetoc_1e3692hm41">Smartphone or dedicated GPS unit?</h3>
+<h2>Things to consider</h2>
+<h3>Smartphone or dedicated GPS unit?</h3>
 <p>This is an easy decision. The smartphone in your pocket is better than just about any moto GPS unit you can buy today and it’s always up-to-date. Moto GPS units from companies like Garmin sometimes require that you hook it up to a computer to upgrade the maps and sometimes for a fee.</p>
 <p>If you’re just riding around town or on a day trip with your friends, why bother with that? I use my iPhone.</p>
-<h3 id="mcetoc_1e3692hm42">Style</h3>
+<h3>Style</h3>
 <p>I love my bike and don’t want anything to interfere with its aesthetics. I ride what is referred to as a Modern Classic – a bike that resembles (or sometimes looks exactly like) its original versions from the early 20th century – but with modern upgrades to fuel intake, brakes, catalytic converters, etc.</p>
 <p>I tend to like <a href="https://en.wikipedia.org/wiki/Café_racer" target="_blank" rel="noopener noreferrer" aria-label="Café Racer (opens in a new tab)">Café Racer</a> styling, made popular in 1960’s England, which is simple, clean and reduced to its barest necessities. With that in mind, hanging stuff on the bike is anathema to that. Trust me – <a href="https://gadgetboy.org/2017/02/01/2017-1-29-heritage-motorcycle-luggage-project/">choosing luggage for my previous bike was an agonizing process</a>, especially since I refused to spend what is typically hundreds of dollars for a moto side bag.</p>
 <p>Style has been a huge factor in my decision making process, especially when I’ve seen riders attach <a rel="noopener noreferrer" aria-label="these monstrosities (opens in a new tab)" href="https://amzn.to/2PRl9jl" target="_blank">these monstrosities</a> to their bikes. When deciding on a mount, I want something small and unobtrusive that blends with the style and color of the bike, not something that looks like an odd appendage.</p>
-<h3 id="mcetoc_1e3692hm43">Security</h3>
+<h3>Security</h3>
 <p>Even though style is important to me, this is really <strong>the</strong> most important thing to consider. You don’t want a $1,000 smartphone flying off your bike at 75 mph. There are <a rel="noopener noreferrer" aria-label="countless mounts available (opens in a new tab)" href="https://amzn.to/2UrGtu7" target="_blank">countless mounts available</a> and just as many horror stories (and videos!) of riders losing their smartphones because of them.</p>
 <p>Sure, my iPhone is insured, (you were expecting otherwise? 😉 ) but I just don’t need the complication of replacing a phone. I want something that’s going to work reliably.</p>
-<h3 id="mcetoc_1e3692hm44">Voice Navigation</h3>
+<h3>Voice Navigation</h3>
 <p>I need turn-by-turn voice navigation. Getting around any city, especially Austin, Texas, can be a dangerous proposition and you don’t want to take your eyes off the road to look for your next turn. For longer <a rel="noopener noreferrer" aria-label="Hill Country (opens in a new tab)" href="https://en.wikipedia.org/wiki/Texas_Hill_Country" target="_blank">Hill Country</a> rides, it’s fine to quickly look at a screen to see how far you are from your next turn, but not in the city.</p>
 <p>For years, I’ve been wearing <a rel="noopener noreferrer" aria-label="Ultimate Ears barrel-style (opens in a new tab)" href="https://amzn.to/2NIuAi2" target="_blank">Ultimate Ears barrel-style</a> headphones under my helmet connected to my iPhone in my jacket pocket for voice navigation. These type of headphones perform double duty as they also protect your hearing from wind and engine noise. Also important: the headphone wires are directed downward at all times – you don’t have to worry about wrapping anything around your ears and having the wires or headphones shift around under your helmet.</p>
-<div class="wp-block-image" >
-<figure class="aligncenter size-large is-resized"><img class="post__image align-center" src="https://gadgetboy.org/media/posts/10/71yvit0zus._sl1500_.jpg" alt="" width="235" height="354"></figure>
+<div class="wp-block-image" data-carousel-extra="{&quot;blog_id&quot;:165997757,&quot;permalink&quot;:&quot;https:\/\/gadgetboy.org\/2019\/09\/02\/the-best-smartphone-motorcycle-mount-for-me\/&quot;}">
+<figure class="aligncenter size-large is-resized"><figure class="post__image align-center"><img loading="lazy"  src="https://gadgetboy.org/media/posts/10/71yvit0zus._sl1500_.jpg" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://gadgetboy.org/media/posts/10/responsive/71yvit0zus._sl1500_-xs.jpg 300w ,https://gadgetboy.org/media/posts/10/responsive/71yvit0zus._sl1500_-sm.jpg 480w ,https://gadgetboy.org/media/posts/10/responsive/71yvit0zus._sl1500_-md.jpg 768w ,https://gadgetboy.org/media/posts/10/responsive/71yvit0zus._sl1500_-lg.jpg 1024w"  alt="" width="235" height="354"></figure></figure>
 </div>
 <p>There a couple of downsides to this method. The biggest is that some mapping apps (Waze, for instance) don’t really behave well when operating with the screen turned off which, of course, you have to do since it’s in your pocket and leaving the screen on would trigger all sorts of unwanted commands. I’ve also found that the device will sometimes lose its GPS signal or simply think that I’ve paused my route, requiring that I pull over, take off my gloves, dig the phone out of the inside pocket and restart the route. Having a mount would reduce some of this inconvenience, especially if I bought a pair of touchscreen-friendly moto gloves.</p>
 <p>If voice navigation is important, then the downside to using a mount is that you now need to consider how you get the sound from the phone on the handlebars to your ears. Dangling wires are a safety hazard and probably wouldn’t survive for long at high speeds.</p>
-<h3 id="mcetoc_1e3692hm45">Bluetooth</h3>
+<h3>Bluetooth</h3>
 <p>Bluetooth is, of course, the answer to the above problem but typical bluetooth headphones just don’t work. The best I found were the <a rel="noopener noreferrer" aria-label="torc-style headphones from LG (opens in a new tab)" href="https://amzn.to/2NItmU9" target="_blank">torc-style headphones from LG</a> but the device controls (play/pause, skip, volume, etc.) would constantly get triggered under the collar of my jacket. Wearing them outside the jacket collar wasn’t an option as the torc would fly off.</p>
 <p>After some searching, I found <a rel="noopener noreferrer" aria-label=" (opens in a new tab)" href="https://amzn.to/2LiGRZc" target="_blank">this adapter that adds bluetooth capabilities to wired headphones</a>. I’ve taken it for a few test rides and it works as advertised. Music doesn’t sound great but that’s not as big of a concern for me.</p>
-<div class="wp-block-image" >
-<figure class="aligncenter size-large is-resized"><img class="post__image" src="https://gadgetboy.org/media/posts/10/61hu3f0cxl._sl1317_.jpg" alt="" width="300" height="295"></figure>
+<div class="wp-block-image" data-carousel-extra="{&quot;blog_id&quot;:165997757,&quot;permalink&quot;:&quot;https:\/\/gadgetboy.org\/2019\/09\/02\/the-best-smartphone-motorcycle-mount-for-me\/&quot;}">
+<figure class="aligncenter size-large is-resized"><figure class="post__image"><img loading="lazy"  src="https://gadgetboy.org/media/posts/10/61hu3f0cxl._sl1317_.jpg" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://gadgetboy.org/media/posts/10/responsive/61hu3f0cxl._sl1317_-xs.jpg 300w ,https://gadgetboy.org/media/posts/10/responsive/61hu3f0cxl._sl1317_-sm.jpg 480w ,https://gadgetboy.org/media/posts/10/responsive/61hu3f0cxl._sl1317_-md.jpg 768w ,https://gadgetboy.org/media/posts/10/responsive/61hu3f0cxl._sl1317_-lg.jpg 1024w"  alt="" width="300" height="295"></figure></figure>
 </div>
 <p>(TIP: If I didn’t already own the one mentioned above, I’d would get <a rel="noopener noreferrer" aria-label="this new one (opens in a new tab)" href="https://amzn.to/2MQ4JoT" target="_blank">this new version</a> with bluetooth 5.0 and expanded codec support.)</p>
-<h2 id="mcetoc_1e3692hm46">The Purchase (Finally)</h2>
+<h2>The Purchase (Finally)</h2>
 <p>After lots of overthinking, I decided that I wanted a twist-lock-style mount. This type of mount requires either a dedicated case or adhering some sort of adapter to the back of your phone. The latter wasn’t an option (the iPhone XS has a glass back) so I surrendered to the case.</p>
 <p>I looked at both the <a rel="noopener noreferrer" aria-label=" (opens in a new tab)" href="https://www.quadlockcase.com" target="_blank">QuadLock</a> and <a rel="noopener noreferrer" aria-label="SP Connect (opens in a new tab)" href="https://sp-connect.com/" target="_blank">SP Connect</a> systems and ultimately selected the <a rel="noopener noreferrer" aria-label="SP Connect Moto Mount Pro with a bundled case for the iPhone (opens in a new tab)" href="https://sp-connect.com/collections/motorbike/products/moto-bundle?variant=52406874581" target="_blank">SP Connect Moto Mount Pro with a bundled case for the iPhone</a>.</p>
-<figure class="post__video"><iframe width="560" height="314" src="https://www.youtube.com/embed/Vborxjgx88k" allowfullscreen="allowfullscreen" ></iframe></figure>
+<figure class="post__video"><iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/Vborxjgx88k" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></figure>
 <figure class="wp-block-embed-youtube wp-block-embed is-type-rich wp-embed-aspect-16-9 wp-has-aspect-ratio">
-<div class="wp-block-embed__wrapper" > </div>
+<div class="wp-block-embed__wrapper" data-carousel-extra="{&quot;blog_id&quot;:165997757,&quot;permalink&quot;:&quot;https:\/\/gadgetboy.org\/2019\/09\/02\/the-best-smartphone-motorcycle-mount-for-me\/&quot;}"> </div>
 </figure>
 <p>The phone can be inserted or removed easily enough with a little fiddling, so I don’t have to use it as my day-to-day phone protection. The most important factor in my decision was the build quality of the mount: QuadLock uses plastic mounts while SP Connect uses aluminum with a vibration dampening system.</p>
 <p>I’m sure plastic works fine for this application but the aluminum makes me feel like the phone is more secure. (And it looks nicer than plastic.)</p>
-<h3 id="mcetoc_1e3692hm47">First Ride</h3>
-<div class="gallery"   >
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/10/gallery/img_1858-1.jpg" ><img src="https://gadgetboy.org/media/posts/10/gallery/img_1858-1-thumbnail.jpg" alt="" width="768" height="768"></a></figure>
-<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/10/gallery/img_1859.jpg" ><img src="https://gadgetboy.org/media/posts/10/gallery/img_1859-thumbnail.jpg" alt="" width="768" height="768"></a></figure>
-</div>
+<h3>First Ride</h3>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-columns="2">
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/10/gallery/img_1858-1.jpg" data-size="1024x1024"><img loading="lazy" src="https://gadgetboy.org/media/posts/10/gallery/img_1858-1-thumbnail.jpg" alt="" width="768" height="768"></a></figure>
+<figure class="gallery__item"><a href="https://gadgetboy.org/media/posts/10/gallery/img_1859.jpg" data-size="1024x1024"><img loading="lazy" src="https://gadgetboy.org/media/posts/10/gallery/img_1859-thumbnail.jpg" alt="" width="768" height="768"></a></figure>
+</div></div>
 <p>I put it on the bike a couple of days ago and went for a long ride in Hill Country with some friends.</p>
 <p>Installation was easy and was completed in 5 minutes. I thought I would be able to extend the extension arm over the center of the handlebar mount but there wasn’t enough clearance. In the end, the final location was best anyway – slightly left of handlebar mount. I mounted it in landscape position and can still clearly see all the gauges while riding.</p>
 <p>The twist-lock case connects to the mount quickly and solidly, then you’re ready to ride.</p>
