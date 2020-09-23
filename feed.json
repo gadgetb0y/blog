@@ -10,6 +10,22 @@
     },
     "items": [
         {
+            "id": "https://gadgetboy.org/cleaning-house-3/",
+            "url": "https://gadgetboy.org/cleaning-house-3/",
+            "title": "Cleaning House",
+            "summary": "In my perpetual quest to learn something new and interesting, I gave&hellip;",
+            "content_html": "<p>In my perpetual quest to learn something new and interesting, I gave this blog a complete overhaul.</p>\n<p>For years, I self-hosted it on Wordpress. That was a pain, primarily because (at the time) it was difficult to lock down Wordpress and protect it from getting hacked. Couple that with things like mySQL and PHP updates and stuff was breaking all the time. I spent more time administering it than actually writing.</p>\n<p>I moved it to Squarespace where it ran for a long time without issues until December 2018 when I made a DNS change (at the request of Squarespace) and it made the site unreachable. Squarespace support was of no help in fixing the issue, so I decided to move it to a basic Wordpress.com site using their Squarespace import tool.</p>\n<p>Wordpress.com is great. A fully-managed Personal blog is $4/month and, if you don’t want to use the traditional Wordpress interface, the new management interface is attractive and easy to use.</p>\n<p>Where it started to get annoying was when I wanted to do simple things like customize my CSS or add a Google Analytics tracking tag and found that a Personal plan doesn’t allow for that - you have to upgrade to a Premium plan.</p>\n<p>I get it - it’s SaaS and they have to price it properly to incentivize people to move up to plans with higher ARPU. But I also know that some of these things are trivial to enable and it felt unnecessarily restrictive.</p>\n<p>So, during my <a href=\"https://gadgetboy.org/what-i-did-on-my-holiday-staycation-2020-edition/\">Holiday Staycation</a>, I began to explore <a href=\"https://www.netlify.com/blog/2020/04/14/what-is-a-static-site-generator-and-3-ways-to-find-the-best-one/\">static site generators</a>. Static sites are incredibly fast because there’s no server side processing of web pages - the web server simply delivers a pre-built file. More importantly, there’s no CMS running code so the attack vectors are (generally speaking) only the OS and the web server and not some insecure Wordpress plugin.</p>\n<p>I was reading a lot of Home Assistant docs (another Staycation project) and noticed that they were using <a href=\"https://jekyllrb.com/\">Jekyll</a>, so I decided to give it a try. I like the simplicity of page generation using plain text files, markdown and YAML and I found a highly regarded python script to import Wordpress posts so I could migrate my current content to static files.</p>\n<p>After some configuration, the import script worked great, but I was unable to figure out why I couldn’t get any theme other than the default to work. I finally ran out of tinker time and had to go back to the office.</p>\n<p>A few weeks later, while my wife was attending a Yzoga immersive for the weekend, I started exploring other options. As it turns out, there <a href=\"https://staticsitegenerators.net/\">are <strong>a lot</strong> of static site generators out there</a>.</p>\n<p>Ultimately, I chose <a href=\"https://getpublii.com/\">Publii</a>. It’s an open source static site generator with a full GUI and lots of great features. There’s a built-in utility for Wordpress imports but then, as I was starting the process, I decided to take inventory of the content.</p>\n<p>Much of it is outdated (Review of the Palm Treo 755p, anyone?) or the equivalent of what would be social media posts today.</p>\n<p>Sure, reviewing old posts was an interesting trip down Memory Lane but in the end, I decided to simply select posts to migrate manually, updating the URL structure and media file references accordingly.</p>\n<p>My intention is to host this on a spare Raspberry Pi on my home network, just so I can learn how to set up things like dynamic DNS, domain-based routing through the firewall and reverse proxy configuration but for now, it’s hosted on GitHub Pages.</p>\n<p>Publii is open source. If you want to support the project, you can contribute code or <a href=\"https://getpublii.com/donate/\">make a donation</a> to the project. I make a monthly donation through <a href=\"https://opencollective.com/publii/\">Open Collective</a> but you can also make a donation via PayPal.</p>\n",
+            "image": "https://gadgetboy.org/media/posts/52/delete_key2_1600.jpg",
+            "author": {
+                "name": "John A. Federico"
+            },
+            "tags": [
+                   "Software"
+            ],
+            "date_published": "2020-09-23T17:55:36-05:00",
+            "date_modified": "2020-09-23T17:55:36-05:00"
+        },
+        {
             "id": "https://gadgetboy.org/set-up-duplicacy-on-pop_os-2004/",
             "url": "https://gadgetboy.org/set-up-duplicacy-on-pop_os-2004/",
             "title": "Set Up Duplicacy on Pop!_OS 20.04",
@@ -25,8 +41,8 @@
                    "Linux",
                    "How-to"
             ],
-            "date_published": "2020-07-23T15:41:47-05:00",
-            "date_modified": "2020-07-23T15:41:47-05:00"
+            "date_published": "2020-09-23T17:55:36-05:00",
+            "date_modified": "2020-09-23T17:55:36-05:00"
         },
         {
             "id": "https://gadgetboy.org/protect-your-privacy-with-firefox-containers/",
@@ -40,8 +56,8 @@
             },
             "tags": [
             ],
-            "date_published": "2020-07-23T15:41:47-05:00",
-            "date_modified": "2020-07-23T15:41:47-05:00"
+            "date_published": "2020-09-23T17:55:36-05:00",
+            "date_modified": "2020-09-23T17:55:36-05:00"
         },
         {
             "id": "https://gadgetboy.org/review-system76-lemur-pro/",
@@ -55,8 +71,8 @@
             },
             "tags": [
             ],
-            "date_published": "2020-07-23T15:41:47-05:00",
-            "date_modified": "2020-07-23T15:41:47-05:00"
+            "date_published": "2020-09-23T17:55:36-05:00",
+            "date_modified": "2020-09-23T17:55:36-05:00"
         },
         {
             "id": "https://gadgetboy.org/what-i-did-on-my-holiday-staycation-2020-edition/",
@@ -75,8 +91,8 @@
                    "Home Assistant",
                    "Coding"
             ],
-            "date_published": "2020-07-23T15:41:47-05:00",
-            "date_modified": "2020-07-23T15:41:47-05:00"
+            "date_published": "2020-09-23T17:55:36-05:00",
+            "date_modified": "2020-09-23T17:55:36-05:00"
         },
         {
             "id": "https://gadgetboy.org/alarming-news/",
@@ -92,8 +108,8 @@
                    "Internet of Things",
                    "Home Automation"
             ],
-            "date_published": "2020-07-23T15:41:47-05:00",
-            "date_modified": "2020-07-23T15:41:47-05:00"
+            "date_published": "2020-09-23T17:55:36-05:00",
+            "date_modified": "2020-09-23T17:55:36-05:00"
         },
         {
             "id": "https://gadgetboy.org/keto-update/",
@@ -110,8 +126,8 @@
                    "Fitness Training",
                    "Fitness"
             ],
-            "date_published": "2020-07-23T15:41:47-05:00",
-            "date_modified": "2020-07-23T15:41:47-05:00"
+            "date_published": "2020-09-23T17:55:36-05:00",
+            "date_modified": "2020-09-23T17:55:36-05:00"
         },
         {
             "id": "https://gadgetboy.org/my-new-chromebook-isnt-a-chromebook-at-all/",
@@ -136,8 +152,8 @@
                    "Gadgets",
                    "Chrome OS"
             ],
-            "date_published": "2020-07-23T15:41:47-05:00",
-            "date_modified": "2020-07-23T15:41:47-05:00"
+            "date_published": "2020-09-23T17:55:36-05:00",
+            "date_modified": "2020-09-23T17:55:36-05:00"
         },
         {
             "id": "https://gadgetboy.org/the-adventures-of-rosie/",
@@ -154,8 +170,8 @@
                    "Home Automation",
                    "Gadgets"
             ],
-            "date_published": "2020-07-23T15:41:47-05:00",
-            "date_modified": "2020-07-23T15:41:47-05:00"
+            "date_published": "2020-09-23T17:55:36-05:00",
+            "date_modified": "2020-09-23T17:55:36-05:00"
         },
         {
             "id": "https://gadgetboy.org/moms-honey-garlic-keto-marinade/",
@@ -170,25 +186,8 @@
             "tags": [
                    "Fitness"
             ],
-            "date_published": "2020-07-23T15:41:47-05:00",
-            "date_modified": "2020-07-23T15:41:47-05:00"
-        },
-        {
-            "id": "https://gadgetboy.org/the-best-smartphone-motorcycle-mount-for-me/",
-            "url": "https://gadgetboy.org/the-best-smartphone-motorcycle-mount-for-me/",
-            "title": "The Best Smartphone Motorcycle Mount (for me)",
-            "summary": "What do you do when you’re “Directionally Challenged” and need GPS to&hellip;",
-            "content_html": "<p>What do you do when you’re “Directionally Challenged” and need GPS to get around on your motorcycle?</p>\n<p>This is something I’ve been wrestling with for 5+ years.</p>\n<p>It’s not that difficult, really. Moto GPS units have been around for decades and there are plenty of smartphone mounts to choose from if you prefer to use Google Maps or one of its ilk.</p>\n<p>I’m very particular about my bike and what sort of bits and bobs I put on it. But it’s a lot more than that.</p>\n<h2>Things to consider</h2>\n<h3>Smartphone or dedicated GPS unit?</h3>\n<p>This is an easy decision. The smartphone in your pocket is better than just about any moto GPS unit you can buy today and it’s always up-to-date. Moto GPS units from companies like Garmin sometimes require that you hook it up to a computer to upgrade the maps and sometimes for a fee.</p>\n<p>If you’re just riding around town or on a day trip with your friends, why bother with that? I use my iPhone.</p>\n<h3>Style</h3>\n<p>I love my bike and don’t want anything to interfere with its aesthetics. I ride what is referred to as a Modern Classic – a bike that resembles (or sometimes looks exactly like) its original versions from the early 20th century – but with modern upgrades to fuel intake, brakes, catalytic converters, etc.</p>\n<p>I tend to like <a href=\"https://en.wikipedia.org/wiki/Café_racer\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Café Racer (opens in a new tab)\">Café Racer</a> styling, made popular in 1960’s England, which is simple, clean and reduced to its barest necessities. With that in mind, hanging stuff on the bike is anathema to that. Trust me – <a href=\"https://gadgetboy.org/2017/02/01/2017-1-29-heritage-motorcycle-luggage-project/\">choosing luggage for my previous bike was an agonizing process</a>, especially since I refused to spend what is typically hundreds of dollars for a moto side bag.</p>\n<p>Style has been a huge factor in my decision making process, especially when I’ve seen riders attach <a rel=\"noopener noreferrer\" aria-label=\"these monstrosities (opens in a new tab)\" href=\"https://amzn.to/2PRl9jl\" target=\"_blank\">these monstrosities</a> to their bikes. When deciding on a mount, I want something small and unobtrusive that blends with the style and color of the bike, not something that looks like an odd appendage.</p>\n<h3>Security</h3>\n<p>Even though style is important to me, this is really <strong>the</strong> most important thing to consider. You don’t want a $1,000 smartphone flying off your bike at 75 mph. There are <a rel=\"noopener noreferrer\" aria-label=\"countless mounts available (opens in a new tab)\" href=\"https://amzn.to/2UrGtu7\" target=\"_blank\">countless mounts available</a> and just as many horror stories (and videos!) of riders losing their smartphones because of them.</p>\n<p>Sure, my iPhone is insured, (you were expecting otherwise? 😉 ) but I just don’t need the complication of replacing a phone. I want something that’s going to work reliably.</p>\n<h3>Voice Navigation</h3>\n<p>I need turn-by-turn voice navigation. Getting around any city, especially Austin, Texas, can be a dangerous proposition and you don’t want to take your eyes off the road to look for your next turn. For longer <a rel=\"noopener noreferrer\" aria-label=\"Hill Country (opens in a new tab)\" href=\"https://en.wikipedia.org/wiki/Texas_Hill_Country\" target=\"_blank\">Hill Country</a> rides, it’s fine to quickly look at a screen to see how far you are from your next turn, but not in the city.</p>\n<p>For years, I’ve been wearing <a rel=\"noopener noreferrer\" aria-label=\"Ultimate Ears barrel-style (opens in a new tab)\" href=\"https://amzn.to/2NIuAi2\" target=\"_blank\">Ultimate Ears barrel-style</a> headphones under my helmet connected to my iPhone in my jacket pocket for voice navigation. These type of headphones perform double duty as they also protect your hearing from wind and engine noise. Also important: the headphone wires are directed downward at all times – you don’t have to worry about wrapping anything around your ears and having the wires or headphones shift around under your helmet.</p>\n<div class=\"wp-block-image\" data-carousel-extra=\"{&quot;blog_id&quot;:165997757,&quot;permalink&quot;:&quot;https:\\/\\/gadgetboy.org\\/2019\\/09\\/02\\/the-best-smartphone-motorcycle-mount-for-me\\/&quot;}\">\n<figure class=\"aligncenter size-large is-resized\"><figure class=\"post__image align-center\"><img loading=\"lazy\"  src=\"https://gadgetboy.org/media/posts/10/71yvit0zus._sl1500_.jpg\" sizes=\"(max-width: 1024px) 100vw, 1024px\" srcset=\"https://gadgetboy.org/media/posts/10/responsive/71yvit0zus._sl1500_-xs.jpg 300w ,https://gadgetboy.org/media/posts/10/responsive/71yvit0zus._sl1500_-sm.jpg 480w ,https://gadgetboy.org/media/posts/10/responsive/71yvit0zus._sl1500_-md.jpg 768w ,https://gadgetboy.org/media/posts/10/responsive/71yvit0zus._sl1500_-lg.jpg 1024w\"  alt=\"\" width=\"235\" height=\"354\"></figure></figure>\n</div>\n<p>There a couple of downsides to this method. The biggest is that some mapping apps (Waze, for instance) don’t really behave well when operating with the screen turned off which, of course, you have to do since it’s in your pocket and leaving the screen on would trigger all sorts of unwanted commands. I’ve also found that the device will sometimes lose its GPS signal or simply think that I’ve paused my route, requiring that I pull over, take off my gloves, dig the phone out of the inside pocket and restart the route. Having a mount would reduce some of this inconvenience, especially if I bought a pair of touchscreen-friendly moto gloves.</p>\n<p>If voice navigation is important, then the downside to using a mount is that you now need to consider how you get the sound from the phone on the handlebars to your ears. Dangling wires are a safety hazard and probably wouldn’t survive for long at high speeds.</p>\n<h3>Bluetooth</h3>\n<p>Bluetooth is, of course, the answer to the above problem but typical bluetooth headphones just don’t work. The best I found were the <a rel=\"noopener noreferrer\" aria-label=\"torc-style headphones from LG (opens in a new tab)\" href=\"https://amzn.to/2NItmU9\" target=\"_blank\">torc-style headphones from LG</a> but the device controls (play/pause, skip, volume, etc.) would constantly get triggered under the collar of my jacket. Wearing them outside the jacket collar wasn’t an option as the torc would fly off.</p>\n<p>After some searching, I found <a rel=\"noopener noreferrer\" aria-label=\" (opens in a new tab)\" href=\"https://amzn.to/2LiGRZc\" target=\"_blank\">this adapter that adds bluetooth capabilities to wired headphones</a>. I’ve taken it for a few test rides and it works as advertised. Music doesn’t sound great but that’s not as big of a concern for me.</p>\n<div class=\"wp-block-image\" data-carousel-extra=\"{&quot;blog_id&quot;:165997757,&quot;permalink&quot;:&quot;https:\\/\\/gadgetboy.org\\/2019\\/09\\/02\\/the-best-smartphone-motorcycle-mount-for-me\\/&quot;}\">\n<figure class=\"aligncenter size-large is-resized\"><figure class=\"post__image\"><img loading=\"lazy\"  src=\"https://gadgetboy.org/media/posts/10/61hu3f0cxl._sl1317_.jpg\" sizes=\"(max-width: 1024px) 100vw, 1024px\" srcset=\"https://gadgetboy.org/media/posts/10/responsive/61hu3f0cxl._sl1317_-xs.jpg 300w ,https://gadgetboy.org/media/posts/10/responsive/61hu3f0cxl._sl1317_-sm.jpg 480w ,https://gadgetboy.org/media/posts/10/responsive/61hu3f0cxl._sl1317_-md.jpg 768w ,https://gadgetboy.org/media/posts/10/responsive/61hu3f0cxl._sl1317_-lg.jpg 1024w\"  alt=\"\" width=\"300\" height=\"295\"></figure></figure>\n</div>\n<p>(TIP: If I didn’t already own the one mentioned above, I’d would get <a rel=\"noopener noreferrer\" aria-label=\"this new one (opens in a new tab)\" href=\"https://amzn.to/2MQ4JoT\" target=\"_blank\">this new version</a> with bluetooth 5.0 and expanded codec support.)</p>\n<h2>The Purchase (Finally)</h2>\n<p>After lots of overthinking, I decided that I wanted a twist-lock-style mount. This type of mount requires either a dedicated case or adhering some sort of adapter to the back of your phone. The latter wasn’t an option (the iPhone XS has a glass back) so I surrendered to the case.</p>\n<p>I looked at both the <a rel=\"noopener noreferrer\" aria-label=\" (opens in a new tab)\" href=\"https://www.quadlockcase.com\" target=\"_blank\">QuadLock</a> and <a rel=\"noopener noreferrer\" aria-label=\"SP Connect (opens in a new tab)\" href=\"https://sp-connect.com/\" target=\"_blank\">SP Connect</a> systems and ultimately selected the <a rel=\"noopener noreferrer\" aria-label=\"SP Connect Moto Mount Pro with a bundled case for the iPhone (opens in a new tab)\" href=\"https://sp-connect.com/collections/motorbike/products/moto-bundle?variant=52406874581\" target=\"_blank\">SP Connect Moto Mount Pro with a bundled case for the iPhone</a>.</p>\n<figure class=\"post__video\"><iframe loading=\"lazy\" width=\"560\" height=\"314\" src=\"https://www.youtube.com/embed/Vborxjgx88k\" allowfullscreen=\"allowfullscreen\" data-mce-fragment=\"1\"></iframe></figure>\n<figure class=\"wp-block-embed-youtube wp-block-embed is-type-rich wp-embed-aspect-16-9 wp-has-aspect-ratio\">\n<div class=\"wp-block-embed__wrapper\" data-carousel-extra=\"{&quot;blog_id&quot;:165997757,&quot;permalink&quot;:&quot;https:\\/\\/gadgetboy.org\\/2019\\/09\\/02\\/the-best-smartphone-motorcycle-mount-for-me\\/&quot;}\"> </div>\n</figure>\n<p>The phone can be inserted or removed easily enough with a little fiddling, so I don’t have to use it as my day-to-day phone protection. The most important factor in my decision was the build quality of the mount: QuadLock uses plastic mounts while SP Connect uses aluminum with a vibration dampening system.</p>\n<p>I’m sure plastic works fine for this application but the aluminum makes me feel like the phone is more secure. (And it looks nicer than plastic.)</p>\n<h3>First Ride</h3>\n<div class=\"gallery-wrapper\"><div class=\"gallery\"  data-is-empty=\"false\" data-columns=\"2\">\n<figure class=\"gallery__item\"><a href=\"https://gadgetboy.org/media/posts/10/gallery/img_1858-1.jpg\" data-size=\"1024x1024\"><img loading=\"lazy\" src=\"https://gadgetboy.org/media/posts/10/gallery/img_1858-1-thumbnail.jpg\" alt=\"\" width=\"768\" height=\"768\"></a></figure>\n<figure class=\"gallery__item\"><a href=\"https://gadgetboy.org/media/posts/10/gallery/img_1859.jpg\" data-size=\"1024x1024\"><img loading=\"lazy\" src=\"https://gadgetboy.org/media/posts/10/gallery/img_1859-thumbnail.jpg\" alt=\"\" width=\"768\" height=\"768\"></a></figure>\n</div></div>\n<p>I put it on the bike a couple of days ago and went for a long ride in Hill Country with some friends.</p>\n<p>Installation was easy and was completed in 5 minutes. I thought I would be able to extend the extension arm over the center of the handlebar mount but there wasn’t enough clearance. In the end, the final location was best anyway – slightly left of handlebar mount. I mounted it in landscape position and can still clearly see all the gauges while riding.</p>\n<p>The twist-lock case connects to the mount quickly and solidly, then you’re ready to ride.</p>\n<p>I used it in the morning to navigate to the meeting spot for our group ride. It was nice to have visual confirmation along with my voice navigation.</p>\n<p>After lunch, we each went our separate ways, so I used the phone for directions home. The battery was nearly dead at the end of the 90 minute ride which I attribute to the screen being continuously turned on.</p>\n<p>My options going forward would be to either leave the screen turned off (which sort of defeats the benefits of a mount) or route power to it. Luckily, my new bike has a USB port under the seat. I just have to figure out how to the best way to hide the cable.</p>\n<p><em>I have no financial relationship with SP United USA and I purchased my own Moto Bundle. Some of the links above point to Amazon. If you buy something from those links, I’ll earn a few cents.</em></p>",
-            "image": "https://gadgetboy.org/media/posts/10/5ca20fab-6058-4564-9750-35ca23620ea7.jpg",
-            "author": {
-                "name": "John A. Federico"
-            },
-            "tags": [
-                   "Motorcycle Gear",
-                   "Motorcycle"
-            ],
-            "date_published": "2020-07-23T15:41:47-05:00",
-            "date_modified": "2020-07-23T15:41:47-05:00"
+            "date_published": "2020-09-23T17:55:36-05:00",
+            "date_modified": "2020-09-23T17:55:36-05:00"
         }
     ]
 }
