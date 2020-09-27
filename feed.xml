@@ -3,7 +3,7 @@
     <title>Ad Hoc</title>
     <link href="https://gadgetboy.org/feed.xml" rel="self" />
     <link href="https://gadgetboy.org" />
-    <updated>2020-09-27T12:07:26-05:00</updated>
+    <updated>2020-09-27T12:09:09-05:00</updated>
     <author>
         <name>John A. Federico</name>
     </author>
@@ -18,7 +18,7 @@
         <id>https://gadgetboy.org/cleaning-house-3/</id>
             <category term="Software"/>
 
-        <updated>2020-09-27T12:07:26-05:00</updated>
+        <updated>2020-09-27T12:09:09-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/52/delete_key2_1600.jpg" alt="Delete Key" />
@@ -39,7 +39,7 @@
 <p>After some configuration, the import script worked great, but I was unable to figure out why I couldn’t get any theme other than the default to work. I finally ran out of tinker time and had to go back to the office.</p>
 <p>A few weeks later, while my wife was attending a Yoga immersive for the weekend, I started exploring other options. As it turns out, there <a href="https://staticsitegenerators.net/">are <strong>a lot</strong> of static site generators out there</a>.</p>
 <p>Ultimately, I chose <a href="https://getpublii.com/">Publii</a>. It’s an open source static site generator with a full GUI and lots of great features. There’s a built-in utility for Wordpress imports but then, as I was starting the process, I decided to take inventory of the content.</p>
-<p>Much of it is outdated (Review of the Palm Treo 755p, anyone?) or the equivalent of what would be social media posts today.</p>
+<p>Much of it is outdated (Review of the <a href="https://en.wikipedia.org/wiki/Treo_755p">Palm Treo 755p</a>, anyone?) or the equivalent of what would be social media posts today.</p>
 <p>Sure, reviewing old posts was an interesting trip down Memory Lane but in the end, I decided to simply select posts to migrate manually, updating the URL structure and media file references accordingly.</p>
 <p>My intention is to host this on a spare Raspberry Pi on my home network, just so I can learn how to set up things like dynamic DNS, domain-based routing through the firewall and reverse proxy configuration but for now, it’s hosted on GitHub Pages.</p>
 <p>Publii is open source. If you want to support the project, you can contribute code or <a href="https://getpublii.com/donate/">make a donation</a>. I make a monthly donation through <a href="https://opencollective.com/publii/">Open Collective</a> but you can also make a donation via PayPal.</p>
