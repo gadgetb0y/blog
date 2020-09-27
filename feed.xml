@@ -3,7 +3,7 @@
     <title>Ad Hoc</title>
     <link href="https://gadgetboy.org/feed.xml" rel="self" />
     <link href="https://gadgetboy.org" />
-    <updated>1969-12-31T18:00:00-06:00</updated>
+    <updated>2020-09-27T12:07:26-05:00</updated>
     <author>
         <name>John A. Federico</name>
     </author>
@@ -18,7 +18,7 @@
         <id>https://gadgetboy.org/cleaning-house-3/</id>
             <category term="Software"/>
 
-        <updated>2020-09-23T17:55:36-05:00</updated>
+        <updated>2020-09-27T12:07:26-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/52/delete_key2_1600.jpg" alt="Delete Key" />
@@ -37,12 +37,12 @@
 <p>So, during my <a href="https://gadgetboy.org/what-i-did-on-my-holiday-staycation-2020-edition/">Holiday Staycation</a>, I began to explore <a href="https://www.netlify.com/blog/2020/04/14/what-is-a-static-site-generator-and-3-ways-to-find-the-best-one/">static site generators</a>. Static sites are incredibly fast because there’s no server side processing of web pages - the web server simply delivers a pre-built file. More importantly, there’s no CMS running code so the attack vectors are (generally speaking) only the OS and the web server and not some insecure Wordpress plugin.</p>
 <p>I was reading a lot of Home Assistant docs (another Staycation project) and noticed that they were using <a href="https://jekyllrb.com/">Jekyll</a>, so I decided to give it a try. I like the simplicity of page generation using plain text files, markdown and YAML and I found a highly regarded python script to import Wordpress posts so I could migrate my current content to static files.</p>
 <p>After some configuration, the import script worked great, but I was unable to figure out why I couldn’t get any theme other than the default to work. I finally ran out of tinker time and had to go back to the office.</p>
-<p>A few weeks later, while my wife was attending a Yzoga immersive for the weekend, I started exploring other options. As it turns out, there <a href="https://staticsitegenerators.net/">are <strong>a lot</strong> of static site generators out there</a>.</p>
+<p>A few weeks later, while my wife was attending a Yoga immersive for the weekend, I started exploring other options. As it turns out, there <a href="https://staticsitegenerators.net/">are <strong>a lot</strong> of static site generators out there</a>.</p>
 <p>Ultimately, I chose <a href="https://getpublii.com/">Publii</a>. It’s an open source static site generator with a full GUI and lots of great features. There’s a built-in utility for Wordpress imports but then, as I was starting the process, I decided to take inventory of the content.</p>
 <p>Much of it is outdated (Review of the Palm Treo 755p, anyone?) or the equivalent of what would be social media posts today.</p>
 <p>Sure, reviewing old posts was an interesting trip down Memory Lane but in the end, I decided to simply select posts to migrate manually, updating the URL structure and media file references accordingly.</p>
 <p>My intention is to host this on a spare Raspberry Pi on my home network, just so I can learn how to set up things like dynamic DNS, domain-based routing through the firewall and reverse proxy configuration but for now, it’s hosted on GitHub Pages.</p>
-<p>Publii is open source. If you want to support the project, you can contribute code or <a href="https://getpublii.com/donate/">make a donation</a> to the project. I make a monthly donation through <a href="https://opencollective.com/publii/">Open Collective</a> but you can also make a donation via PayPal.</p>
+<p>Publii is open source. If you want to support the project, you can contribute code or <a href="https://getpublii.com/donate/">make a donation</a>. I make a monthly donation through <a href="https://opencollective.com/publii/">Open Collective</a> but you can also make a donation via PayPal.</p>
 
             ]]>
         </content>
@@ -59,7 +59,7 @@
             <category term="Linux"/>
             <category term="How-to"/>
 
-        <updated>2020-09-23T17:55:36-05:00</updated>
+        <updated>2020-05-10T09:54:59-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/46/duplicacy_backup_feature.png" alt="Set Up Duplicacy on Pop!_OS 20.04" />
@@ -288,7 +288,7 @@ If you found this how-to helpful, pay it forward.
         <link href="https://gadgetboy.org/protect-your-privacy-with-firefox-containers/"/>
         <id>https://gadgetboy.org/protect-your-privacy-with-firefox-containers/</id>
 
-        <updated>2020-09-23T17:55:36-05:00</updated>
+        <updated>2020-07-06T07:07:55-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/45/shipping_containers_firefox.png" alt="Shipping Containers" />
@@ -429,7 +429,7 @@ If you found this how-to helpful, pay it forward.
         <link href="https://gadgetboy.org/review-system76-lemur-pro/"/>
         <id>https://gadgetboy.org/review-system76-lemur-pro/</id>
 
-        <updated>2020-09-23T17:55:36-05:00</updated>
+        <updated>2020-04-30T18:51:41-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/43/lemur.jpg" alt="Just a Lemur." />
@@ -791,7 +791,7 @@ If you found this how-to helpful, pay it forward.
             <category term="Home Assistant"/>
             <category term="Coding"/>
 
-        <updated>2020-09-23T17:55:36-05:00</updated>
+        <updated>2020-03-13T12:50:11-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/3/staycation_postcard.jpeg" alt="Staycation" />
@@ -825,7 +825,7 @@ If you found this how-to helpful, pay it forward.
             <category term="Internet of Things"/>
             <category term="Home Automation"/>
 
-        <updated>2020-09-23T17:55:36-05:00</updated>
+        <updated>2020-04-18T08:03:29-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/4/sirens.png" alt="Sirens" />
@@ -909,7 +909,7 @@ If you found this how-to helpful, pay it forward.
             <category term="Fitness Training"/>
             <category term="Fitness"/>
 
-        <updated>2020-09-23T17:55:36-05:00</updated>
+        <updated>2020-03-11T21:12:55-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/6/keto.jpg" alt="Keto" />
@@ -949,7 +949,7 @@ If you found this how-to helpful, pay it forward.
             <category term="Gadgets"/>
             <category term="Chrome OS"/>
 
-        <updated>2020-09-23T17:55:36-05:00</updated>
+        <updated>2020-07-06T07:13:16-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/5/system76-unleash_your_robot_blue-by_kate_hazen_of_system76-e4dcb9252f.png" alt="System76 Pop!_OS Desktop Image" />
@@ -1010,7 +1010,7 @@ If you found this how-to helpful, pay it forward.
             <category term="Home Automation"/>
             <category term="Gadgets"/>
 
-        <updated>2020-09-23T17:55:36-05:00</updated>
+        <updated>2020-04-18T08:19:55-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/7/rosie-the-jetsons-free-vector-800x566.jpg" alt="Rosie!" />
@@ -1242,7 +1242,7 @@ processing is incompatible with original purposes.</code></p>
         <id>https://gadgetboy.org/moms-honey-garlic-keto-marinade/</id>
             <category term="Fitness"/>
 
-        <updated>2020-09-23T17:55:36-05:00</updated>
+        <updated>2020-03-11T21:21:43-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/8/grilled-pork-tenderloing.jpg" alt="" />
