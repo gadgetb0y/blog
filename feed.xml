@@ -3,7 +3,7 @@
     <title>Ad Hoc</title>
     <link href="https://gadgetboy.org/feed.xml" rel="self" />
     <link href="https://gadgetboy.org" />
-    <updated>2020-11-02T08:10:51-06:00</updated>
+    <updated>2020-11-02T08:18:19-06:00</updated>
     <author>
         <name>John A. Federico</name>
     </author>
@@ -19,7 +19,7 @@
             <category term="Podcasting"/>
             <category term="Audio Production"/>
 
-        <updated>2020-11-02T08:10:51-06:00</updated>
+        <updated>2020-11-02T08:18:19-06:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/54/Blue_Encore_200.jpg" alt="Blue Encore 200" />
@@ -36,8 +36,8 @@
 <p>I’m <strong>only</strong> returning to podcasting because I no longer have to be what <a href="https://twitter.com/evoterra">Evo Terra</a> refers to as a “full-stack podcaster”. </p>
 <p>A full-stack podcaster is someone who, back in the day, <strong>had</strong> to be well-versed in audio recording, editing and mixdown along with things like generating a properly formatted RSS feed so that your podcast could make its way into whatever podcast app your audience chooses.</p>
 <p>I’ve produced and hosted two of my own shows since 2005. The first was a panel-style show that required herding the proverbial cats into my home studio every Thursday night (Remember, this was 2005 and things like Skype recording were still a PITA), edit the show, post it and do my best to promote it. I had so many issues with certain Wordpress plugins that I ultimately started creating my feeds by hand, using <a href="https://reinventedsoftware.com/feeder/">Feeder</a>, then hosting it on Amazon S3 and their Cloudfront CDN.</p>
-<p>The second show was a little easier, since it was an interview-style format and I produced it in support of my company. I could do it during “normal” working hours, but it was still a “full-stack” production.</p>
-<p>It was the first show, the “extracurricular activity,” that pushed me toward my current mindset and the key thought is this: I will <strong>not</strong> produce another show unless I can have the simplest workflow possible.</p>
+<p>The second show was a little easier, since it was an interview-style format and I produced it in support of my company. I could do it during “normal” working hours, but it was still a full-stack production.</p>
+<p>It was the first show, the <em>extracurricular activity</em>, that pushed me toward my current mindset and the key thought is this: I will <strong>not</strong> produce another show unless I can have the simplest workflow possible.</p>
 <p>That’s it. That’s the most important part.</p>
 <p>The concept of the show is designed both around the content and creativity that make it work <strong>and</strong> the workflow. I had other creative concepts for the show but realized they would take up too much time and effort, and my day job already demands too much of my time. I want my next show to be a creative outlet and not something that felt like a second job.</p>
 <p>If nothing else, it has made me rethink my workflows and equipment.</p>
