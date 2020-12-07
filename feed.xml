@@ -3,7 +3,7 @@
     <title>Ad Hoc</title>
     <link href="https://gadgetboy.org/feed.xml" rel="self" />
     <link href="https://gadgetboy.org" />
-    <updated>2020-12-07T08:43:38-06:00</updated>
+    <updated>2020-12-07T08:54:13-06:00</updated>
     <author>
         <name>John A. Federico</name>
     </author>
@@ -23,7 +23,7 @@
             <category term="Communication"/>
             <category term="Audio Production"/>
 
-        <updated>2020-12-07T08:43:38-06:00</updated>
+        <updated>2020-12-07T08:54:13-06:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/55/mic_ham.jpg" alt="" />
@@ -61,7 +61,7 @@
 </ul>
 <h2 id="join-me">Join Me</h2>
 <p>If you want to join me on this journey, sign-up for email updates (below) or go ahead and <a href="https://gadgetboy.org/feed">subscribe to this blog in your favorite RSS reader</a>.</p>
-
+<div class="post__iframe"><iframe loading="lazy" src="https://createinpublic.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe></div>
             ]]>
         </content>
     </entry>
