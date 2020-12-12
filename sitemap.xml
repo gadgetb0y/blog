@@ -842,6 +842,9 @@
 <loc>https://gadgetboy.org/tag/ubuntu/</loc>
 </url>
 <url>
+<loc>https://gadgetboy.org/tag/video-production/</loc>
+</url>
+<url>
 <loc>https://gadgetboy.org/tag/windows/</loc>
 </url>
 <url>
@@ -894,6 +897,14 @@
 </image:image>
 <image:image>
 <image:loc>https://gadgetboy.org/media/posts/10/gallery/img_1859-thumbnail.jpg</image:loc>
+<image:title><![CDATA[]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://gadgetboy.org/the-leaders-guide-to-video-conferencing-part-1/</loc>
+<lastmod>2020-12-12T10:56:06-06:00</lastmod>
+<image:image>
+<image:loc>https://gadgetboy.org/media/posts/56/youtv.jpg</image:loc>
 <image:title><![CDATA[]]></image:title>
 </image:image>
 </url>
