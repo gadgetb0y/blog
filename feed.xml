@@ -3,7 +3,7 @@
     <title>Ad Hoc</title>
     <link href="https://gadgetboy.org/feed.xml" rel="self" />
     <link href="https://gadgetboy.org" />
-    <updated>2022-02-25T18:54:55-06:00</updated>
+    <updated>2022-02-25T19:36:04-06:00</updated>
     <author>
         <name>John A. Federico</name>
     </author>
@@ -300,7 +300,7 @@
             <category term="Podcasting"/>
             <category term="Audio Production"/>
 
-        <updated>2022-02-18T07:54:19-06:00</updated>
+        <updated>2022-02-25T19:36:04-06:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/54/Blue_Encore_200.jpg" alt="Blue Encore 200" />
@@ -326,7 +326,7 @@
 <h2 id="gear">Gear</h2>
 <p>I am selling <strong>all</strong> of my outboard gear (vocal strips, noise gate, mixers, USB audio interface, portable recorders, etc.) and buying an <strong>all-in-one setup</strong> with onboard signal processing, simple mix-minus, etc. </p>
 <p>Right now, the <a href="https://amzn.to/37UNHzH">Rodecaster Pro</a> is at the top of my list but I’m waiting for reviews of the <a href="https://www.bhphotovideo.com/c/product/1592739-REG/zoom_zp8_podtrak_p8_portable_multitrack.html">Podtrak P8</a> from working podcasters and not just B&amp;H or Sweetwater, who both sell the device. (<a href="https://www.youtube.com/watch?v=xVUXqUKHx1o">I like A.B.</a>, and think that he does thorough reviews, but I want a diversity of opinions.)</p>
-<p>I’ll keep my beloved <a href="https://amzn.to/3oMSn0i">Sony MDR-7506</a> headphones, <a href="https://amzn.to/3kMDloW">MXL 990</a>, Blue Encore 100 and <a href="http://recordinghacks.com/microphones/Kel-Audio/HM1">Kel Audio HM-1</a>, but everything else will be posted on eBay or Craigslist.</p>
+<p>I’ll keep my beloved <a href="https://amzn.to/3oMSn0i">Sony MDR-7506</a> headphones, <a href="https://amzn.to/3kMDloW">MXL 990</a>, Blue Encore 100 and <a href="http://recordinghacks.com/microphones/Kel-Audio/HM1">Kel Audio HM-1</a>, but everything else will be sold on eBay or Craigslist.</p>
 <p>When dry, the <a href="https://amzn.to/3oS2Dor">Blue Encore 100</a> sounds very similar to the Shure <a href="https://amzn.to/3ebaacW">SM58</a> (which itself sounds very similar to the Shure <a href="https://amzn.to/35QRYS3">SM7B</a>) so that will likely be my go-to mic.</p>
 <h2 id="editing-and-post-production">Editing and Post-Production</h2>
 <p>I am <strong>completely</strong> sold on <a href="https://www.descript.com/">Descript</a> and its ability to quickly transcribe and edit the audio using text. (And have you seen the Overdub feature?! Could there be anything more “PINO” than that?) The product is amazing and appears to be well worth the $24/month for the Pro plan. (Though paying for a year upfront is a little painful.)</p>
@@ -352,7 +352,7 @@
         <id>https://gadgetboy.org/cleaning-house/</id>
             <category term="Software"/>
 
-        <updated>2020-09-27T12:10:29-05:00</updated>
+        <updated>2022-02-25T19:17:09-06:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://gadgetboy.org/media/posts/52/delete_key2_1600.jpg" alt="Delete Key" />
@@ -363,11 +363,11 @@
             <![CDATA[
                     <img src="https://gadgetboy.org/media/posts/52/delete_key2_1600.jpg" alt="Delete Key" />
                 <p>In my perpetual quest to learn something new and interesting, I gave this blog a complete overhaul.</p>
-<p>For years, I self-hosted it on Wordpress. That was a pain, primarily because (at the time) it was difficult to lock down Wordpress and protect it from getting hacked. Couple that with things like mySQL and PHP updates and stuff was breaking all the time. I spent more time administering it than actually writing.</p>
+<p>For years, I self-hosted it on Wordpress. That was a pain, primarily because (at the time) it was difficult to lock down Wordpress and protect it from getting hacked. Coupled with things like mySQL and PHP updates and stuff was breaking all the time. I spent more time tweaking it than actually writing.</p>
 <p>I moved it to Squarespace where it ran for a long time without issues until December 2018 when I made a DNS change (at the request of Squarespace) and it made the site unreachable. Squarespace support was of no help in fixing the issue, so I decided to move it to a basic Wordpress.com site using their Squarespace import tool.</p>
 <p>Wordpress.com is great. A fully-managed Personal blog is $4/month and, if you don’t want to use the traditional Wordpress interface, the new management interface is attractive and easy to use.</p>
 <p>Where it started to get annoying was when I wanted to do simple things like customize my CSS or add a Google Analytics tracking tag and found that a Personal plan doesn’t allow for that - you have to upgrade to a Premium plan.</p>
-<p>I get it - it’s SaaS and they have to price it properly to incentivize people to move up to plans with higher ARPU. But I also know that some of these things are trivial to enable and it felt unnecessarily restrictive.</p>
+<p>I get it - it’s SaaS and they have to price it properly to incentivize people to move up to plans with a higher ARPU. But I also know that some of these things are trivial to enable and it felt unnecessarily restrictive.</p>
 <p>So, during my <a href="https://gadgetboy.org/what-i-did-on-my-holiday-staycation-2020-edition/">Holiday Staycation</a>, I began to explore <a href="https://www.netlify.com/blog/2020/04/14/what-is-a-static-site-generator-and-3-ways-to-find-the-best-one/">static site generators</a>. Static sites are incredibly fast because there’s no server side processing of web pages - the web server simply delivers a pre-built file. More importantly, there’s no CMS running code so the attack vectors are (generally speaking) only the OS and the web server and not some insecure Wordpress plugin.</p>
 <p>I was reading a lot of Home Assistant docs (another Staycation project) and noticed that they were using <a href="https://jekyllrb.com/">Jekyll</a>, so I decided to give it a try. I like the simplicity of page generation using plain text files, markdown and YAML and I found a highly regarded python script to import Wordpress posts so I could migrate my current content to static files.</p>
 <p>After some configuration, the import script worked great, but I was unable to figure out why I couldn’t get any theme other than the default to work. I finally ran out of tinker time and had to go back to the office.</p>
