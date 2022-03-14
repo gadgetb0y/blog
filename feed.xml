@@ -3,7 +3,7 @@
     <title>Ad Hoc</title>
     <link href="https://gadgetboy.org/feed.xml" rel="self" />
     <link href="https://gadgetboy.org" />
-    <updated>2022-03-13T14:59:36-05:00</updated>
+    <updated>2022-03-14T07:31:14-05:00</updated>
     <author>
         <name>John A. Federico</name>
     </author>
@@ -357,18 +357,23 @@ I spent a good portion of my life “making do” with whatever I could. When I 
         <link href="https://gadgetboy.org/cleaning-house/"/>
         <id>https://gadgetboy.org/cleaning-house/</id>
             <category term="Software"/>
+            <category term="Podcasting"/>
 
-        <updated>2022-02-25T19:17:09-06:00</updated>
+        <updated>2022-03-14T07:31:14-05:00</updated>
             <summary>
                 <![CDATA[
-                        <img src="https://gadgetboy.org/media/posts/52/delete_key2_1600.jpg" alt="Delete Key" />
-                    In my perpetual quest to learn something new and interesting, I gave&hellip;
+                        <img src="https://gadgetboy.org/media/posts/52/delete_key2_1600-2xl.jpg" alt="Delete Key" />
+                    Listen to this instead. Subscribe to the podcast here. In my perpetual&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <img src="https://gadgetboy.org/media/posts/52/delete_key2_1600.jpg" alt="Delete Key" />
-                <p>In my perpetual quest to learn something new and interesting, I gave this blog a complete overhaul.</p>
+                    <img src="https://gadgetboy.org/media/posts/52/delete_key2_1600-2xl.jpg" alt="Delete Key" />
+                <h2 id="listen-to-this-instead">Listen to this instead.</h2>
+<p><strong><a href="https://anchor.fm/john-federico">Subscribe to the podcast here.</a></strong></p>
+<div class="post__iframe"><iframe loading="lazy" src="https://share.descript.com/embed/4IJWQf3cwVz" width="410" height="410" frameborder="0" allowfullscreen></iframe></div>
+
+<p>In my perpetual quest to learn something new and interesting, I gave this blog a complete overhaul.</p>
 <p>For years, I self-hosted it on Wordpress. That was a pain, primarily because (at the time) it was difficult to lock down Wordpress and protect it from getting hacked. Coupled with things like mySQL and PHP updates and stuff was breaking all the time. I spent more time tweaking it than actually writing.</p>
 <p>I moved it to Squarespace where it ran for a long time without issues until December 2018 when I made a DNS change (at the request of Squarespace) and it made the site unreachable. Squarespace support was of no help in fixing the issue, so I decided to move it to a basic Wordpress.com site using their Squarespace import tool.</p>
 <p>Wordpress.com is great. A fully-managed Personal blog is $4/month and, if you don’t want to use the traditional Wordpress interface, the new management interface is attractive and easy to use.</p>
